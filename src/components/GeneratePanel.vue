@@ -2,8 +2,8 @@
   <q-card flat bordered>
     <q-card-section>
       <div class="row q-col-gutter-md">
-        <!-- Generate Button -->
-        <div class="col-12 col-sm-6">
+        <!-- Generate Button (conditionally shown) -->
+        <div v-if="showGenerate" class="col-12 col-sm-6">
           <q-btn
             unelevated
             color="primary"
@@ -17,7 +17,7 @@
         </div>
 
         <!-- Reset Button -->
-        <div class="col-12 col-sm-6">
+        <div :class="showGenerate ? 'col-12 col-sm-6' : 'col-12'">
           <q-btn
             outline
             color="grey-7"
@@ -44,11 +44,17 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  loading: boolean;
-  error: string | null;
-  canGenerate: boolean;
-}>();
+withDefaults(
+  defineProps<{
+    loading: boolean;
+    error: string | null;
+    canGenerate: boolean;
+    showGenerate?: boolean;
+  }>(),
+  {
+    showGenerate: true,
+  },
+);
 
 const emit = defineEmits<{
   generate: [];

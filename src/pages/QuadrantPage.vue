@@ -44,12 +44,13 @@
         />
       </div>
 
-      <!-- Generate Panel (hide when all quadrants are complete) -->
-      <div v-if="!allQuadrantsComplete" class="q-mt-md">
+      <!-- Generate Panel (hide Generate button when all quadrants complete) -->
+      <div class="q-mt-md">
         <generate-panel
           :loading="isLoading"
           :error="errorMessage"
           :can-generate="canGenerate"
+          :show-generate="!allQuadrantsComplete"
           @generate="handleGenerate"
           @reset="handleReset"
         />
