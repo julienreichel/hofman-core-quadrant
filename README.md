@@ -10,7 +10,9 @@ An AI-powered web application for generating personalized [Ofman Core Quadrant](
 ## 🎯 Features
 
 - **AI-Powered Generation**: Uses OpenAI GPT-4o-mini to suggest traits based on your input
+- **Offline Mode**: Works without an API key using a preset database of traits (degraded mode)
 - **Interactive Interface**: Select from 5 AI-generated suggestions for each quadrant
+- **Searchable Dropdown**: Autocomplete trait selection in offline mode
 - **Bilingual Support**: Full English and French translations (EN/FR)
 - **Client-Side Only**: All data stays in your browser (localStorage for API key)
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
@@ -32,13 +34,30 @@ This tool helps you explore these relationships by:
 3. Select the words that resonate most with you
 4. Explore your complete behavioral pattern
 
+## 🔑 Usage Modes
+
+### Online Mode (with API Key)
+
+- Provide your OpenAI API key for full AI-powered suggestions
+- Get personalized trait suggestions based on any input
+- More flexible and contextual responses
+
+### Offline Mode (without API Key)
+
+- Use the built-in database of preset traits (degraded mode)
+- Search and select from a curated list of traits via autocomplete dropdown
+- Navigate trait relationships using pre-generated connections
+- Perfect for quick exploration or when you don't have an API key
+
+**Note**: In offline mode, you can only select from traits that exist in the preset database. Use the searchable dropdown to find available options.
+
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Node.js (v20 or higher)
 - npm or yarn
-- OpenAI API key (get one at [platform.openai.com](https://platform.openai.com))
+- OpenAI API key (optional - get one at [platform.openai.com](https://platform.openai.com) for full AI features)
 
 ### Installation
 
@@ -109,7 +128,7 @@ The workflow includes:
 
 1. **Quality Gate**
    - Run ESLint checks
-   - Execute all unit tests (66 tests)
+   - Execute all unit tests (99 tests)
    - Generate coverage report
 
 2. **Build**
@@ -156,6 +175,8 @@ src/
 │   ├── useApiKey.ts
 │   ├── useLanguage.ts
 │   ├── useOfmanGenerator.ts
+│   ├── useOfflineDatabase.ts
+│   ├── useOfflineDbGenerator.ts
 │   ├── usePromptBuilder.ts
 │   └── useQuadrantState.ts
 ├── i18n/            # Translation files
@@ -194,10 +215,10 @@ To add a new language:
 
 This project follows TDD principles with comprehensive unit testing:
 
-- **66 passing tests** covering all composables
+- **99 passing tests** covering all composables
 - **No component tests** in MVP (focus on business logic)
 - **Mocked OpenAI calls** for fast, deterministic tests
-- **100% composable coverage**
+- **100% composable coverage** including offline database functionality
 
 ## 📝 License
 
