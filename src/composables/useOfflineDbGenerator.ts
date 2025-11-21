@@ -17,7 +17,6 @@ export interface TraitNode {
   id: string; // lowercase, hyphenated version of label
   label: string; // Display name
   polarity: 'positive' | 'negative';
-  synonyms: string[];
 }
 
 export interface TraitLink {
@@ -53,16 +52,11 @@ export function useOfflineDbGenerator() {
   /**
    * Create a trait node
    */
-  const createTraitNode = (
-    label: string,
-    polarity: 'positive' | 'negative',
-    synonyms: string[] = [],
-  ): TraitNode => {
+  const createTraitNode = (label: string, polarity: 'positive' | 'negative'): TraitNode => {
     return {
       id: normalizeId(label),
       label: label.trim(),
       polarity,
-      synonyms,
     };
   };
 
@@ -243,8 +237,11 @@ export function useOfflineDbGenerator() {
       // Generate suggestions for each core quality
       const results = [];
       for (let i = 0; i < coreQualities.length; i++) {
-        currentStatus.value = `Generating for: ${coreQualities[i]} (${i + 1}/${coreQualities.length})`;
-        const result = await generateForCoreQuality(apiKey, coreQualities[i], language);
+        const coreQuality = coreQualities[i];
+        if (!coreQuality) continue;
+
+        currentStatus.value = `Generating for: ${coreQuality} (${i + 1}/${coreQualities.length})`;
+        const result = await generateForCoreQuality(apiKey, coreQuality, language);
         results.push(result);
         progress.value = ((i + 1) / coreQualities.length) * 80; // 80% for generation
       }
