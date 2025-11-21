@@ -16,20 +16,24 @@ export type SupportedLanguage = 'en' | 'fr';
 
 export const availableLanguages: SupportedLanguage[] = ['en', 'fr'];
 
+// Shared state across all instances
+const currentLang = ref<SupportedLanguage>(DEFAULT_LANGUAGE);
+
+// Load language from localStorage immediately
+const loadLanguage = () => {
+  const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  if (stored && availableLanguages.includes(stored as SupportedLanguage)) {
+    currentLang.value = stored as SupportedLanguage;
+  } else {
+    // Reset to default if invalid
+    currentLang.value = DEFAULT_LANGUAGE;
+  }
+};
+
+// Initialize immediately on module load
+loadLanguage();
+
 export function useLanguage() {
-  const currentLang = ref<SupportedLanguage>(DEFAULT_LANGUAGE);
-
-  // Load language from localStorage
-  const loadLanguage = () => {
-    const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY);
-    if (stored && availableLanguages.includes(stored as SupportedLanguage)) {
-      currentLang.value = stored as SupportedLanguage;
-    } else {
-      // Reset to default if invalid
-      currentLang.value = DEFAULT_LANGUAGE;
-    }
-  };
-
   // Set and persist language with validation
   const setLang = (language: string) => {
     // Validate input - reset to default if invalid
@@ -41,9 +45,6 @@ export function useLanguage() {
       localStorage.setItem(LANGUAGE_STORAGE_KEY, DEFAULT_LANGUAGE);
     }
   };
-
-  // Initialize on creation
-  loadLanguage();
 
   return {
     currentLang,

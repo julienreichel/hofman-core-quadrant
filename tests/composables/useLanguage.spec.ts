@@ -4,6 +4,9 @@ import { useLanguage, availableLanguages } from 'src/composables/useLanguage';
 describe('useLanguage', () => {
   beforeEach(() => {
     localStorage.clear();
+    // Reset the shared state to default
+    const { loadLanguage } = useLanguage();
+    loadLanguage();
   });
 
   afterEach(() => {
@@ -18,13 +21,15 @@ describe('useLanguage', () => {
 
     it('should load language from localStorage on initialization', () => {
       localStorage.setItem('ofman_lang', 'fr');
-      const { currentLang } = useLanguage();
+      const { loadLanguage, currentLang } = useLanguage();
+      loadLanguage(); // Reload after setting localStorage
       expect(currentLang.value).toBe('fr');
     });
 
     it('invalid input resets to "en"', () => {
       localStorage.setItem('ofman_lang', 'invalid-lang');
-      const { currentLang } = useLanguage();
+      const { loadLanguage, currentLang } = useLanguage();
+      loadLanguage(); // Reload after setting localStorage
       expect(currentLang.value).toBe('en');
     });
   });
