@@ -14,9 +14,14 @@ export function usePromptBuilder() {
    * Build a prompt for OpenAI to generate Ofman quadrant suggestions
    * @param inputQuadrant - Which quadrant the user provided
    * @param inputValue - The trait/word the user entered
+   * @param language - The language for suggestions ('en' or 'fr')
    * @returns Formatted prompt string
    */
-  const buildPrompt = (inputQuadrant: QuadrantType, inputValue: string): string => {
+  const buildPrompt = (
+    inputQuadrant: QuadrantType,
+    inputValue: string,
+    language: 'en' | 'fr' = 'en',
+  ): string => {
     const quadrantDescriptions = {
       core_quality:
         'Core Quality: A positive trait or strength that defines someone at their best.',
@@ -40,10 +45,15 @@ Relationships:
 - Allergy = Challenge taken too far (or Core Quality's negative opposite)
 `;
 
+    const languageInstruction =
+      language === 'fr'
+        ? '\n**IMPORTANT: All suggestions MUST be in French.**\n'
+        : '\n**IMPORTANT: All suggestions MUST be in English.**\n';
+
     const prompt = `You are an expert in the Ofman Core Quadrant model, a framework for personal development and understanding behavior patterns.
 
 ${quadrantRelationships}
-
+${languageInstruction}
 The user has provided this ${inputQuadrant.replace('_', ' ')}: "${inputValue}"
 
 ${quadrantDescriptions[inputQuadrant]}

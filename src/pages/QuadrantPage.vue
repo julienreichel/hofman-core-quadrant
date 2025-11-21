@@ -69,6 +69,7 @@ import type { QuadrantType } from 'src/composables/useQuadrantState';
 import { useApiKey } from 'src/composables/useApiKey';
 import { useQuadrantState } from 'src/composables/useQuadrantState';
 import { useOfmanGenerator } from 'src/composables/useOfmanGenerator';
+import { useLanguage } from 'src/composables/useLanguage';
 import QuadrantBox from 'components/QuadrantBox.vue';
 import GeneratePanel from 'components/GeneratePanel.vue';
 import SummaryView from 'components/SummaryView.vue';
@@ -78,6 +79,7 @@ const $q = useQuasar();
 
 // Composables
 const { apiKey, hasKey, isValidKey } = useApiKey();
+const { currentLang } = useLanguage();
 const {
   inputQuadrant,
   inputValue,
@@ -131,6 +133,7 @@ const handleGenerate = async () => {
       apiKey.value,
       inputQuadrant.value!,
       inputValue.value,
+      currentLang.value,
     );
 
     setSuggestions(newSuggestions);

@@ -96,5 +96,25 @@ describe('usePromptBuilder', () => {
       expect(prompt1).toContain('Do NOT include suggestions for "core_quality"');
       expect(prompt2).toContain('Do NOT include suggestions for "pitfall"');
     });
+
+    it('should default to English when no language specified', () => {
+      const prompt = buildPrompt('core_quality', 'Decisive');
+
+      expect(prompt).toContain('MUST be in English');
+    });
+
+    it('should request English suggestions when language is "en"', () => {
+      const prompt = buildPrompt('core_quality', 'Decisive', 'en');
+
+      expect(prompt).toContain('MUST be in English');
+      expect(prompt).not.toContain('MUST be in French');
+    });
+
+    it('should request French suggestions when language is "fr"', () => {
+      const prompt = buildPrompt('core_quality', 'Décisif', 'fr');
+
+      expect(prompt).toContain('MUST be in French');
+      expect(prompt).not.toContain('MUST be in English');
+    });
   });
 });

@@ -5,8 +5,8 @@
       :key="index"
       clickable
       :outline="selected !== suggestion"
-      :color="selected === suggestion ? 'primary' : 'blue-2'"
-      :text-color="selected === suggestion ? 'white' : 'blue-9'"
+      :color="selected === suggestion ? 'primary' : 'accent'"
+      :text-color="selected === suggestion ? 'white' : 'white'"
       @click="handleSelect(suggestion)"
     >
       {{ suggestion }}

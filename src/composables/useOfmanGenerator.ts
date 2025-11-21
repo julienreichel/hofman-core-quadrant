@@ -24,18 +24,20 @@ export function useOfmanGenerator() {
    * @param apiKey - OpenAI API key
    * @param inputQuadrant - Which quadrant the user provided
    * @param inputValue - The trait/word the user entered
+   * @param language - The language for suggestions ('en' or 'fr')
    * @returns Partial suggestions object (excluding the input quadrant)
    */
   const generateSuggestions = async (
     apiKey: string,
     inputQuadrant: QuadrantType,
     inputValue: string,
+    language: 'en' | 'fr' = 'en',
   ): Promise<Partial<QuadrantSuggestions>> => {
     isLoading.value = true;
     error.value = null;
 
     try {
-      const prompt = buildPrompt(inputQuadrant, inputValue);
+      const prompt = buildPrompt(inputQuadrant, inputValue, language);
 
       const response = await fetch(OPENAI_API_URL, {
         method: 'POST',
