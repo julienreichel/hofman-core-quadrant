@@ -1,9 +1,9 @@
 <template>
   <q-page class="q-pa-md">
     <div class="quadrant-container">
-      <!-- 2x2 Grid -->
+      <!-- 2x2 Grid: Quality-Pitfall / Allergy-Challenge -->
       <div class="quadrant-grid">
-        <!-- Core Quality -->
+        <!-- Core Quality (top-left) -->
         <quadrant-box
           quadrant-type="core_quality"
           :input-value="getInputValue('core_quality')"
@@ -13,7 +13,7 @@
           @select="(word) => selectWord('core_quality', word)"
         />
 
-        <!-- Pitfall -->
+        <!-- Pitfall (top-right) -->
         <quadrant-box
           quadrant-type="pitfall"
           :input-value="getInputValue('pitfall')"
@@ -23,17 +23,7 @@
           @select="(word) => selectWord('pitfall', word)"
         />
 
-        <!-- Challenge -->
-        <quadrant-box
-          quadrant-type="challenge"
-          :input-value="getInputValue('challenge')"
-          :selected-word="selectedWords.challenge"
-          :suggestions="suggestions.challenge"
-          @input="(value) => handleInput('challenge', value)"
-          @select="(word) => selectWord('challenge', word)"
-        />
-
-        <!-- Allergy -->
+        <!-- Allergy (bottom-left) -->
         <quadrant-box
           quadrant-type="allergy"
           :input-value="getInputValue('allergy')"
@@ -41,6 +31,16 @@
           :suggestions="suggestions.allergy"
           @input="(value) => handleInput('allergy', value)"
           @select="(word) => selectWord('allergy', word)"
+        />
+
+        <!-- Challenge (bottom-right) -->
+        <quadrant-box
+          quadrant-type="challenge"
+          :input-value="getInputValue('challenge')"
+          :selected-word="selectedWords.challenge"
+          :suggestions="suggestions.challenge"
+          @input="(value) => handleInput('challenge', value)"
+          @select="(word) => selectWord('challenge', word)"
         />
       </div>
 
