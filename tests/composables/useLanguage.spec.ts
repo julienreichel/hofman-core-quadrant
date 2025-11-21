@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { useLanguage } from 'src/composables/useLanguage';
+import { useLanguage, availableLanguages } from 'src/composables/useLanguage';
 
 describe('useLanguage', () => {
   beforeEach(() => {
@@ -11,77 +11,102 @@ describe('useLanguage', () => {
   });
 
   describe('initialization', () => {
-    it('should initialize with default language en-US', () => {
-      const { currentLanguage } = useLanguage();
-      expect(currentLanguage.value).toBe('en-US');
+    it('default language is "en"', () => {
+      const { currentLang } = useLanguage();
+      expect(currentLang.value).toBe('en');
     });
 
     it('should load language from localStorage on initialization', () => {
-      localStorage.setItem('app-language', 'fr-FR');
-      const { currentLanguage } = useLanguage();
-      expect(currentLanguage.value).toBe('fr-FR');
+      localStorage.setItem('ofman_lang', 'fr');
+      const { currentLang } = useLanguage();
+      expect(currentLang.value).toBe('fr');
     });
 
-    it('should ignore invalid language in localStorage', () => {
-      localStorage.setItem('app-language', 'invalid-lang');
-      const { currentLanguage } = useLanguage();
-      expect(currentLanguage.value).toBe('en-US');
+    it('invalid input resets to "en"', () => {
+      localStorage.setItem('ofman_lang', 'invalid-lang');
+      const { currentLang } = useLanguage();
+      expect(currentLang.value).toBe('en');
     });
   });
 
-  describe('setLanguage', () => {
-    it('should set language to en-US', () => {
-      const { currentLanguage, setLanguage } = useLanguage();
-      setLanguage('en-US');
-      expect(currentLanguage.value).toBe('en-US');
-      expect(localStorage.getItem('app-language')).toBe('en-US');
+  describe('setLang', () => {
+    it('should set language to en', () => {
+      const { currentLang, setLang } = useLanguage();
+      setLang('en');
+      expect(currentLang.value).toBe('en');
+      expect(localStorage.getItem('ofman_lang')).toBe('en');
     });
 
-    it('should set language to fr-FR', () => {
-      const { currentLanguage, setLanguage } = useLanguage();
-      setLanguage('fr-FR');
-      expect(currentLanguage.value).toBe('fr-FR');
-      expect(localStorage.getItem('app-language')).toBe('fr-FR');
+    it('switching to "fr" works', () => {
+      const { currentLang, setLang } = useLanguage();
+      setLang('fr');
+      expect(currentLang.value).toBe('fr');
+      expect(localStorage.getItem('ofman_lang')).toBe('fr');
+    });
+
+    it('invalid input resets to "en" when calling setLang', () => {
+      const { currentLang, setLang } = useLanguage();
+      setLang('invalid-language');
+      expect(currentLang.value).toBe('en');
+      expect(localStorage.getItem('ofman_lang')).toBe('en');
     });
 
     it('should persist language selection', () => {
-      const { setLanguage } = useLanguage();
-      setLanguage('fr-FR');
+      const { setLang } = useLanguage();
+      setLang('fr');
 
       // Create new instance to simulate app restart
-      const { currentLanguage } = useLanguage();
-      expect(currentLanguage.value).toBe('fr-FR');
+      const { currentLang } = useLanguage();
+      expect(currentLang.value).toBe('fr');
     });
   });
 
   describe('switching languages', () => {
-    it('should switch from en-US to fr-FR', () => {
-      const { currentLanguage, setLanguage } = useLanguage();
-      expect(currentLanguage.value).toBe('en-US');
+    it('should switch from en to fr', () => {
+      const { currentLang, setLang } = useLanguage();
+      expect(currentLang.value).toBe('en');
 
-      setLanguage('fr-FR');
-      expect(currentLanguage.value).toBe('fr-FR');
+      setLang('fr');
+      expect(currentLang.value).toBe('fr');
     });
 
-    it('should switch from fr-FR to en-US', () => {
-      const { currentLanguage, setLanguage } = useLanguage();
-      setLanguage('fr-FR');
-      expect(currentLanguage.value).toBe('fr-FR');
+    it('should switch from fr to en', () => {
+      const { currentLang, setLang } = useLanguage();
+      setLang('fr');
+      expect(currentLang.value).toBe('fr');
 
-      setLanguage('en-US');
-      expect(currentLanguage.value).toBe('en-US');
+      setLang('en');
+      expect(currentLang.value).toBe('en');
     });
   });
 
-  describe('loadLanguage', () => {
-    it('should reload language from localStorage', () => {
-      const { currentLanguage, loadLanguage } = useLanguage();
-      expect(currentLanguage.value).toBe('en-US');
+  describe('persistence in localStorage', () => {
+    it('should persist language to localStorage', () => {
+      const { setLang } = useLanguage();
+      setLang('fr');
+      expect(localStorage.getItem('ofman_lang')).toBe('fr');
+    });
 
-      localStorage.setItem('app-language', 'fr-FR');
+    it('localStorage roundtrip works', () => {
+      const { setLang } = useLanguage();
+      setLang('fr');
+
+      // Clear and reload
+      const { currentLang, loadLanguage } = useLanguage();
       loadLanguage();
 
-      expect(currentLanguage.value).toBe('fr-FR');
+      expect(currentLang.value).toBe('fr');
+    });
+  });
+
+  describe('availableLanguages', () => {
+    it('should expose availableLanguages array', () => {
+      const { availableLanguages: langs } = useLanguage();
+      expect(langs).toEqual(['en', 'fr']);
+    });
+
+    it('availableLanguages should be exported', () => {
+      expect(availableLanguages).toEqual(['en', 'fr']);
     });
   });
 });

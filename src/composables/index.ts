@@ -3,7 +3,7 @@
  */
 
 export { useApiKey } from './useApiKey';
-export { useLanguage, type SupportedLanguage } from './useLanguage';
+export { useLanguage, availableLanguages, type SupportedLanguage } from './useLanguage';
 export {
   useQuadrantState,
   type QuadrantType,
