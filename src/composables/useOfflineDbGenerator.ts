@@ -1,0 +1,277 @@
+/**
+ * useOfflineDbGenerator - Generates offline database from core qualities
+ *
+ * Responsibilities:
+ * - Parse comma-separated core quality input
+ * - Generate suggestions for all quadrants for each core quality
+ * - Build graph structure with traits and links
+ * - Deduplicate traits across multiple queries
+ * - Export as JSON file
+ */
+
+import { ref } from 'vue';
+import { useOfmanGenerator } from './useOfmanGenerator';
+
+// Data structure types matching the specification
+export interface TraitNode {
+  id: string; // lowercase, hyphenated version of label
+  label: string; // Display name
+  polarity: 'positive' | 'negative';
+  synonyms: string[];
+}
+
+export interface TraitLink {
+  from: string; // trait id
+  to: string; // trait id
+  type: 'excess' | 'balance';
+}
+
+export interface OfflineDatabase {
+  traits: TraitNode[];
+  links: TraitLink[];
+}
+
+export function useOfflineDbGenerator() {
+  const isGenerating = ref(false);
+  const progress = ref(0);
+  const currentStatus = ref('');
+  const error = ref<string | null>(null);
+
+  const { generateSuggestions } = useOfmanGenerator();
+
+  /**
+   * Normalize a word to create a consistent ID
+   */
+  const normalizeId = (word: string): string => {
+    return word
+      .toLowerCase()
+      .trim()
+      .replace(/[^\w\s-]/g, '') // Remove special chars
+      .replace(/\s+/g, '-'); // Replace spaces with hyphens
+  };
+
+  /**
+   * Create a trait node
+   */
+  const createTraitNode = (
+    label: string,
+    polarity: 'positive' | 'negative',
+    synonyms: string[] = [],
+  ): TraitNode => {
+    return {
+      id: normalizeId(label),
+      label: label.trim(),
+      polarity,
+      synonyms,
+    };
+  };
+
+  /**
+   * Create a link between two traits
+   */
+  const createLink = (fromId: string, toId: string, type: 'excess' | 'balance'): TraitLink => {
+    return { from: fromId, to: toId, type };
+  };
+
+  /**
+   * Parse comma-separated core qualities
+   */
+  const parseCoreQualities = (input: string): string[] => {
+    return input
+      .split(',')
+      .map((word) => word.trim())
+      .filter((word) => word.length > 0);
+  };
+
+  /**
+   * Generate all suggestions for one core quality
+   * Returns all 4 quadrants worth of suggestions
+   */
+  const generateForCoreQuality = async (
+    apiKey: string,
+    coreQuality: string,
+    language: 'en' | 'fr',
+  ): Promise<{
+    core: string;
+    pitfalls: string[];
+    challenges: string[];
+    allergies: string[];
+  }> => {
+    // Generate pitfalls from core quality
+    const pitfallSuggestions = await generateSuggestions(
+      apiKey,
+      'core_quality',
+      coreQuality,
+      language,
+    );
+    const pitfalls = pitfallSuggestions.pitfall || [];
+
+    // Generate challenges from core quality
+    const challengeSuggestions = await generateSuggestions(
+      apiKey,
+      'core_quality',
+      coreQuality,
+      language,
+    );
+    const challenges = challengeSuggestions.challenge || [];
+
+    // Generate allergies from core quality
+    const allergySuggestions = await generateSuggestions(
+      apiKey,
+      'core_quality',
+      coreQuality,
+      language,
+    );
+    const allergies = allergySuggestions.allergy || [];
+
+    return {
+      core: coreQuality,
+      pitfalls: pitfalls.filter((p): p is string => p !== undefined),
+      challenges: challenges.filter((c): c is string => c !== undefined),
+      allergies: allergies.filter((a): a is string => a !== undefined),
+    };
+  };
+
+  /**
+   * Build the complete database from all core qualities
+   */
+  const buildDatabase = (
+    results: Array<{
+      core: string;
+      pitfalls: string[];
+      challenges: string[];
+      allergies: string[];
+    }>,
+  ): OfflineDatabase => {
+    const traitMap = new Map<string, TraitNode>();
+    const links: TraitLink[] = [];
+
+    // Process each core quality result
+    for (const result of results) {
+      const coreId = normalizeId(result.core);
+
+      // Add core quality (positive polarity)
+      if (!traitMap.has(coreId)) {
+        traitMap.set(coreId, createTraitNode(result.core, 'positive'));
+      }
+
+      // Add pitfalls (negative polarity) and create links
+      for (const pitfall of result.pitfalls) {
+        const pitfallId = normalizeId(pitfall);
+        if (!traitMap.has(pitfallId)) {
+          traitMap.set(pitfallId, createTraitNode(pitfall, 'negative'));
+        }
+        // Core -> Pitfall is "excess"
+        links.push(createLink(coreId, pitfallId, 'excess'));
+      }
+
+      // Add challenges (positive polarity) and create links
+      for (const challenge of result.challenges) {
+        const challengeId = normalizeId(challenge);
+        if (!traitMap.has(challengeId)) {
+          traitMap.set(challengeId, createTraitNode(challenge, 'positive'));
+        }
+
+        // Create links: Pitfall -> Challenge (balance)
+        for (const pitfall of result.pitfalls) {
+          const pitfallId = normalizeId(pitfall);
+          links.push(createLink(pitfallId, challengeId, 'balance'));
+        }
+      }
+
+      // Add allergies (negative polarity) and create links
+      for (const allergy of result.allergies) {
+        const allergyId = normalizeId(allergy);
+        if (!traitMap.has(allergyId)) {
+          traitMap.set(allergyId, createTraitNode(allergy, 'negative'));
+        }
+
+        // Challenge -> Allergy (excess)
+        for (const challenge of result.challenges) {
+          const challengeId = normalizeId(challenge);
+          links.push(createLink(challengeId, allergyId, 'excess'));
+        }
+
+        // Allergy -> Core (balance)
+        links.push(createLink(allergyId, coreId, 'balance'));
+      }
+    }
+
+    return {
+      traits: Array.from(traitMap.values()),
+      links,
+    };
+  };
+
+  /**
+   * Download JSON file
+   */
+  const downloadJson = (data: OfflineDatabase, filename = 'ofman-database.json') => {
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
+  /**
+   * Main function to generate offline database
+   */
+  const generateOfflineDatabase = async (
+    apiKey: string,
+    coreQualitiesInput: string,
+    language: 'en' | 'fr' = 'en',
+  ): Promise<void> => {
+    isGenerating.value = true;
+    progress.value = 0;
+    error.value = null;
+
+    try {
+      // Parse input
+      currentStatus.value = 'Parsing core qualities...';
+      const coreQualities = parseCoreQualities(coreQualitiesInput);
+
+      if (coreQualities.length === 0) {
+        throw new Error('No core qualities provided');
+      }
+
+      // Generate suggestions for each core quality
+      const results = [];
+      for (let i = 0; i < coreQualities.length; i++) {
+        currentStatus.value = `Generating for: ${coreQualities[i]} (${i + 1}/${coreQualities.length})`;
+        const result = await generateForCoreQuality(apiKey, coreQualities[i], language);
+        results.push(result);
+        progress.value = ((i + 1) / coreQualities.length) * 80; // 80% for generation
+      }
+
+      // Build database
+      currentStatus.value = 'Building database structure...';
+      const database = buildDatabase(results);
+      progress.value = 90;
+
+      // Export
+      currentStatus.value = 'Exporting JSON file...';
+      downloadJson(database);
+      progress.value = 100;
+      currentStatus.value = 'Complete!';
+    } catch (err) {
+      error.value = err instanceof Error ? err.message : 'Unknown error occurred';
+      throw err;
+    } finally {
+      isGenerating.value = false;
+    }
+  };
+
+  return {
+    isGenerating,
+    progress,
+    currentStatus,
+    error,
+    generateOfflineDatabase,
+  };
+}

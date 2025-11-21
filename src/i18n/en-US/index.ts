@@ -50,4 +50,22 @@ export default {
     noInput: 'Please enter a trait in one quadrant',
     generationFailed: 'Failed to generate suggestions',
   },
+  offlineDb: {
+    buttonLabel: 'Generate Offline DB',
+    dialogTitle: 'Generate Offline Database',
+    dialogDescription:
+      'Enter a list of core qualities (comma-separated) to generate a complete offline database with all relationships.',
+    inputLabel: 'Core Qualities',
+    inputPlaceholder: 'adaptability, creativity, discipline, empathy...',
+    generate: 'Generate',
+    cancel: 'Cancel',
+    generating: 'Generating...',
+    statusParsing: 'Parsing core qualities...',
+    statusGenerating: 'Generating for: {trait} ({current}/{total})',
+    statusBuilding: 'Building database structure...',
+    statusExporting: 'Exporting JSON file...',
+    statusComplete: 'Complete! Download started.',
+    errorNoQualities: 'Please enter at least one core quality',
+    errorGeneration: 'Generation failed: {error}',
+  },
 };

@@ -56,6 +56,9 @@
         />
       </div>
     </div>
+
+    <!-- Offline DB Generator Button (only when API key is set) -->
+    <generate-offline-db-button v-if="hasKey" />
   </q-page>
 </template>
 
@@ -70,6 +73,7 @@ import { useOfmanGenerator } from 'src/composables/useOfmanGenerator';
 import { useLanguage } from 'src/composables/useLanguage';
 import QuadrantBox from 'components/QuadrantBox.vue';
 import GeneratePanel from 'components/GeneratePanel.vue';
+import GenerateOfflineDbButton from 'components/GenerateOfflineDbButton.vue';
 
 const { t } = useI18n();
 const $q = useQuasar();
