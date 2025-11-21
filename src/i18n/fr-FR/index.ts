@@ -71,11 +71,11 @@ export default {
     importButton: 'Importer une Base de Données',
     importTitle: 'Importer une Base de Données Personnalisée',
     importDescription:
-      'Téléchargez un fichier JSON avec des traits et des relations personnalisés. Si aucune base de données n\'est importée, la base de données par défaut sera utilisée.',
+      "Téléchargez un fichier JSON avec des traits et des relations personnalisés. Si aucune base de données n'est importée, la base de données par défaut sera utilisée.",
     selectFile: 'Sélectionner un fichier JSON',
     import: 'Importer',
     importSuccess: 'Base de données importée avec succès',
-    importError: 'Échec de l\'importation de la base de données',
+    importError: "Échec de l'importation de la base de données",
     customDbLoaded: 'Base de données personnalisée chargée ({count} traits)',
     defaultDbLoaded: 'Utilisation de la base de données par défaut ({count} traits)',
   },

@@ -150,6 +150,39 @@ export function useOfflineDatabase() {
   }
 
   /**
+   * Get traits that link TO this trait (reverse lookup)
+   * @param toId - Target trait ID
+   * @param linkType - Type of link to follow ('excess' or 'balance')
+   * @param maxResults - Maximum number of results (if more exist, pick randomly)
+   */
+  function getReverseLinkedTraits(
+    toId: string,
+    linkType: 'excess' | 'balance',
+    maxResults = 5,
+  ): TraitNode[] {
+    if (!currentDatabase.value) return [];
+
+    // Find all links TO the target trait with the specified type
+    const links = currentDatabase.value.links.filter(
+      (link) => link.to === toId && link.type === linkType,
+    );
+
+    // Get the source trait nodes
+    const sourceTraits = links
+      .map((link) => getTraitById(link.from))
+      .filter((trait): trait is TraitNode => trait !== undefined);
+
+    // If we have more results than maxResults, pick randomly
+    if (sourceTraits.length <= maxResults) {
+      return sourceTraits;
+    }
+
+    // Shuffle and pick random subset
+    const shuffled = [...sourceTraits].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, maxResults);
+  }
+
+  /**
    * Check if database is loaded
    */
   const isDatabaseLoaded = computed(() => currentDatabase.value !== null);
@@ -173,5 +206,6 @@ export function useOfflineDatabase() {
     getTraitById,
     searchTraits,
     getLinkedTraits,
+    getReverseLinkedTraits,
   };
 }

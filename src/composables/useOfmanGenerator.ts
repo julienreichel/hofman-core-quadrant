@@ -20,48 +20,100 @@ export function useOfmanGenerator() {
   const isLoading = ref(false);
   const error = ref<string | null>(null);
   const { buildPrompt } = usePromptBuilder();
-  const { getLinkedTraits } = useOfflineDatabase();
+  const { getLinkedTraits, getReverseLinkedTraits } = useOfflineDatabase();
 
   /**
    * Generate suggestions using offline database
    * Uses links to traverse from the input trait
-   * Simplified: Only supports starting from core_quality
+   * Supports starting from any quadrant
    */
   const generateOfflineSuggestions = (
     inputQuadrant: QuadrantType,
     inputTraitId: string,
   ): Partial<QuadrantSuggestions> => {
-    // For MVP, only support starting from core_quality
-    if (inputQuadrant !== 'core_quality') {
-      throw new Error('Offline mode currently only supports starting from core quality');
-    }
-
     const result: Partial<QuadrantSuggestions> = {};
 
-    // core_quality → pitfall (excess links)
-    const pitfalls = getLinkedTraits(inputTraitId, 'excess', 5);
-    result.pitfall = pitfalls.map((t) => t.label);
+    if (inputQuadrant === 'core_quality') {
+      // STARTING FROM CORE QUALITY (positive trait)
+      // core_quality → pitfall (excess links)
+      const pitfalls = getLinkedTraits(inputTraitId, 'excess', 5);
+      result.pitfall = pitfalls.map((t) => t.label);
 
-    // For each pitfall, get challenges (balance links)
-    const allChallenges = pitfalls.flatMap((pitfall) =>
-      getLinkedTraits(pitfall.id, 'balance', 5)
-    );
-    // Deduplicate and pick 5 random
-    const uniqueChallenges = Array.from(
-      new Map(allChallenges.map((t) => [t.id, t])).values()
-    );
-    const shuffled = uniqueChallenges.sort(() => Math.random() - 0.5);
-    result.challenge = shuffled.slice(0, 5).map((t) => t.label);
+      // pitfall → challenge (balance links)
+      const allChallenges = pitfalls.flatMap((pitfall) =>
+        getLinkedTraits(pitfall.id, 'balance', 5),
+      );
+      const uniqueChallenges = Array.from(new Map(allChallenges.map((t) => [t.id, t])).values());
+      const shuffledChallenges = uniqueChallenges.sort(() => Math.random() - 0.5);
+      result.challenge = shuffledChallenges.slice(0, 5).map((t) => t.label);
 
-    // From challenges, get allergies (excess links)
-    const allAllergies = shuffled.slice(0, 5).flatMap((challenge) =>
-      getLinkedTraits(challenge.id, 'excess', 5)
-    );
-    const uniqueAllergies = Array.from(
-      new Map(allAllergies.map((t) => [t.id, t])).values()
-    );
-    const shuffledAllergies = uniqueAllergies.sort(() => Math.random() - 0.5);
-    result.allergy = shuffledAllergies.slice(0, 5).map((t) => t.label);
+      // challenge → allergy (excess links)
+      const allAllergies = shuffledChallenges
+        .slice(0, 5)
+        .flatMap((challenge) => getLinkedTraits(challenge.id, 'excess', 5));
+      const uniqueAllergies = Array.from(new Map(allAllergies.map((t) => [t.id, t])).values());
+      const shuffledAllergies = uniqueAllergies.sort(() => Math.random() - 0.5);
+      result.allergy = shuffledAllergies.slice(0, 5).map((t) => t.label);
+    } else if (inputQuadrant === 'pitfall') {
+      // STARTING FROM PITFALL (negative trait)
+      // pitfall → challenge (balance links - forward)
+      const challenges = getLinkedTraits(inputTraitId, 'balance', 5);
+      result.challenge = challenges.map((t) => t.label);
+
+      // pitfall ← core_quality (excess links - reverse)
+      const coreQualities = getReverseLinkedTraits(inputTraitId, 'excess', 5);
+      result.core_quality = coreQualities.map((t) => t.label);
+
+      // challenge → allergy (excess links)
+      const allAllergies = challenges.flatMap((challenge) =>
+        getLinkedTraits(challenge.id, 'excess', 5),
+      );
+      const uniqueAllergies = Array.from(new Map(allAllergies.map((t) => [t.id, t])).values());
+      const shuffledAllergies = uniqueAllergies.sort(() => Math.random() - 0.5);
+      result.allergy = shuffledAllergies.slice(0, 5).map((t) => t.label);
+    } else if (inputQuadrant === 'challenge') {
+      // STARTING FROM CHALLENGE (positive trait)
+      // challenge → allergy (excess links - forward)
+      const allergies = getLinkedTraits(inputTraitId, 'excess', 5);
+      result.allergy = allergies.map((t) => t.label);
+
+      // challenge ← pitfall (balance links - reverse)
+      const pitfalls = getReverseLinkedTraits(inputTraitId, 'balance', 5);
+      result.pitfall = pitfalls.map((t) => t.label);
+
+      // pitfall ← core_quality (excess links - reverse)
+      const allCoreQualities = pitfalls.flatMap((pitfall) =>
+        getReverseLinkedTraits(pitfall.id, 'excess', 5),
+      );
+      const uniqueCoreQualities = Array.from(
+        new Map(allCoreQualities.map((t) => [t.id, t])).values(),
+      );
+      const shuffledCoreQualities = uniqueCoreQualities.sort(() => Math.random() - 0.5);
+      result.core_quality = shuffledCoreQualities.slice(0, 5).map((t) => t.label);
+    } else if (inputQuadrant === 'allergy') {
+      // STARTING FROM ALLERGY (negative trait)
+      // allergy ← challenge (excess links - reverse)
+      const challenges = getReverseLinkedTraits(inputTraitId, 'excess', 5);
+      result.challenge = challenges.map((t) => t.label);
+
+      // challenge ← pitfall (balance links - reverse)
+      const allPitfalls = challenges.flatMap((challenge) =>
+        getReverseLinkedTraits(challenge.id, 'balance', 5),
+      );
+      const uniquePitfalls = Array.from(new Map(allPitfalls.map((t) => [t.id, t])).values());
+      const shuffledPitfalls = uniquePitfalls.sort(() => Math.random() - 0.5);
+      result.pitfall = shuffledPitfalls.slice(0, 5).map((t) => t.label);
+
+      // pitfall ← core_quality (excess links - reverse)
+      const allCoreQualities = shuffledPitfalls
+        .slice(0, 5)
+        .flatMap((pitfall) => getReverseLinkedTraits(pitfall.id, 'excess', 5));
+      const uniqueCoreQualities = Array.from(
+        new Map(allCoreQualities.map((t) => [t.id, t])).values(),
+      );
+      const shuffledCoreQualities = uniqueCoreQualities.sort(() => Math.random() - 0.5);
+      result.core_quality = shuffledCoreQualities.slice(0, 5).map((t) => t.label);
+    }
 
     return result;
   };

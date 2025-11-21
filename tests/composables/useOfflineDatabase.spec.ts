@@ -164,7 +164,7 @@ describe('useOfflineDatabase', () => {
       // analytical has 5 excess links, request 3
       const links1 = db.getLinkedTraits('analytical', 'excess', 3);
       const links2 = db.getLinkedTraits('analytical', 'excess', 3);
-      
+
       expect(links1.length).toBe(3);
       expect(links2.length).toBe(3);
       // Note: randomness means they might be the same sometimes
@@ -173,6 +173,45 @@ describe('useOfflineDatabase', () => {
     it('should return empty array for non-existent trait', () => {
       const links = db.getLinkedTraits('non-existent', 'excess', 5);
       expect(links).toEqual([]);
+    });
+  });
+
+  describe('getReverseLinkedTraits', () => {
+    beforeEach(() => {
+      db.loadDefaultDatabase('en-US');
+    });
+
+    it('should return traits that link TO this trait via excess', () => {
+      // overthinking is linked FROM analytical via excess
+      const reverseLinks = db.getReverseLinkedTraits('overthinking', 'excess', 10);
+      expect(reverseLinks.length).toBeGreaterThan(0);
+      expect(reverseLinks.some((t) => t.id === 'analytical')).toBe(true);
+      expect(reverseLinks.every((t) => t.polarity === 'positive')).toBe(true);
+    });
+
+    it('should return traits that link TO this trait via balance', () => {
+      // intuition is linked TO FROM overthinking via balance
+      const reverseLinks = db.getReverseLinkedTraits('intuition', 'balance', 10);
+      expect(reverseLinks.length).toBeGreaterThan(0);
+      expect(reverseLinks.every((t) => t.polarity === 'negative')).toBe(true);
+    });
+
+    it('should limit results to maxResults', () => {
+      const reverseLinks = db.getReverseLinkedTraits('intuition', 'balance', 3);
+      expect(reverseLinks.length).toBeLessThanOrEqual(3);
+    });
+
+    it('should return random subset when more than maxResults', () => {
+      const links1 = db.getReverseLinkedTraits('intuition', 'balance', 3);
+      const links2 = db.getReverseLinkedTraits('intuition', 'balance', 3);
+
+      expect(links1.length).toBe(3);
+      expect(links2.length).toBe(3);
+    });
+
+    it('should return empty array for non-existent trait', () => {
+      const reverseLinks = db.getReverseLinkedTraits('non-existent', 'excess', 5);
+      expect(reverseLinks).toEqual([]);
     });
   });
 });

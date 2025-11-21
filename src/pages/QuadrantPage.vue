@@ -98,8 +98,7 @@ const {
   reset,
 } = useQuadrantState();
 
-const { generateSuggestions, generateOfflineSuggestions, isLoading, error } =
-  useOfmanGenerator();
+const { generateSuggestions, generateOfflineSuggestions, isLoading, error } = useOfmanGenerator();
 const { loadDefaultDatabase } = useOfflineDatabase();
 
 // Local state
@@ -115,10 +114,7 @@ onMounted(() => {
 // Computed
 const canGenerate = computed(() => {
   // Can generate with API key OR in offline mode
-  return (
-    isReadyToGenerate.value &&
-    ((hasKey.value && isValidKey.value) || !hasKey.value)
-  );
+  return isReadyToGenerate.value && ((hasKey.value && isValidKey.value) || !hasKey.value);
 });
 
 const allQuadrantsComplete = computed(() => {
@@ -165,13 +161,21 @@ const handleGenerate = async () => {
       );
     } else {
       // Offline mode: use database links
-      // For offline mode, we need the trait ID not the label
-      // For MVP, we'll search the database for a matching trait
+      // Determine polarity based on input quadrant
+      // core_quality and challenge are positive traits
+      // pitfall and allergy are negative traits
+      const polarity =
+        inputQuadrant.value === 'core_quality' || inputQuadrant.value === 'challenge'
+          ? 'positive'
+          : 'negative';
+
       const { searchTraits } = useOfflineDatabase();
-      const matchingTraits = searchTraits(inputValue.value, 'positive');
-      
+      const matchingTraits = searchTraits(inputValue.value, polarity);
+
       if (matchingTraits.length === 0) {
-        throw new Error('Trait not found in database. Please select from autocomplete suggestions.');
+        throw new Error(
+          'Trait not found in database. Please select from autocomplete suggestions.',
+        );
       }
 
       // Use the first matching trait
