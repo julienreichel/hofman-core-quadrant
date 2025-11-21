@@ -91,32 +91,12 @@ export function useOfflineDbGenerator() {
     challenges: string[];
     allergies: string[];
   }> => {
-    // Generate pitfalls from core quality
-    const pitfallSuggestions = await generateSuggestions(
-      apiKey,
-      'core_quality',
-      coreQuality,
-      language,
-    );
-    const pitfalls = pitfallSuggestions.pitfall || [];
+    // Generate all three quadrants in a single API call
+    const suggestions = await generateSuggestions(apiKey, 'core_quality', coreQuality, language);
 
-    // Generate challenges from core quality
-    const challengeSuggestions = await generateSuggestions(
-      apiKey,
-      'core_quality',
-      coreQuality,
-      language,
-    );
-    const challenges = challengeSuggestions.challenge || [];
-
-    // Generate allergies from core quality
-    const allergySuggestions = await generateSuggestions(
-      apiKey,
-      'core_quality',
-      coreQuality,
-      language,
-    );
-    const allergies = allergySuggestions.allergy || [];
+    const pitfalls = suggestions.pitfall || [];
+    const challenges = suggestions.challenge || [];
+    const allergies = suggestions.allergy || [];
 
     return {
       core: coreQuality,
