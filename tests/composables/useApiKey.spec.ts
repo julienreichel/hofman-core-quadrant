@@ -19,7 +19,7 @@ describe('useApiKey', () => {
     });
 
     it('should load key from localStorage on initialization', () => {
-      localStorage.setItem('openai-api-key', 'sk-test123456789012345678901234567890');
+      localStorage.setItem('openai_api_key', 'sk-test123456789012345678901234567890');
       const { apiKey, hasKey } = useApiKey();
       expect(apiKey.value).toBe('sk-test123456789012345678901234567890');
       expect(hasKey.value).toBe(true);
@@ -35,7 +35,7 @@ describe('useApiKey', () => {
 
       expect(apiKey.value).toBe(testKey);
       expect(hasKey.value).toBe(true);
-      expect(localStorage.getItem('openai-api-key')).toBe(testKey);
+      expect(localStorage.getItem('openai_api_key')).toBe(testKey);
     });
   });
 
@@ -51,7 +51,7 @@ describe('useApiKey', () => {
 
       expect(apiKey.value).toBe('');
       expect(hasKey.value).toBe(false);
-      expect(localStorage.getItem('openai-api-key')).toBeNull();
+      expect(localStorage.getItem('openai_api_key')).toBeNull();
     });
   });
 
@@ -107,7 +107,7 @@ describe('useApiKey', () => {
       const { apiKey, loadKey } = useApiKey();
       expect(apiKey.value).toBe('');
 
-      localStorage.setItem('openai-api-key', 'sk-newkey123456789012345678901234567890');
+      localStorage.setItem('openai_api_key', 'sk-newkey123456789012345678901234567890');
       loadKey();
 
       expect(apiKey.value).toBe('sk-newkey123456789012345678901234567890');

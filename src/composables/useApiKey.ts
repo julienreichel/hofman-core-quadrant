@@ -9,7 +9,7 @@
 
 import { ref, computed } from 'vue';
 
-const API_KEY_STORAGE_KEY = 'openai-api-key';
+const API_KEY_STORAGE_KEY = 'openai_api_key';
 
 export function useApiKey() {
   const apiKey = ref<string>('');
