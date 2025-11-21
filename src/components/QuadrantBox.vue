@@ -20,10 +20,11 @@
         outlined
         dense
         use-input
+        hide-selected
+        fill-input
         input-debounce="0"
         @filter="filterOptions"
-        @update:model-value="handleSelect"
-        @input-value="handleInput"
+        @update:model-value="handleDropdownSelect"
       >
         <template v-slot:no-option>
           <q-item>
@@ -57,7 +58,7 @@
         <SuggestionList
           :suggestions="suggestions"
           :selected="selectedWord"
-          @select="handleSelect"
+          @select="handleSuggestionSelect"
         />
       </div>
     </q-card-section>
@@ -89,11 +90,21 @@ const handleInput = (value: string | number | null) => {
   emit('input', String(value || ''));
 };
 
-const handleSelect = (word: string) => {
+const handleDropdownSelect = (word: string) => {
+  // When selecting from autocomplete dropdown, treat it as input (not final selection)
+  // The user still needs to click Generate, then select from suggestions
+  emit('input', word);
+};
+
+const handleSuggestionSelect = (word: string) => {
+  // When clicking on a generated suggestion, mark it as the final selection
   emit('select', word);
 };
 
 const filterOptions = (val: string, update: (fn: () => void) => void) => {
+  // Emit input event to update parent's inputValue
+  emit('input', val);
+
   update(() => {
     if (val === '') {
       filteredOptions.value = [];
