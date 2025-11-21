@@ -100,21 +100,21 @@ describe('usePromptBuilder', () => {
     it('should default to English when no language specified', () => {
       const prompt = buildPrompt('core_quality', 'Decisive');
 
-      expect(prompt).toContain('MUST be in English');
+      expect(prompt).toContain('MUST respond in English');
     });
 
     it('should request English suggestions when language is "en"', () => {
       const prompt = buildPrompt('core_quality', 'Decisive', 'en');
 
-      expect(prompt).toContain('MUST be in English');
-      expect(prompt).not.toContain('MUST be in French');
+      expect(prompt).toContain('MUST respond in English');
+      expect(prompt).not.toContain('MUST respond in French');
     });
 
     it('should request French suggestions when language is "fr"', () => {
       const prompt = buildPrompt('core_quality', 'Décisif', 'fr');
 
-      expect(prompt).toContain('MUST be in French');
-      expect(prompt).not.toContain('MUST be in English');
+      expect(prompt).toContain('MUST respond in French');
+      expect(prompt).not.toContain('MUST respond in English');
     });
   });
 });

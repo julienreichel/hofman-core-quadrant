@@ -47,8 +47,13 @@ Relationships:
 
     const languageInstruction =
       language === 'fr'
-        ? '\n**IMPORTANT: All suggestions MUST be in French.**\n'
-        : '\n**IMPORTANT: All suggestions MUST be in English.**\n';
+        ? '\n**CRITICAL REQUIREMENT: You MUST respond in French. All suggestions MUST be French words or French phrases. This is mandatory.**\n'
+        : '\n**CRITICAL REQUIREMENT: You MUST respond in English. All suggestions MUST be English words or English phrases. This is mandatory.**\n';
+
+    const languageReminder =
+      language === 'fr'
+        ? '\n\nREMINDER: Return all suggestions in French only. No English words allowed.'
+        : '\n\nREMINDER: Return all suggestions in English only.';
 
     const prompt = `You are an expert in the Ofman Core Quadrant model, a framework for personal development and understanding behavior patterns.
 
@@ -59,6 +64,7 @@ The user has provided this ${inputQuadrant.replace('_', ' ')}: "${inputValue}"
 ${quadrantDescriptions[inputQuadrant]}
 
 Based on this input, generate 5 distinct suggestions for each of the OTHER three quadrants. Each suggestion should be a single word or short phrase (2-4 words maximum).
+${languageReminder}
 
 Return your response as a JSON object with this exact structure:
 {

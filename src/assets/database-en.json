@@ -1,0 +1,1476 @@
+{
+  "traits": [
+    {
+      "id": "analytical",
+      "label": "Analytical",
+      "polarity": "positive"
+    },
+    {
+      "id": "overthinking",
+      "label": "Overthinking",
+      "polarity": "negative"
+    },
+    {
+      "id": "indecisiveness",
+      "label": "Indecisiveness",
+      "polarity": "negative"
+    },
+    {
+      "id": "perfectionism",
+      "label": "Perfectionism",
+      "polarity": "negative"
+    },
+    {
+      "id": "isolation",
+      "label": "Isolation",
+      "polarity": "negative"
+    },
+    {
+      "id": "criticism",
+      "label": "Criticism",
+      "polarity": "negative"
+    },
+    {
+      "id": "intuition",
+      "label": "Intuition",
+      "polarity": "positive"
+    },
+    {
+      "id": "emotional-awareness",
+      "label": "Emotional awareness",
+      "polarity": "positive"
+    },
+    {
+      "id": "creativity",
+      "label": "Creativity",
+      "polarity": "positive"
+    },
+    {
+      "id": "flexibility",
+      "label": "Flexibility",
+      "polarity": "positive"
+    },
+    {
+      "id": "spontaneity",
+      "label": "Spontaneity",
+      "polarity": "positive"
+    },
+    {
+      "id": "chaos",
+      "label": "Chaos",
+      "polarity": "negative"
+    },
+    {
+      "id": "emotionality",
+      "label": "Emotionality",
+      "polarity": "negative"
+    },
+    {
+      "id": "impulsiveness",
+      "label": "Impulsiveness",
+      "polarity": "negative"
+    },
+    {
+      "id": "subjectivity",
+      "label": "Subjectivity",
+      "polarity": "negative"
+    },
+    {
+      "id": "unstructured",
+      "label": "Unstructured",
+      "polarity": "negative"
+    },
+    {
+      "id": "observant",
+      "label": "Observant",
+      "polarity": "positive"
+    },
+    {
+      "id": "overanalyzing",
+      "label": "Overanalyzing",
+      "polarity": "negative"
+    },
+    {
+      "id": "nitpicking",
+      "label": "Nitpicking",
+      "polarity": "negative"
+    },
+    {
+      "id": "cynicism",
+      "label": "Cynicism",
+      "polarity": "negative"
+    },
+    {
+      "id": "decisiveness",
+      "label": "Decisiveness",
+      "polarity": "positive"
+    },
+    {
+      "id": "trusting-instincts",
+      "label": "Trusting instincts",
+      "polarity": "positive"
+    },
+    {
+      "id": "simplicity",
+      "label": "Simplicity",
+      "polarity": "positive"
+    },
+    {
+      "id": "big-picture-thinking",
+      "label": "Big picture thinking",
+      "polarity": "positive"
+    },
+    {
+      "id": "ignorance",
+      "label": "Ignorance",
+      "polarity": "negative"
+    },
+    {
+      "id": "naivety",
+      "label": "Naivety",
+      "polarity": "negative"
+    },
+    {
+      "id": "disregard",
+      "label": "Disregard",
+      "polarity": "negative"
+    },
+    {
+      "id": "carelessness",
+      "label": "Carelessness",
+      "polarity": "negative"
+    },
+    {
+      "id": "curious",
+      "label": "Curious",
+      "polarity": "positive"
+    },
+    {
+      "id": "inquisitive-overdrive",
+      "label": "Inquisitive overdrive",
+      "polarity": "negative"
+    },
+    {
+      "id": "distraction",
+      "label": "Distraction",
+      "polarity": "negative"
+    },
+    {
+      "id": "restlessness",
+      "label": "Restlessness",
+      "polarity": "negative"
+    },
+    {
+      "id": "impatience",
+      "label": "Impatience",
+      "polarity": "negative"
+    },
+    {
+      "id": "focus",
+      "label": "Focus",
+      "polarity": "positive"
+    },
+    {
+      "id": "discipline",
+      "label": "Discipline",
+      "polarity": "positive"
+    },
+    {
+      "id": "patience",
+      "label": "Patience",
+      "polarity": "positive"
+    },
+    {
+      "id": "depth",
+      "label": "Depth",
+      "polarity": "positive"
+    },
+    {
+      "id": "groundedness",
+      "label": "Groundedness",
+      "polarity": "positive"
+    },
+    {
+      "id": "boredom",
+      "label": "Boredom",
+      "polarity": "negative"
+    },
+    {
+      "id": "stagnation",
+      "label": "Stagnation",
+      "polarity": "negative"
+    },
+    {
+      "id": "routine",
+      "label": "Routine",
+      "polarity": "negative"
+    },
+    {
+      "id": "conformity",
+      "label": "Conformity",
+      "polarity": "negative"
+    },
+    {
+      "id": "predictability",
+      "label": "Predictability",
+      "polarity": "negative"
+    },
+    {
+      "id": "strategic",
+      "label": "Strategic",
+      "polarity": "positive"
+    },
+    {
+      "id": "indecision",
+      "label": "Indecision",
+      "polarity": "negative"
+    },
+    {
+      "id": "rigidity",
+      "label": "Rigidity",
+      "polarity": "negative"
+    },
+    {
+      "id": "detachment",
+      "label": "Detachment",
+      "polarity": "negative"
+    },
+    {
+      "id": "overplanning",
+      "label": "Overplanning",
+      "polarity": "negative"
+    },
+    {
+      "id": "empathy",
+      "label": "Empathy",
+      "polarity": "positive"
+    },
+    {
+      "id": "collaboration",
+      "label": "Collaboration",
+      "polarity": "positive"
+    },
+    {
+      "id": "imprecision",
+      "label": "Imprecision",
+      "polarity": "negative"
+    },
+    {
+      "id": "lack-of-vision",
+      "label": "Lack of vision",
+      "polarity": "negative"
+    },
+    {
+      "id": "disorganization",
+      "label": "Disorganization",
+      "polarity": "negative"
+    },
+    {
+      "id": "short-sightedness",
+      "label": "Short-sightedness",
+      "polarity": "negative"
+    }
+  ],
+  "links": [
+    {
+      "from": "analytical",
+      "to": "overthinking",
+      "type": "excess"
+    },
+    {
+      "from": "analytical",
+      "to": "indecisiveness",
+      "type": "excess"
+    },
+    {
+      "from": "analytical",
+      "to": "perfectionism",
+      "type": "excess"
+    },
+    {
+      "from": "analytical",
+      "to": "isolation",
+      "type": "excess"
+    },
+    {
+      "from": "analytical",
+      "to": "criticism",
+      "type": "excess"
+    },
+    {
+      "from": "overthinking",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "indecisiveness",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionism",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "isolation",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "criticism",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "emotional-awareness",
+      "type": "balance"
+    },
+    {
+      "from": "indecisiveness",
+      "to": "emotional-awareness",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionism",
+      "to": "emotional-awareness",
+      "type": "balance"
+    },
+    {
+      "from": "isolation",
+      "to": "emotional-awareness",
+      "type": "balance"
+    },
+    {
+      "from": "criticism",
+      "to": "emotional-awareness",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "creativity",
+      "type": "balance"
+    },
+    {
+      "from": "indecisiveness",
+      "to": "creativity",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionism",
+      "to": "creativity",
+      "type": "balance"
+    },
+    {
+      "from": "isolation",
+      "to": "creativity",
+      "type": "balance"
+    },
+    {
+      "from": "criticism",
+      "to": "creativity",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "flexibility",
+      "type": "balance"
+    },
+    {
+      "from": "indecisiveness",
+      "to": "flexibility",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionism",
+      "to": "flexibility",
+      "type": "balance"
+    },
+    {
+      "from": "isolation",
+      "to": "flexibility",
+      "type": "balance"
+    },
+    {
+      "from": "criticism",
+      "to": "flexibility",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "indecisiveness",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionism",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "isolation",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "criticism",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "intuition",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "emotional-awareness",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "creativity",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "flexibility",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "chaos",
+      "to": "analytical",
+      "type": "balance"
+    },
+    {
+      "from": "intuition",
+      "to": "emotionality",
+      "type": "excess"
+    },
+    {
+      "from": "emotional-awareness",
+      "to": "emotionality",
+      "type": "excess"
+    },
+    {
+      "from": "creativity",
+      "to": "emotionality",
+      "type": "excess"
+    },
+    {
+      "from": "flexibility",
+      "to": "emotionality",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "emotionality",
+      "type": "excess"
+    },
+    {
+      "from": "emotionality",
+      "to": "analytical",
+      "type": "balance"
+    },
+    {
+      "from": "intuition",
+      "to": "impulsiveness",
+      "type": "excess"
+    },
+    {
+      "from": "emotional-awareness",
+      "to": "impulsiveness",
+      "type": "excess"
+    },
+    {
+      "from": "creativity",
+      "to": "impulsiveness",
+      "type": "excess"
+    },
+    {
+      "from": "flexibility",
+      "to": "impulsiveness",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "impulsiveness",
+      "type": "excess"
+    },
+    {
+      "from": "impulsiveness",
+      "to": "analytical",
+      "type": "balance"
+    },
+    {
+      "from": "intuition",
+      "to": "subjectivity",
+      "type": "excess"
+    },
+    {
+      "from": "emotional-awareness",
+      "to": "subjectivity",
+      "type": "excess"
+    },
+    {
+      "from": "creativity",
+      "to": "subjectivity",
+      "type": "excess"
+    },
+    {
+      "from": "flexibility",
+      "to": "subjectivity",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "subjectivity",
+      "type": "excess"
+    },
+    {
+      "from": "subjectivity",
+      "to": "analytical",
+      "type": "balance"
+    },
+    {
+      "from": "intuition",
+      "to": "unstructured",
+      "type": "excess"
+    },
+    {
+      "from": "emotional-awareness",
+      "to": "unstructured",
+      "type": "excess"
+    },
+    {
+      "from": "creativity",
+      "to": "unstructured",
+      "type": "excess"
+    },
+    {
+      "from": "flexibility",
+      "to": "unstructured",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "unstructured",
+      "type": "excess"
+    },
+    {
+      "from": "unstructured",
+      "to": "analytical",
+      "type": "balance"
+    },
+    {
+      "from": "observant",
+      "to": "overanalyzing",
+      "type": "excess"
+    },
+    {
+      "from": "observant",
+      "to": "indecisiveness",
+      "type": "excess"
+    },
+    {
+      "from": "observant",
+      "to": "nitpicking",
+      "type": "excess"
+    },
+    {
+      "from": "observant",
+      "to": "overthinking",
+      "type": "excess"
+    },
+    {
+      "from": "observant",
+      "to": "cynicism",
+      "type": "excess"
+    },
+    {
+      "from": "overanalyzing",
+      "to": "decisiveness",
+      "type": "balance"
+    },
+    {
+      "from": "indecisiveness",
+      "to": "decisiveness",
+      "type": "balance"
+    },
+    {
+      "from": "nitpicking",
+      "to": "decisiveness",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "decisiveness",
+      "type": "balance"
+    },
+    {
+      "from": "cynicism",
+      "to": "decisiveness",
+      "type": "balance"
+    },
+    {
+      "from": "overanalyzing",
+      "to": "trusting-instincts",
+      "type": "balance"
+    },
+    {
+      "from": "indecisiveness",
+      "to": "trusting-instincts",
+      "type": "balance"
+    },
+    {
+      "from": "nitpicking",
+      "to": "trusting-instincts",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "trusting-instincts",
+      "type": "balance"
+    },
+    {
+      "from": "cynicism",
+      "to": "trusting-instincts",
+      "type": "balance"
+    },
+    {
+      "from": "overanalyzing",
+      "to": "simplicity",
+      "type": "balance"
+    },
+    {
+      "from": "indecisiveness",
+      "to": "simplicity",
+      "type": "balance"
+    },
+    {
+      "from": "nitpicking",
+      "to": "simplicity",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "simplicity",
+      "type": "balance"
+    },
+    {
+      "from": "cynicism",
+      "to": "simplicity",
+      "type": "balance"
+    },
+    {
+      "from": "overanalyzing",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "indecisiveness",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "nitpicking",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "cynicism",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "overanalyzing",
+      "to": "big-picture-thinking",
+      "type": "balance"
+    },
+    {
+      "from": "indecisiveness",
+      "to": "big-picture-thinking",
+      "type": "balance"
+    },
+    {
+      "from": "nitpicking",
+      "to": "big-picture-thinking",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "big-picture-thinking",
+      "type": "balance"
+    },
+    {
+      "from": "cynicism",
+      "to": "big-picture-thinking",
+      "type": "balance"
+    },
+    {
+      "from": "decisiveness",
+      "to": "ignorance",
+      "type": "excess"
+    },
+    {
+      "from": "trusting-instincts",
+      "to": "ignorance",
+      "type": "excess"
+    },
+    {
+      "from": "simplicity",
+      "to": "ignorance",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "ignorance",
+      "type": "excess"
+    },
+    {
+      "from": "big-picture-thinking",
+      "to": "ignorance",
+      "type": "excess"
+    },
+    {
+      "from": "ignorance",
+      "to": "observant",
+      "type": "balance"
+    },
+    {
+      "from": "decisiveness",
+      "to": "naivety",
+      "type": "excess"
+    },
+    {
+      "from": "trusting-instincts",
+      "to": "naivety",
+      "type": "excess"
+    },
+    {
+      "from": "simplicity",
+      "to": "naivety",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "naivety",
+      "type": "excess"
+    },
+    {
+      "from": "big-picture-thinking",
+      "to": "naivety",
+      "type": "excess"
+    },
+    {
+      "from": "naivety",
+      "to": "observant",
+      "type": "balance"
+    },
+    {
+      "from": "decisiveness",
+      "to": "disregard",
+      "type": "excess"
+    },
+    {
+      "from": "trusting-instincts",
+      "to": "disregard",
+      "type": "excess"
+    },
+    {
+      "from": "simplicity",
+      "to": "disregard",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "disregard",
+      "type": "excess"
+    },
+    {
+      "from": "big-picture-thinking",
+      "to": "disregard",
+      "type": "excess"
+    },
+    {
+      "from": "disregard",
+      "to": "observant",
+      "type": "balance"
+    },
+    {
+      "from": "decisiveness",
+      "to": "impulsiveness",
+      "type": "excess"
+    },
+    {
+      "from": "trusting-instincts",
+      "to": "impulsiveness",
+      "type": "excess"
+    },
+    {
+      "from": "simplicity",
+      "to": "impulsiveness",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "impulsiveness",
+      "type": "excess"
+    },
+    {
+      "from": "big-picture-thinking",
+      "to": "impulsiveness",
+      "type": "excess"
+    },
+    {
+      "from": "impulsiveness",
+      "to": "observant",
+      "type": "balance"
+    },
+    {
+      "from": "decisiveness",
+      "to": "carelessness",
+      "type": "excess"
+    },
+    {
+      "from": "trusting-instincts",
+      "to": "carelessness",
+      "type": "excess"
+    },
+    {
+      "from": "simplicity",
+      "to": "carelessness",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "carelessness",
+      "type": "excess"
+    },
+    {
+      "from": "big-picture-thinking",
+      "to": "carelessness",
+      "type": "excess"
+    },
+    {
+      "from": "carelessness",
+      "to": "observant",
+      "type": "balance"
+    },
+    {
+      "from": "curious",
+      "to": "inquisitive-overdrive",
+      "type": "excess"
+    },
+    {
+      "from": "curious",
+      "to": "overthinking",
+      "type": "excess"
+    },
+    {
+      "from": "curious",
+      "to": "distraction",
+      "type": "excess"
+    },
+    {
+      "from": "curious",
+      "to": "restlessness",
+      "type": "excess"
+    },
+    {
+      "from": "curious",
+      "to": "impatience",
+      "type": "excess"
+    },
+    {
+      "from": "inquisitive-overdrive",
+      "to": "focus",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "focus",
+      "type": "balance"
+    },
+    {
+      "from": "distraction",
+      "to": "focus",
+      "type": "balance"
+    },
+    {
+      "from": "restlessness",
+      "to": "focus",
+      "type": "balance"
+    },
+    {
+      "from": "impatience",
+      "to": "focus",
+      "type": "balance"
+    },
+    {
+      "from": "inquisitive-overdrive",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "distraction",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "restlessness",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "impatience",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "inquisitive-overdrive",
+      "to": "patience",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "patience",
+      "type": "balance"
+    },
+    {
+      "from": "distraction",
+      "to": "patience",
+      "type": "balance"
+    },
+    {
+      "from": "restlessness",
+      "to": "patience",
+      "type": "balance"
+    },
+    {
+      "from": "impatience",
+      "to": "patience",
+      "type": "balance"
+    },
+    {
+      "from": "inquisitive-overdrive",
+      "to": "depth",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "depth",
+      "type": "balance"
+    },
+    {
+      "from": "distraction",
+      "to": "depth",
+      "type": "balance"
+    },
+    {
+      "from": "restlessness",
+      "to": "depth",
+      "type": "balance"
+    },
+    {
+      "from": "impatience",
+      "to": "depth",
+      "type": "balance"
+    },
+    {
+      "from": "inquisitive-overdrive",
+      "to": "groundedness",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "groundedness",
+      "type": "balance"
+    },
+    {
+      "from": "distraction",
+      "to": "groundedness",
+      "type": "balance"
+    },
+    {
+      "from": "restlessness",
+      "to": "groundedness",
+      "type": "balance"
+    },
+    {
+      "from": "impatience",
+      "to": "groundedness",
+      "type": "balance"
+    },
+    {
+      "from": "focus",
+      "to": "boredom",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "boredom",
+      "type": "excess"
+    },
+    {
+      "from": "patience",
+      "to": "boredom",
+      "type": "excess"
+    },
+    {
+      "from": "depth",
+      "to": "boredom",
+      "type": "excess"
+    },
+    {
+      "from": "groundedness",
+      "to": "boredom",
+      "type": "excess"
+    },
+    {
+      "from": "boredom",
+      "to": "curious",
+      "type": "balance"
+    },
+    {
+      "from": "focus",
+      "to": "stagnation",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "stagnation",
+      "type": "excess"
+    },
+    {
+      "from": "patience",
+      "to": "stagnation",
+      "type": "excess"
+    },
+    {
+      "from": "depth",
+      "to": "stagnation",
+      "type": "excess"
+    },
+    {
+      "from": "groundedness",
+      "to": "stagnation",
+      "type": "excess"
+    },
+    {
+      "from": "stagnation",
+      "to": "curious",
+      "type": "balance"
+    },
+    {
+      "from": "focus",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "patience",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "depth",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "groundedness",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "routine",
+      "to": "curious",
+      "type": "balance"
+    },
+    {
+      "from": "focus",
+      "to": "conformity",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "conformity",
+      "type": "excess"
+    },
+    {
+      "from": "patience",
+      "to": "conformity",
+      "type": "excess"
+    },
+    {
+      "from": "depth",
+      "to": "conformity",
+      "type": "excess"
+    },
+    {
+      "from": "groundedness",
+      "to": "conformity",
+      "type": "excess"
+    },
+    {
+      "from": "conformity",
+      "to": "curious",
+      "type": "balance"
+    },
+    {
+      "from": "focus",
+      "to": "predictability",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "predictability",
+      "type": "excess"
+    },
+    {
+      "from": "patience",
+      "to": "predictability",
+      "type": "excess"
+    },
+    {
+      "from": "depth",
+      "to": "predictability",
+      "type": "excess"
+    },
+    {
+      "from": "groundedness",
+      "to": "predictability",
+      "type": "excess"
+    },
+    {
+      "from": "predictability",
+      "to": "curious",
+      "type": "balance"
+    },
+    {
+      "from": "strategic",
+      "to": "overthinking",
+      "type": "excess"
+    },
+    {
+      "from": "strategic",
+      "to": "indecision",
+      "type": "excess"
+    },
+    {
+      "from": "strategic",
+      "to": "rigidity",
+      "type": "excess"
+    },
+    {
+      "from": "strategic",
+      "to": "detachment",
+      "type": "excess"
+    },
+    {
+      "from": "strategic",
+      "to": "overplanning",
+      "type": "excess"
+    },
+    {
+      "from": "overthinking",
+      "to": "flexibility",
+      "type": "balance"
+    },
+    {
+      "from": "indecision",
+      "to": "flexibility",
+      "type": "balance"
+    },
+    {
+      "from": "rigidity",
+      "to": "flexibility",
+      "type": "balance"
+    },
+    {
+      "from": "detachment",
+      "to": "flexibility",
+      "type": "balance"
+    },
+    {
+      "from": "overplanning",
+      "to": "flexibility",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "empathy",
+      "type": "balance"
+    },
+    {
+      "from": "indecision",
+      "to": "empathy",
+      "type": "balance"
+    },
+    {
+      "from": "rigidity",
+      "to": "empathy",
+      "type": "balance"
+    },
+    {
+      "from": "detachment",
+      "to": "empathy",
+      "type": "balance"
+    },
+    {
+      "from": "overplanning",
+      "to": "empathy",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "indecision",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "rigidity",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "detachment",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "overplanning",
+      "to": "spontaneity",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "collaboration",
+      "type": "balance"
+    },
+    {
+      "from": "indecision",
+      "to": "collaboration",
+      "type": "balance"
+    },
+    {
+      "from": "rigidity",
+      "to": "collaboration",
+      "type": "balance"
+    },
+    {
+      "from": "detachment",
+      "to": "collaboration",
+      "type": "balance"
+    },
+    {
+      "from": "overplanning",
+      "to": "collaboration",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "indecision",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "rigidity",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "detachment",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "overplanning",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "flexibility",
+      "to": "imprecision",
+      "type": "excess"
+    },
+    {
+      "from": "empathy",
+      "to": "imprecision",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "imprecision",
+      "type": "excess"
+    },
+    {
+      "from": "collaboration",
+      "to": "imprecision",
+      "type": "excess"
+    },
+    {
+      "from": "intuition",
+      "to": "imprecision",
+      "type": "excess"
+    },
+    {
+      "from": "imprecision",
+      "to": "strategic",
+      "type": "balance"
+    },
+    {
+      "from": "flexibility",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "empathy",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "collaboration",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "intuition",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "chaos",
+      "to": "strategic",
+      "type": "balance"
+    },
+    {
+      "from": "flexibility",
+      "to": "lack-of-vision",
+      "type": "excess"
+    },
+    {
+      "from": "empathy",
+      "to": "lack-of-vision",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "lack-of-vision",
+      "type": "excess"
+    },
+    {
+      "from": "collaboration",
+      "to": "lack-of-vision",
+      "type": "excess"
+    },
+    {
+      "from": "intuition",
+      "to": "lack-of-vision",
+      "type": "excess"
+    },
+    {
+      "from": "lack-of-vision",
+      "to": "strategic",
+      "type": "balance"
+    },
+    {
+      "from": "flexibility",
+      "to": "disorganization",
+      "type": "excess"
+    },
+    {
+      "from": "empathy",
+      "to": "disorganization",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "disorganization",
+      "type": "excess"
+    },
+    {
+      "from": "collaboration",
+      "to": "disorganization",
+      "type": "excess"
+    },
+    {
+      "from": "intuition",
+      "to": "disorganization",
+      "type": "excess"
+    },
+    {
+      "from": "disorganization",
+      "to": "strategic",
+      "type": "balance"
+    },
+    {
+      "from": "flexibility",
+      "to": "short-sightedness",
+      "type": "excess"
+    },
+    {
+      "from": "empathy",
+      "to": "short-sightedness",
+      "type": "excess"
+    },
+    {
+      "from": "spontaneity",
+      "to": "short-sightedness",
+      "type": "excess"
+    },
+    {
+      "from": "collaboration",
+      "to": "short-sightedness",
+      "type": "excess"
+    },
+    {
+      "from": "intuition",
+      "to": "short-sightedness",
+      "type": "excess"
+    },
+    {
+      "from": "short-sightedness",
+      "to": "strategic",
+      "type": "balance"
+    }
+  ]
+}
