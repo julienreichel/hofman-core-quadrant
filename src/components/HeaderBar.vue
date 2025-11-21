@@ -37,11 +37,26 @@
 </template>
 
 <script setup lang="ts">
+import { watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { useLanguage } from 'src/composables/useLanguage';
 import { useApiKey } from 'src/composables/useApiKey';
 
+// i18n
+const { locale } = useI18n();
+
 // Language management
 const { currentLang, setLang, availableLanguages } = useLanguage();
+
+// Sync currentLang with i18n locale
+watch(
+  currentLang,
+  (newLang) => {
+    // Map short code to full locale code
+    locale.value = newLang === 'en' ? 'en-US' : 'fr-FR';
+  },
+  { immediate: true },
+);
 
 // API key management
 const { hasKey } = useApiKey();
