@@ -100,11 +100,12 @@ const canGenerate = computed(() => {
 });
 
 const allQuadrantsComplete = computed(() => {
+  const words = selectedWords.value;
   return (
-    selectedWords.value.core_quality !== '' &&
-    selectedWords.value.pitfall !== '' &&
-    selectedWords.value.challenge !== '' &&
-    selectedWords.value.allergy !== ''
+    words.core_quality.length > 0 &&
+    words.pitfall.length > 0 &&
+    words.challenge.length > 0 &&
+    words.allergy.length > 0
   );
 });
 
