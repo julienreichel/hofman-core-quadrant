@@ -1,9 +1,10 @@
 {
   "name": "hofman-core-quadrant",
   "version": "0.0.1",
-  "description": "An MVP to play with Hofman core quadrant",
-  "productName": "Hofman Core Quadrant",
+  "description": "AI-powered Ofman Core Quadrant Generator for personal development",
+  "productName": "Ofman Core Quadrant Generator",
   "author": "Julien Reichel <julien.reichel@bluewin.ch>",
+  "license": "MIT",
   "type": "module",
   "private": true,
   "scripts": {
