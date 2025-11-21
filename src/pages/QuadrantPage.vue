@@ -135,6 +135,9 @@ const handleGenerate = async () => {
 
     setSuggestions(newSuggestions);
 
+    // Set the user's input as the selected word for that quadrant
+    selectWord(inputQuadrant.value!, inputValue.value);
+
     $q.notify({
       type: 'positive',
       message: 'Suggestions generated successfully!',

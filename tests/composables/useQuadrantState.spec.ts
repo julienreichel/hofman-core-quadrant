@@ -43,11 +43,13 @@ describe('useQuadrantState', () => {
       expect(inputValue.value).toBe('Decisive');
     });
 
-    it('should set selected word for input quadrant', () => {
+    it('should not set selected word for input quadrant', () => {
       const { selectedWords, setInput } = useQuadrantState();
       setInput('pitfall', 'Domineering');
 
-      expect(selectedWords.value.pitfall).toBe('Domineering');
+      // setInput should only update inputQuadrant and inputValue,
+      // not the selectedWords. Selection happens explicitly via selectWord()
+      expect(selectedWords.value.pitfall).toBe('');
     });
 
     it('should update input when called multiple times', () => {

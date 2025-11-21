@@ -52,7 +52,7 @@ export function useQuadrantState() {
   const setInput = (quadrant: QuadrantType, value: string) => {
     inputQuadrant.value = quadrant;
     inputValue.value = value;
-    selectedWords.value[quadrant] = value; // User input becomes selected word
+    // Note: selectedWords will be set when user confirms (generates or selects)
   };
 
   // Set suggestions from AI generation
