@@ -1,6 +1,11 @@
 # Ofman Core Quadrant Generator
 
+[![CI/CD Pipeline](https://github.com/julienreichel/hofman-core-quadrant/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/julienreichel/hofman-core-quadrant/actions/workflows/ci-cd.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 An AI-powered web application for generating personalized [Ofman Core Quadrant](https://en.wikipedia.org/wiki/Core_quadrants) insights for personal development and understanding behavior patterns.
+
+**🌐 Live Demo**: [https://julienreichel.github.io/hofman-core-quadrant/](https://julienreichel.github.io/hofman-core-quadrant/)
 
 ## 🎯 Features
 
@@ -94,7 +99,39 @@ npm run lint
 npm run format
 ```
 
-## 🛠️ Tech Stack
+## � Deployment
+
+The application is automatically deployed to GitHub Pages via GitHub Actions on every push to the `main` branch.
+
+### CI/CD Pipeline
+
+The workflow includes:
+
+1. **Quality Gate**
+   - Run ESLint checks
+   - Execute all unit tests (66 tests)
+   - Generate coverage report
+
+2. **Build**
+   - Build optimized production bundle
+   - Generate static files for deployment
+
+3. **Deploy**
+   - Automatically deploy to GitHub Pages
+   - Available at: https://julienreichel.github.io/hofman-core-quadrant/
+
+### Manual Deployment
+
+To deploy manually to GitHub Pages:
+
+```bash
+# Build with GitHub Pages configuration
+GITHUB_PAGES=true npm run build
+
+# The dist/spa/ folder is ready for deployment
+```
+
+## �🛠️ Tech Stack
 
 - **Framework**: [Quasar v2](https://quasar.dev) (Vue 3 + Vite)
 - **Language**: TypeScript (strict mode)
