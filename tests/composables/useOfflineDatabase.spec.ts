@@ -1,23 +1,54 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { useOfflineDatabase } from 'src/composables/useOfflineDatabase';
+import databaseEn from 'src/assets/database.en.json';
+import databaseFr from 'src/assets/database.fr.json';
+
+// Mock fetch
+global.fetch = vi.fn((input: RequestInfo | URL) => {
+  let url = '';
+  if (typeof input === 'string') {
+    url = input;
+  } else if (input instanceof URL) {
+    url = input.href;
+  } else if (input instanceof Request) {
+    url = input.url;
+  }
+  
+  if (url.includes('database.en.json')) {
+    return Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve(databaseEn),
+    } as Response);
+  }
+  if (url.includes('database.fr.json')) {
+    return Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve(databaseFr),
+    } as Response);
+  }
+  return Promise.resolve({
+    ok: false,
+    statusText: 'Not Found',
+  } as Response);
+}) as typeof fetch;
 
 describe('useOfflineDatabase', () => {
   let db: ReturnType<typeof useOfflineDatabase>;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     db = useOfflineDatabase();
   });
 
   describe('loadDefaultDatabase', () => {
-    it('should load English database', () => {
-      db.loadDefaultDatabase('en-US');
+    it('should load English database', async () => {
+      await await db.loadDefaultDatabase('en-US');
       expect(db.isDatabaseLoaded.value).toBe(true);
       expect(db.isCustomDatabase.value).toBe(false);
       expect(db.traitCount.value).toBeGreaterThan(0);
     });
 
-    it('should load French database', () => {
-      db.loadDefaultDatabase('fr-FR');
+    it('should load French database', async () => {
+      await await db.loadDefaultDatabase('fr-FR');
       expect(db.isDatabaseLoaded.value).toBe(true);
       expect(db.isCustomDatabase.value).toBe(false);
       expect(db.traitCount.value).toBeGreaterThan(0);
@@ -76,8 +107,8 @@ describe('useOfflineDatabase', () => {
   });
 
   describe('getTraitsByPolarity', () => {
-    beforeEach(() => {
-      db.loadDefaultDatabase('en-US');
+    beforeEach(async () => {
+      await await db.loadDefaultDatabase('en-US');
     });
 
     it('should return positive traits', () => {
@@ -94,8 +125,8 @@ describe('useOfflineDatabase', () => {
   });
 
   describe('getTraitById', () => {
-    beforeEach(() => {
-      db.loadDefaultDatabase('en-US');
+    beforeEach(async () => {
+      await db.loadDefaultDatabase('en-US');
     });
 
     it('should find existing trait', () => {
@@ -111,8 +142,8 @@ describe('useOfflineDatabase', () => {
   });
 
   describe('searchTraits', () => {
-    beforeEach(() => {
-      db.loadDefaultDatabase('en-US');
+    beforeEach(async () => {
+      await db.loadDefaultDatabase('en-US');
     });
 
     it('should find traits by partial label match', () => {
@@ -139,8 +170,8 @@ describe('useOfflineDatabase', () => {
   });
 
   describe('getLinkedTraits', () => {
-    beforeEach(() => {
-      db.loadDefaultDatabase('en-US');
+    beforeEach(async () => {
+      await db.loadDefaultDatabase('en-US');
     });
 
     it('should return linked traits via excess type', () => {
@@ -177,8 +208,8 @@ describe('useOfflineDatabase', () => {
   });
 
   describe('getReverseLinkedTraits', () => {
-    beforeEach(() => {
-      db.loadDefaultDatabase('en-US');
+    beforeEach(async () => {
+      await db.loadDefaultDatabase('en-US');
     });
 
     it('should return traits that link TO this trait via excess', () => {

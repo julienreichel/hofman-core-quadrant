@@ -35,14 +35,14 @@ export function useOfmanGenerator() {
 
     // Define the circular order of quadrants
     const quadrantOrder: QuadrantType[] = ['core_quality', 'pitfall', 'challenge', 'allergy'];
-    
+
     // Define link types between quadrants (alternates: excess, balance, excess, balance)
     // core→pitfall: excess, pitfall→challenge: balance, challenge→allergy: excess, allergy→core: balance
     const linkTypes: Array<'excess' | 'balance'> = ['excess', 'balance', 'excess', 'balance'];
 
     // Find starting position
     const startIndex = quadrantOrder.indexOf(inputQuadrant);
-    
+
     // Track current traits for traversal
     let currentTraits = [{ id: inputTraitId, label: '' }]; // We only need IDs for traversal
 

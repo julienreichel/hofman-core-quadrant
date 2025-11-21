@@ -1,7 +1,5 @@
 import { ref, computed } from 'vue';
 import type { MessageLanguages } from 'src/boot/i18n';
-import databaseEn from 'src/assets/database.en.json';
-import databaseFr from 'src/assets/database.fr.json';
 
 export interface TraitNode {
   id: string;
@@ -32,10 +30,20 @@ export function useOfflineDatabase() {
   /**
    * Load the default database for the given language
    */
-  function loadDefaultDatabase(language: MessageLanguages): void {
-    const db = language === 'fr-FR' ? databaseFr : databaseEn;
-    currentDatabase.value = db as OfflineDatabase;
-    isCustomDatabase.value = false;
+  async function loadDefaultDatabase(language: MessageLanguages): Promise<void> {
+    const fileName = language === 'fr-FR' ? 'database.fr.json' : 'database.en.json';
+    try {
+      const response = await fetch(`/src/assets/${fileName}`);
+      if (!response.ok) {
+        throw new Error(`Failed to load database: ${response.statusText}`);
+      }
+      const db = await response.json();
+      currentDatabase.value = db as OfflineDatabase;
+      isCustomDatabase.value = false;
+    } catch (error) {
+      console.error('Failed to load default database:', error);
+      throw error;
+    }
   }
 
   /**

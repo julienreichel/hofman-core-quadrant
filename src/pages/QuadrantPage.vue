@@ -105,10 +105,14 @@ const { loadDefaultDatabase } = useOfflineDatabase();
 const errorMessage = ref<string | null>(null);
 
 // Initialize offline database on mount
-onMounted(() => {
+onMounted(async () => {
   // Convert 'en'/'fr' to 'en-US'/'fr-FR' for database loading
   const dbLang = currentLang.value === 'fr' ? 'fr-FR' : 'en-US';
-  loadDefaultDatabase(dbLang);
+  try {
+    await loadDefaultDatabase(dbLang);
+  } catch (error) {
+    console.error('Failed to load offline database:', error);
+  }
 });
 
 // Computed
