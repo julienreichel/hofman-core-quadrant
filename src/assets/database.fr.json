@@ -1,68 +1,13 @@
 {
   "traits": [
     {
-      "id": "doute",
-      "label": "Doute",
+      "id": "analytique",
+      "label": "Analytique",
       "polarity": "positive"
     },
     {
-      "id": "indcision",
-      "label": "indécision",
-      "polarity": "negative"
-    },
-    {
-      "id": "paralysie",
-      "label": "paralysie",
-      "polarity": "negative"
-    },
-    {
-      "id": "angoisse",
-      "label": "angoisse",
-      "polarity": "negative"
-    },
-    {
-      "id": "mfiance",
-      "label": "méfiance",
-      "polarity": "negative"
-    },
-    {
-      "id": "scepticisme",
-      "label": "scepticisme",
-      "polarity": "negative"
-    },
-    {
-      "id": "confiance",
-      "label": "confiance",
-      "polarity": "positive"
-    },
-    {
-      "id": "croyance",
-      "label": "croyance",
-      "polarity": "positive"
-    },
-    {
-      "id": "assurance",
-      "label": "assurance",
-      "polarity": "positive"
-    },
-    {
-      "id": "optimisme",
-      "label": "optimisme",
-      "polarity": "positive"
-    },
-    {
-      "id": "fermet",
-      "label": "fermeté",
-      "polarity": "positive"
-    },
-    {
-      "id": "certitude",
-      "label": "certitude",
-      "polarity": "negative"
-    },
-    {
-      "id": "dogmatisme",
-      "label": "dogmatisme",
+      "id": "trop-critique",
+      "label": "trop critique",
       "polarity": "negative"
     },
     {
@@ -71,53 +16,28 @@
       "polarity": "negative"
     },
     {
-      "id": "arrogance",
-      "label": "arrogance",
+      "id": "surdveloppement",
+      "label": "surdéveloppement",
       "polarity": "negative"
     },
     {
-      "id": "inflexibilit",
-      "label": "inflexibilité",
+      "id": "perfectionnisme",
+      "label": "perfectionnisme",
       "polarity": "negative"
     },
     {
-      "id": "sincrit",
-      "label": "Sincérité",
+      "id": "analyse-excessive",
+      "label": "analyse excessive",
+      "polarity": "negative"
+    },
+    {
+      "id": "crativit",
+      "label": "créativité",
       "polarity": "positive"
     },
     {
-      "id": "brutalit",
-      "label": "brutalité",
-      "polarity": "negative"
-    },
-    {
-      "id": "insensibilit",
-      "label": "insensibilité",
-      "polarity": "negative"
-    },
-    {
-      "id": "trop-de-franchise",
-      "label": "trop de franchise",
-      "polarity": "negative"
-    },
-    {
-      "id": "imprcision",
-      "label": "imprécision",
-      "polarity": "negative"
-    },
-    {
-      "id": "diplomatie",
-      "label": "diplomatie",
-      "polarity": "positive"
-    },
-    {
-      "id": "tact",
-      "label": "tact",
-      "polarity": "positive"
-    },
-    {
-      "id": "coute",
-      "label": "écoute",
+      "id": "intuition",
+      "label": "intuition",
       "polarity": "positive"
     },
     {
@@ -126,635 +46,7000 @@
       "polarity": "positive"
     },
     {
-      "id": "compassion",
-      "label": "compassion",
+      "id": "relationnel",
+      "label": "relationnel",
       "polarity": "positive"
     },
     {
-      "id": "hypocrisie",
-      "label": "hypocrisie",
+      "id": "improvisation",
+      "label": "improvisation",
+      "polarity": "positive"
+    },
+    {
+      "id": "dsorganisation",
+      "label": "désorganisation",
       "polarity": "negative"
     },
     {
-      "id": "manipulation",
-      "label": "manipulation",
+      "id": "imprvisibilit",
+      "label": "imprévisibilité",
       "polarity": "negative"
     },
     {
-      "id": "fausse-modestie",
-      "label": "fausse modestie",
+      "id": "superficialit",
+      "label": "superficialité",
       "polarity": "negative"
     },
     {
-      "id": "dsinvolture",
-      "label": "désinvolture",
+      "id": "motionnel",
+      "label": "émotionnel",
+      "polarity": "negative"
+    },
+    {
+      "id": "chaos",
+      "label": "chaos",
+      "polarity": "negative"
+    },
+    {
+      "id": "empathique",
+      "label": "Empathique",
+      "polarity": "positive"
+    },
+    {
+      "id": "trop-motif",
+      "label": "trop émotif",
+      "polarity": "negative"
+    },
+    {
+      "id": "manque-de-limites",
+      "label": "manque de limites",
+      "polarity": "negative"
+    },
+    {
+      "id": "dpendance-affective",
+      "label": "dépendance affective",
+      "polarity": "negative"
+    },
+    {
+      "id": "suridentification",
+      "label": "suridentification",
+      "polarity": "negative"
+    },
+    {
+      "id": "puisement-motionnel",
+      "label": "épuisement émotionnel",
+      "polarity": "negative"
+    },
+    {
+      "id": "assertivit",
+      "label": "assertivité",
+      "polarity": "positive"
+    },
+    {
+      "id": "indpendance",
+      "label": "indépendance",
+      "polarity": "positive"
+    },
+    {
+      "id": "objectivit",
+      "label": "objectivité",
+      "polarity": "positive"
+    },
+    {
+      "id": "rsilience",
+      "label": "résilience",
+      "polarity": "positive"
+    },
+    {
+      "id": "dtermination",
+      "label": "détermination",
+      "polarity": "positive"
+    },
+    {
+      "id": "insensibilit",
+      "label": "insensibilité",
       "polarity": "negative"
     },
     {
       "id": "indiffrence",
       "label": "indifférence",
       "polarity": "negative"
+    },
+    {
+      "id": "gosme",
+      "label": "égoïsme",
+      "polarity": "negative"
+    },
+    {
+      "id": "manque-dempathie",
+      "label": "manque d'empathie",
+      "polarity": "negative"
+    },
+    {
+      "id": "proactif",
+      "label": "Proactif",
+      "polarity": "positive"
+    },
+    {
+      "id": "impatience",
+      "label": "Impatience",
+      "polarity": "negative"
+    },
+    {
+      "id": "impulsivit",
+      "label": "Impulsivité",
+      "polarity": "negative"
+    },
+    {
+      "id": "dominance",
+      "label": "Dominance",
+      "polarity": "negative"
+    },
+    {
+      "id": "surcharge",
+      "label": "Surcharge",
+      "polarity": "negative"
+    },
+    {
+      "id": "ractivit",
+      "label": "Réactivité",
+      "polarity": "positive"
+    },
+    {
+      "id": "patience",
+      "label": "Patience",
+      "polarity": "positive"
+    },
+    {
+      "id": "coute",
+      "label": "Écoute",
+      "polarity": "positive"
+    },
+    {
+      "id": "acceptation",
+      "label": "Acceptation",
+      "polarity": "positive"
+    },
+    {
+      "id": "passivit",
+      "label": "Passivité",
+      "polarity": "negative"
+    },
+    {
+      "id": "inertie",
+      "label": "Inertie",
+      "polarity": "negative"
+    },
+    {
+      "id": "indcision",
+      "label": "Indécision",
+      "polarity": "negative"
+    },
+    {
+      "id": "dlai",
+      "label": "Délai",
+      "polarity": "negative"
+    },
+    {
+      "id": "manque-dinitiative",
+      "label": "Manque d'initiative",
+      "polarity": "negative"
+    },
+    {
+      "id": "imaginatif",
+      "label": "Imaginatif",
+      "polarity": "positive"
+    },
+    {
+      "id": "dlire",
+      "label": "délire",
+      "polarity": "negative"
+    },
+    {
+      "id": "perte-de-contact",
+      "label": "perte de contact",
+      "polarity": "negative"
+    },
+    {
+      "id": "fantaisie-excessive",
+      "label": "fantaisie excessive",
+      "polarity": "negative"
+    },
+    {
+      "id": "incohrence",
+      "label": "incohérence",
+      "polarity": "negative"
+    },
+    {
+      "id": "ralisme",
+      "label": "réalisme",
+      "polarity": "positive"
+    },
+    {
+      "id": "pragmatisme",
+      "label": "pragmatisme",
+      "polarity": "positive"
+    },
+    {
+      "id": "structure",
+      "label": "structure",
+      "polarity": "positive"
+    },
+    {
+      "id": "discipline",
+      "label": "discipline",
+      "polarity": "positive"
+    },
+    {
+      "id": "mthode",
+      "label": "méthode",
+      "polarity": "positive"
+    },
+    {
+      "id": "routine",
+      "label": "routine",
+      "polarity": "negative"
+    },
+    {
+      "id": "prvisibilit",
+      "label": "prévisibilité",
+      "polarity": "negative"
+    },
+    {
+      "id": "banalit",
+      "label": "banalité",
+      "polarity": "negative"
+    },
+    {
+      "id": "ennui",
+      "label": "ennui",
+      "polarity": "negative"
+    },
+    {
+      "id": "calme",
+      "label": "Calme",
+      "polarity": "positive"
+    },
+    {
+      "id": "apathie",
+      "label": "Apathie",
+      "polarity": "negative"
+    },
+    {
+      "id": "dtachement",
+      "label": "Détachement",
+      "polarity": "negative"
+    },
+    {
+      "id": "dynamisme",
+      "label": "Dynamisme",
+      "polarity": "positive"
+    },
+    {
+      "id": "nergie",
+      "label": "Énergie",
+      "polarity": "positive"
+    },
+    {
+      "id": "engagement",
+      "label": "Engagement",
+      "polarity": "positive"
+    },
+    {
+      "id": "proactivit",
+      "label": "Proactivité",
+      "polarity": "positive"
+    },
+    {
+      "id": "agitation",
+      "label": "Agitation",
+      "polarity": "negative"
+    },
+    {
+      "id": "stress",
+      "label": "Stress",
+      "polarity": "negative"
+    },
+    {
+      "id": "conflit",
+      "label": "Conflit",
+      "polarity": "negative"
+    },
+    {
+      "id": "bruit",
+      "label": "Bruit",
+      "polarity": "negative"
+    },
+    {
+      "id": "observateur",
+      "label": "Observateur",
+      "polarity": "positive"
+    },
+    {
+      "id": "trop-analytique",
+      "label": "trop analytique",
+      "polarity": "negative"
+    },
+    {
+      "id": "passivit-excessive",
+      "label": "passivité excessive",
+      "polarity": "negative"
+    },
+    {
+      "id": "dtachement-motionnel",
+      "label": "détachement émotionnel",
+      "polarity": "negative"
+    },
+    {
+      "id": "surveillance-constante",
+      "label": "surveillance constante",
+      "polarity": "negative"
+    },
+    {
+      "id": "expression-motionnelle",
+      "label": "expression émotionnelle",
+      "polarity": "positive"
+    },
+    {
+      "id": "interaction-sociale",
+      "label": "interaction sociale",
+      "polarity": "positive"
+    },
+    {
+      "id": "confiance-en-soi",
+      "label": "confiance en soi",
+      "polarity": "positive"
+    },
+    {
+      "id": "confusion",
+      "label": "confusion",
+      "polarity": "negative"
+    },
+    {
+      "id": "soutenant",
+      "label": "Soutenant",
+      "polarity": "positive"
+    },
+    {
+      "id": "crasant",
+      "label": "Écrasant",
+      "polarity": "negative"
+    },
+    {
+      "id": "manipulateur",
+      "label": "Manipulateur",
+      "polarity": "negative"
+    },
+    {
+      "id": "surprotecteur",
+      "label": "Surprotecteur",
+      "polarity": "negative"
+    },
+    {
+      "id": "dominateur",
+      "label": "Dominateur",
+      "polarity": "negative"
+    },
+    {
+      "id": "inflexible",
+      "label": "Inflexible",
+      "polarity": "negative"
+    },
+    {
+      "id": "indpendant",
+      "label": "Indépendant",
+      "polarity": "positive"
+    },
+    {
+      "id": "autonome",
+      "label": "Autonome",
+      "polarity": "positive"
+    },
+    {
+      "id": "assertif",
+      "label": "Assertif",
+      "polarity": "positive"
+    },
+    {
+      "id": "sincre",
+      "label": "Sincère",
+      "polarity": "positive"
+    },
+    {
+      "id": "critique",
+      "label": "Critique",
+      "polarity": "positive"
+    },
+    {
+      "id": "ngligence",
+      "label": "Négligence",
+      "polarity": "negative"
+    },
+    {
+      "id": "agressif",
+      "label": "agressif",
+      "polarity": "negative"
+    },
+    {
+      "id": "dominant",
+      "label": "dominant",
+      "polarity": "negative"
+    },
+    {
+      "id": "impulsif",
+      "label": "impulsif",
+      "polarity": "negative"
+    },
+    {
+      "id": "autoritaire",
+      "label": "autoritaire",
+      "polarity": "negative"
+    },
+    {
+      "id": "empathie",
+      "label": "empathie",
+      "polarity": "positive"
+    },
+    {
+      "id": "souplesse",
+      "label": "souplesse",
+      "polarity": "positive"
+    },
+    {
+      "id": "humilit",
+      "label": "humilité",
+      "polarity": "positive"
+    },
+    {
+      "id": "collaboration",
+      "label": "collaboration",
+      "polarity": "positive"
+    },
+    {
+      "id": "soumission",
+      "label": "soumission",
+      "polarity": "negative"
+    },
+    {
+      "id": "timidit",
+      "label": "timidité",
+      "polarity": "negative"
+    },
+    {
+      "id": "lchet",
+      "label": "lâcheté",
+      "polarity": "negative"
+    },
+    {
+      "id": "innovant",
+      "label": "Innovant",
+      "polarity": "positive"
+    },
+    {
+      "id": "distraction",
+      "label": "distraction",
+      "polarity": "negative"
+    },
+    {
+      "id": "surengagement",
+      "label": "surengagement",
+      "polarity": "negative"
+    },
+    {
+      "id": "rigueur",
+      "label": "rigueur",
+      "polarity": "positive"
+    },
+    {
+      "id": "organisation",
+      "label": "organisation",
+      "polarity": "positive"
+    },
+    {
+      "id": "mthodologie",
+      "label": "méthodologie",
+      "polarity": "positive"
+    },
+    {
+      "id": "prcision",
+      "label": "précision",
+      "polarity": "positive"
+    },
+    {
+      "id": "stabilit",
+      "label": "stabilité",
+      "polarity": "positive"
+    },
+    {
+      "id": "conformisme",
+      "label": "conformisme",
+      "polarity": "negative"
+    },
+    {
+      "id": "immobilisme",
+      "label": "immobilisme",
+      "polarity": "negative"
+    },
+    {
+      "id": "rsilient",
+      "label": "Résilient",
+      "polarity": "positive"
+    },
+    {
+      "id": "ttu",
+      "label": "têtu",
+      "polarity": "negative"
+    },
+    {
+      "id": "insensible",
+      "label": "insensible",
+      "polarity": "negative"
+    },
+    {
+      "id": "surmen",
+      "label": "surmené",
+      "polarity": "negative"
+    },
+    {
+      "id": "isol",
+      "label": "isolé",
+      "polarity": "negative"
+    },
+    {
+      "id": "ddaigneux",
+      "label": "dédaigneux",
+      "polarity": "negative"
+    },
+    {
+      "id": "sensibilit",
+      "label": "sensibilité",
+      "polarity": "positive"
+    },
+    {
+      "id": "lgret",
+      "label": "légèreté",
+      "polarity": "positive"
+    },
+    {
+      "id": "ouverture",
+      "label": "ouverture",
+      "polarity": "positive"
+    },
+    {
+      "id": "faiblesse",
+      "label": "faiblesse",
+      "polarity": "negative"
+    },
+    {
+      "id": "vulnrabilit",
+      "label": "vulnérabilité",
+      "polarity": "negative"
+    },
+    {
+      "id": "pessimisme",
+      "label": "pessimisme",
+      "polarity": "negative"
+    },
+    {
+      "id": "curieux",
+      "label": "Curieux",
+      "polarity": "positive"
+    },
+    {
+      "id": "invasif",
+      "label": "invasif",
+      "polarity": "negative"
+    },
+    {
+      "id": "dispers",
+      "label": "dispersé",
+      "polarity": "negative"
+    },
+    {
+      "id": "trop-exigeant",
+      "label": "trop exigeant",
+      "polarity": "negative"
+    },
+    {
+      "id": "impatient",
+      "label": "impatient",
+      "polarity": "negative"
+    },
+    {
+      "id": "superficiel",
+      "label": "superficiel",
+      "polarity": "negative"
+    },
+    {
+      "id": "srieux",
+      "label": "sérieux",
+      "polarity": "positive"
+    },
+    {
+      "id": "concentration",
+      "label": "concentration",
+      "polarity": "positive"
+    },
+    {
+      "id": "profondeur",
+      "label": "profondeur",
+      "polarity": "positive"
+    },
+    {
+      "id": "fermet-desprit",
+      "label": "fermeté d'esprit",
+      "polarity": "negative"
+    },
+    {
+      "id": "collaboratif",
+      "label": "Collaboratif",
+      "polarity": "positive"
+    },
+    {
+      "id": "trop-de-dpendance",
+      "label": "trop de dépendance",
+      "polarity": "negative"
+    },
+    {
+      "id": "manque-dautonomie",
+      "label": "manque d'autonomie",
+      "polarity": "negative"
+    },
+    {
+      "id": "dilution-des-responsabilits",
+      "label": "dilution des responsabilités",
+      "polarity": "negative"
+    },
+    {
+      "id": "prise-de-dcisions-lentes",
+      "label": "prise de décisions lentes",
+      "polarity": "negative"
+    },
+    {
+      "id": "conflits-dintrts",
+      "label": "conflits d'intérêts",
+      "polarity": "negative"
+    },
+    {
+      "id": "dtermin",
+      "label": "déterminé",
+      "polarity": "positive"
+    },
+    {
+      "id": "confiant",
+      "label": "confiant",
+      "polarity": "positive"
+    },
+    {
+      "id": "isolement",
+      "label": "isolement",
+      "polarity": "negative"
+    },
+    {
+      "id": "individualisme",
+      "label": "individualisme",
+      "polarity": "negative"
+    },
+    {
+      "id": "manque-de-communication",
+      "label": "manque de communication",
+      "polarity": "negative"
+    },
+    {
+      "id": "organis",
+      "label": "Organisé",
+      "polarity": "positive"
+    },
+    {
+      "id": "rigide",
+      "label": "rigide",
+      "polarity": "negative"
+    },
+    {
+      "id": "surcontrle",
+      "label": "surcontrôle",
+      "polarity": "negative"
+    },
+    {
+      "id": "puis",
+      "label": "épuisé",
+      "polarity": "negative"
+    },
+    {
+      "id": "spontanit",
+      "label": "spontanéité",
+      "polarity": "positive"
+    },
+    {
+      "id": "laisser-aller",
+      "label": "laisser-aller",
+      "polarity": "positive"
+    },
+    {
+      "id": "imprvu",
+      "label": "imprévu",
+      "polarity": "negative"
+    },
+    {
+      "id": "anarchie",
+      "label": "anarchie",
+      "polarity": "negative"
+    },
+    {
+      "id": "alatoire",
+      "label": "aléatoire",
+      "polarity": "negative"
+    },
+    {
+      "id": "original",
+      "label": "Original",
+      "polarity": "positive"
+    },
+    {
+      "id": "excentricit",
+      "label": "excentricité",
+      "polarity": "negative"
+    },
+    {
+      "id": "inconstance",
+      "label": "inconstance",
+      "polarity": "negative"
+    },
+    {
+      "id": "trop-de-crativit",
+      "label": "trop de créativité",
+      "polarity": "negative"
+    },
+    {
+      "id": "conventionnel",
+      "label": "conventionnel",
+      "polarity": "positive"
+    },
+    {
+      "id": "pragmatique",
+      "label": "pragmatique",
+      "polarity": "positive"
+    },
+    {
+      "id": "quilibre",
+      "label": "équilibre",
+      "polarity": "positive"
+    },
+    {
+      "id": "structured",
+      "label": "structured",
+      "polarity": "positive"
+    },
+    {
+      "id": "prvisible",
+      "label": "prévisible",
+      "polarity": "positive"
+    },
+    {
+      "id": "uniformit",
+      "label": "uniformité",
+      "polarity": "negative"
+    },
+    {
+      "id": "routinier",
+      "label": "routinier",
+      "polarity": "negative"
+    },
+    {
+      "id": "prvisibilit-excessive",
+      "label": "prévisibilité excessive",
+      "polarity": "negative"
+    },
+    {
+      "id": "ancr",
+      "label": "Ancré",
+      "polarity": "positive"
+    },
+    {
+      "id": "sarcophage",
+      "label": "sarcophage",
+      "polarity": "negative"
+    },
+    {
+      "id": "sur-ancr",
+      "label": "sur-ancré",
+      "polarity": "negative"
+    },
+    {
+      "id": "ouvert",
+      "label": "ouvert",
+      "polarity": "positive"
+    },
+    {
+      "id": "adaptable",
+      "label": "adaptable",
+      "polarity": "positive"
+    },
+    {
+      "id": "flexible",
+      "label": "flexible",
+      "polarity": "positive"
+    },
+    {
+      "id": "volutif",
+      "label": "évolutif",
+      "polarity": "positive"
+    },
+    {
+      "id": "rceptif",
+      "label": "réceptif",
+      "polarity": "positive"
+    },
+    {
+      "id": "instabilit",
+      "label": "instabilité",
+      "polarity": "negative"
+    },
+    {
+      "id": "irresponsabilit",
+      "label": "irresponsabilité",
+      "polarity": "negative"
+    },
+    {
+      "id": "stratgique",
+      "label": "Stratégique",
+      "polarity": "positive"
+    },
+    {
+      "id": "manipulation",
+      "label": "Manipulation",
+      "polarity": "negative"
+    },
+    {
+      "id": "overthinking",
+      "label": "Overthinking",
+      "polarity": "negative"
+    },
+    {
+      "id": "adaptabilit",
+      "label": "Adaptabilité",
+      "polarity": "positive"
+    },
+    {
+      "id": "simplicit",
+      "label": "Simplicité",
+      "polarity": "positive"
+    },
+    {
+      "id": "ouverture-desprit",
+      "label": "Ouverture d'esprit",
+      "polarity": "positive"
+    },
+    {
+      "id": "incertitude",
+      "label": "Incertitude",
+      "polarity": "negative"
+    },
+    {
+      "id": "ressentiment",
+      "label": "Ressentiment",
+      "polarity": "negative"
+    },
+    {
+      "id": "diplomate",
+      "label": "Diplomate",
+      "polarity": "positive"
+    },
+    {
+      "id": "trop-de-compromis",
+      "label": "trop de compromis",
+      "polarity": "negative"
+    },
+    {
+      "id": "fuite-des-conflits",
+      "label": "fuite des conflits",
+      "polarity": "negative"
+    },
+    {
+      "id": "perte-dauthenticit",
+      "label": "perte d'authenticité",
+      "polarity": "negative"
+    },
+    {
+      "id": "franchise",
+      "label": "franchise",
+      "polarity": "positive"
+    },
+    {
+      "id": "confrontation",
+      "label": "confrontation",
+      "polarity": "positive"
+    },
+    {
+      "id": "clart",
+      "label": "clarté",
+      "polarity": "positive"
+    },
+    {
+      "id": "franchise-excessive",
+      "label": "franchise excessive",
+      "polarity": "negative"
+    },
+    {
+      "id": "inflexibilit",
+      "label": "inflexibilité",
+      "polarity": "negative"
+    },
+    {
+      "id": "absence-de-compromis",
+      "label": "absence de compromis",
+      "polarity": "negative"
+    },
+    {
+      "id": "fiable",
+      "label": "Fiable",
+      "polarity": "positive"
+    },
+    {
+      "id": "manque-de-spontanit",
+      "label": "Manque de spontanéité",
+      "polarity": "negative"
+    },
+    {
+      "id": "infiabilit",
+      "label": "Infiabilité",
+      "polarity": "negative"
+    },
+    {
+      "id": "laxisme",
+      "label": "Laxisme",
+      "polarity": "negative"
+    },
+    {
+      "id": "manque-de-structure",
+      "label": "manque de structure",
+      "polarity": "negative"
+    },
+    {
+      "id": "perte-de-focus",
+      "label": "perte de focus",
+      "polarity": "negative"
+    },
+    {
+      "id": "cohrence",
+      "label": "cohérence",
+      "polarity": "positive"
+    },
+    {
+      "id": "persvrance",
+      "label": "persévérance",
+      "polarity": "positive"
+    },
+    {
+      "id": "autoritarisme",
+      "label": "autoritarisme",
+      "polarity": "negative"
+    },
+    {
+      "id": "stagnation",
+      "label": "stagnation",
+      "polarity": "negative"
+    },
+    {
+      "id": "quilibr",
+      "label": "Équilibré",
+      "polarity": "positive"
+    },
+    {
+      "id": "surimplication",
+      "label": "Surimplication",
+      "polarity": "negative"
+    },
+    {
+      "id": "contrle-excessif",
+      "label": "Contrôle excessif",
+      "polarity": "negative"
+    },
+    {
+      "id": "imprparation",
+      "label": "Impréparation",
+      "polarity": "negative"
     }
   ],
   "links": [
     {
-      "from": "doute",
-      "to": "indcision",
+      "from": "analytique",
+      "to": "trop-critique",
       "type": "excess"
     },
     {
-      "from": "doute",
-      "to": "paralysie",
-      "type": "excess"
-    },
-    {
-      "from": "doute",
-      "to": "angoisse",
-      "type": "excess"
-    },
-    {
-      "from": "doute",
-      "to": "mfiance",
-      "type": "excess"
-    },
-    {
-      "from": "doute",
-      "to": "scepticisme",
-      "type": "excess"
-    },
-    {
-      "from": "indcision",
-      "to": "confiance",
-      "type": "balance"
-    },
-    {
-      "from": "paralysie",
-      "to": "confiance",
-      "type": "balance"
-    },
-    {
-      "from": "angoisse",
-      "to": "confiance",
-      "type": "balance"
-    },
-    {
-      "from": "mfiance",
-      "to": "confiance",
-      "type": "balance"
-    },
-    {
-      "from": "scepticisme",
-      "to": "confiance",
-      "type": "balance"
-    },
-    {
-      "from": "indcision",
-      "to": "croyance",
-      "type": "balance"
-    },
-    {
-      "from": "paralysie",
-      "to": "croyance",
-      "type": "balance"
-    },
-    {
-      "from": "angoisse",
-      "to": "croyance",
-      "type": "balance"
-    },
-    {
-      "from": "mfiance",
-      "to": "croyance",
-      "type": "balance"
-    },
-    {
-      "from": "scepticisme",
-      "to": "croyance",
-      "type": "balance"
-    },
-    {
-      "from": "indcision",
-      "to": "assurance",
-      "type": "balance"
-    },
-    {
-      "from": "paralysie",
-      "to": "assurance",
-      "type": "balance"
-    },
-    {
-      "from": "angoisse",
-      "to": "assurance",
-      "type": "balance"
-    },
-    {
-      "from": "mfiance",
-      "to": "assurance",
-      "type": "balance"
-    },
-    {
-      "from": "scepticisme",
-      "to": "assurance",
-      "type": "balance"
-    },
-    {
-      "from": "indcision",
-      "to": "optimisme",
-      "type": "balance"
-    },
-    {
-      "from": "paralysie",
-      "to": "optimisme",
-      "type": "balance"
-    },
-    {
-      "from": "angoisse",
-      "to": "optimisme",
-      "type": "balance"
-    },
-    {
-      "from": "mfiance",
-      "to": "optimisme",
-      "type": "balance"
-    },
-    {
-      "from": "scepticisme",
-      "to": "optimisme",
-      "type": "balance"
-    },
-    {
-      "from": "indcision",
-      "to": "fermet",
-      "type": "balance"
-    },
-    {
-      "from": "paralysie",
-      "to": "fermet",
-      "type": "balance"
-    },
-    {
-      "from": "angoisse",
-      "to": "fermet",
-      "type": "balance"
-    },
-    {
-      "from": "mfiance",
-      "to": "fermet",
-      "type": "balance"
-    },
-    {
-      "from": "scepticisme",
-      "to": "fermet",
-      "type": "balance"
-    },
-    {
-      "from": "confiance",
-      "to": "certitude",
-      "type": "excess"
-    },
-    {
-      "from": "croyance",
-      "to": "certitude",
-      "type": "excess"
-    },
-    {
-      "from": "assurance",
-      "to": "certitude",
-      "type": "excess"
-    },
-    {
-      "from": "optimisme",
-      "to": "certitude",
-      "type": "excess"
-    },
-    {
-      "from": "fermet",
-      "to": "certitude",
-      "type": "excess"
-    },
-    {
-      "from": "certitude",
-      "to": "doute",
-      "type": "balance"
-    },
-    {
-      "from": "confiance",
-      "to": "dogmatisme",
-      "type": "excess"
-    },
-    {
-      "from": "croyance",
-      "to": "dogmatisme",
-      "type": "excess"
-    },
-    {
-      "from": "assurance",
-      "to": "dogmatisme",
-      "type": "excess"
-    },
-    {
-      "from": "optimisme",
-      "to": "dogmatisme",
-      "type": "excess"
-    },
-    {
-      "from": "fermet",
-      "to": "dogmatisme",
-      "type": "excess"
-    },
-    {
-      "from": "dogmatisme",
-      "to": "doute",
-      "type": "balance"
-    },
-    {
-      "from": "confiance",
+      "from": "analytique",
       "to": "rigidit",
       "type": "excess"
     },
     {
-      "from": "croyance",
-      "to": "rigidit",
+      "from": "analytique",
+      "to": "surdveloppement",
       "type": "excess"
     },
     {
-      "from": "assurance",
-      "to": "rigidit",
+      "from": "analytique",
+      "to": "perfectionnisme",
       "type": "excess"
     },
     {
-      "from": "optimisme",
-      "to": "rigidit",
+      "from": "analytique",
+      "to": "analyse-excessive",
       "type": "excess"
     },
     {
-      "from": "fermet",
-      "to": "rigidit",
-      "type": "excess"
+      "from": "trop-critique",
+      "to": "crativit",
+      "type": "balance"
     },
     {
       "from": "rigidit",
-      "to": "doute",
+      "to": "crativit",
       "type": "balance"
     },
     {
-      "from": "confiance",
-      "to": "arrogance",
-      "type": "excess"
-    },
-    {
-      "from": "croyance",
-      "to": "arrogance",
-      "type": "excess"
-    },
-    {
-      "from": "assurance",
-      "to": "arrogance",
-      "type": "excess"
-    },
-    {
-      "from": "optimisme",
-      "to": "arrogance",
-      "type": "excess"
-    },
-    {
-      "from": "fermet",
-      "to": "arrogance",
-      "type": "excess"
-    },
-    {
-      "from": "arrogance",
-      "to": "doute",
+      "from": "surdveloppement",
+      "to": "crativit",
       "type": "balance"
     },
     {
-      "from": "confiance",
-      "to": "inflexibilit",
-      "type": "excess"
-    },
-    {
-      "from": "croyance",
-      "to": "inflexibilit",
-      "type": "excess"
-    },
-    {
-      "from": "assurance",
-      "to": "inflexibilit",
-      "type": "excess"
-    },
-    {
-      "from": "optimisme",
-      "to": "inflexibilit",
-      "type": "excess"
-    },
-    {
-      "from": "fermet",
-      "to": "inflexibilit",
-      "type": "excess"
-    },
-    {
-      "from": "inflexibilit",
-      "to": "doute",
+      "from": "perfectionnisme",
+      "to": "crativit",
       "type": "balance"
     },
     {
-      "from": "sincrit",
-      "to": "brutalit",
+      "from": "analyse-excessive",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "trop-critique",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "surdveloppement",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "analyse-excessive",
+      "to": "intuition",
+      "type": "balance"
+    },
+    {
+      "from": "trop-critique",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "surdveloppement",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "analyse-excessive",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "trop-critique",
+      "to": "relationnel",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "relationnel",
+      "type": "balance"
+    },
+    {
+      "from": "surdveloppement",
+      "to": "relationnel",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "relationnel",
+      "type": "balance"
+    },
+    {
+      "from": "analyse-excessive",
+      "to": "relationnel",
+      "type": "balance"
+    },
+    {
+      "from": "trop-critique",
+      "to": "improvisation",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "improvisation",
+      "type": "balance"
+    },
+    {
+      "from": "surdveloppement",
+      "to": "improvisation",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "improvisation",
+      "type": "balance"
+    },
+    {
+      "from": "analyse-excessive",
+      "to": "improvisation",
+      "type": "balance"
+    },
+    {
+      "from": "crativit",
+      "to": "dsorganisation",
       "type": "excess"
     },
     {
-      "from": "sincrit",
+      "from": "intuition",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "relationnel",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "improvisation",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "analytique",
+      "type": "balance"
+    },
+    {
+      "from": "crativit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "intuition",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "relationnel",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "improvisation",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "analytique",
+      "type": "balance"
+    },
+    {
+      "from": "crativit",
+      "to": "superficialit",
+      "type": "excess"
+    },
+    {
+      "from": "intuition",
+      "to": "superficialit",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "superficialit",
+      "type": "excess"
+    },
+    {
+      "from": "relationnel",
+      "to": "superficialit",
+      "type": "excess"
+    },
+    {
+      "from": "improvisation",
+      "to": "superficialit",
+      "type": "excess"
+    },
+    {
+      "from": "superficialit",
+      "to": "analytique",
+      "type": "balance"
+    },
+    {
+      "from": "crativit",
+      "to": "motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "intuition",
+      "to": "motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "relationnel",
+      "to": "motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "improvisation",
+      "to": "motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "motionnel",
+      "to": "analytique",
+      "type": "balance"
+    },
+    {
+      "from": "crativit",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "intuition",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "relationnel",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "improvisation",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "chaos",
+      "to": "analytique",
+      "type": "balance"
+    },
+    {
+      "from": "empathique",
+      "to": "trop-motif",
+      "type": "excess"
+    },
+    {
+      "from": "empathique",
+      "to": "manque-de-limites",
+      "type": "excess"
+    },
+    {
+      "from": "empathique",
+      "to": "dpendance-affective",
+      "type": "excess"
+    },
+    {
+      "from": "empathique",
+      "to": "suridentification",
+      "type": "excess"
+    },
+    {
+      "from": "empathique",
+      "to": "puisement-motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "trop-motif",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-limites",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "dpendance-affective",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "suridentification",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "puisement-motionnel",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "trop-motif",
+      "to": "indpendance",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-limites",
+      "to": "indpendance",
+      "type": "balance"
+    },
+    {
+      "from": "dpendance-affective",
+      "to": "indpendance",
+      "type": "balance"
+    },
+    {
+      "from": "suridentification",
+      "to": "indpendance",
+      "type": "balance"
+    },
+    {
+      "from": "puisement-motionnel",
+      "to": "indpendance",
+      "type": "balance"
+    },
+    {
+      "from": "trop-motif",
+      "to": "objectivit",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-limites",
+      "to": "objectivit",
+      "type": "balance"
+    },
+    {
+      "from": "dpendance-affective",
+      "to": "objectivit",
+      "type": "balance"
+    },
+    {
+      "from": "suridentification",
+      "to": "objectivit",
+      "type": "balance"
+    },
+    {
+      "from": "puisement-motionnel",
+      "to": "objectivit",
+      "type": "balance"
+    },
+    {
+      "from": "trop-motif",
+      "to": "rsilience",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-limites",
+      "to": "rsilience",
+      "type": "balance"
+    },
+    {
+      "from": "dpendance-affective",
+      "to": "rsilience",
+      "type": "balance"
+    },
+    {
+      "from": "suridentification",
+      "to": "rsilience",
+      "type": "balance"
+    },
+    {
+      "from": "puisement-motionnel",
+      "to": "rsilience",
+      "type": "balance"
+    },
+    {
+      "from": "trop-motif",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-limites",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "dpendance-affective",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "suridentification",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "puisement-motionnel",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
       "to": "insensibilit",
       "type": "excess"
     },
     {
-      "from": "sincrit",
-      "to": "trop-de-franchise",
+      "from": "indpendance",
+      "to": "insensibilit",
       "type": "excess"
     },
     {
-      "from": "sincrit",
-      "to": "imprcision",
+      "from": "objectivit",
+      "to": "insensibilit",
       "type": "excess"
     },
     {
-      "from": "sincrit",
-      "to": "arrogance",
+      "from": "rsilience",
+      "to": "insensibilit",
       "type": "excess"
     },
     {
-      "from": "brutalit",
-      "to": "diplomatie",
-      "type": "balance"
+      "from": "dtermination",
+      "to": "insensibilit",
+      "type": "excess"
     },
     {
       "from": "insensibilit",
-      "to": "diplomatie",
+      "to": "empathique",
       "type": "balance"
     },
     {
-      "from": "trop-de-franchise",
-      "to": "diplomatie",
-      "type": "balance"
-    },
-    {
-      "from": "imprcision",
-      "to": "diplomatie",
-      "type": "balance"
-    },
-    {
-      "from": "arrogance",
-      "to": "diplomatie",
-      "type": "balance"
-    },
-    {
-      "from": "brutalit",
-      "to": "tact",
-      "type": "balance"
-    },
-    {
-      "from": "insensibilit",
-      "to": "tact",
-      "type": "balance"
-    },
-    {
-      "from": "trop-de-franchise",
-      "to": "tact",
-      "type": "balance"
-    },
-    {
-      "from": "imprcision",
-      "to": "tact",
-      "type": "balance"
-    },
-    {
-      "from": "arrogance",
-      "to": "tact",
-      "type": "balance"
-    },
-    {
-      "from": "brutalit",
-      "to": "coute",
-      "type": "balance"
-    },
-    {
-      "from": "insensibilit",
-      "to": "coute",
-      "type": "balance"
-    },
-    {
-      "from": "trop-de-franchise",
-      "to": "coute",
-      "type": "balance"
-    },
-    {
-      "from": "imprcision",
-      "to": "coute",
-      "type": "balance"
-    },
-    {
-      "from": "arrogance",
-      "to": "coute",
-      "type": "balance"
-    },
-    {
-      "from": "brutalit",
-      "to": "flexibilit",
-      "type": "balance"
-    },
-    {
-      "from": "insensibilit",
-      "to": "flexibilit",
-      "type": "balance"
-    },
-    {
-      "from": "trop-de-franchise",
-      "to": "flexibilit",
-      "type": "balance"
-    },
-    {
-      "from": "imprcision",
-      "to": "flexibilit",
-      "type": "balance"
-    },
-    {
-      "from": "arrogance",
-      "to": "flexibilit",
-      "type": "balance"
-    },
-    {
-      "from": "brutalit",
-      "to": "compassion",
-      "type": "balance"
-    },
-    {
-      "from": "insensibilit",
-      "to": "compassion",
-      "type": "balance"
-    },
-    {
-      "from": "trop-de-franchise",
-      "to": "compassion",
-      "type": "balance"
-    },
-    {
-      "from": "imprcision",
-      "to": "compassion",
-      "type": "balance"
-    },
-    {
-      "from": "arrogance",
-      "to": "compassion",
-      "type": "balance"
-    },
-    {
-      "from": "diplomatie",
-      "to": "hypocrisie",
-      "type": "excess"
-    },
-    {
-      "from": "tact",
-      "to": "hypocrisie",
-      "type": "excess"
-    },
-    {
-      "from": "coute",
-      "to": "hypocrisie",
-      "type": "excess"
-    },
-    {
-      "from": "flexibilit",
-      "to": "hypocrisie",
-      "type": "excess"
-    },
-    {
-      "from": "compassion",
-      "to": "hypocrisie",
-      "type": "excess"
-    },
-    {
-      "from": "hypocrisie",
-      "to": "sincrit",
-      "type": "balance"
-    },
-    {
-      "from": "diplomatie",
-      "to": "manipulation",
-      "type": "excess"
-    },
-    {
-      "from": "tact",
-      "to": "manipulation",
-      "type": "excess"
-    },
-    {
-      "from": "coute",
-      "to": "manipulation",
-      "type": "excess"
-    },
-    {
-      "from": "flexibilit",
-      "to": "manipulation",
-      "type": "excess"
-    },
-    {
-      "from": "compassion",
-      "to": "manipulation",
-      "type": "excess"
-    },
-    {
-      "from": "manipulation",
-      "to": "sincrit",
-      "type": "balance"
-    },
-    {
-      "from": "diplomatie",
-      "to": "fausse-modestie",
-      "type": "excess"
-    },
-    {
-      "from": "tact",
-      "to": "fausse-modestie",
-      "type": "excess"
-    },
-    {
-      "from": "coute",
-      "to": "fausse-modestie",
-      "type": "excess"
-    },
-    {
-      "from": "flexibilit",
-      "to": "fausse-modestie",
-      "type": "excess"
-    },
-    {
-      "from": "compassion",
-      "to": "fausse-modestie",
-      "type": "excess"
-    },
-    {
-      "from": "fausse-modestie",
-      "to": "sincrit",
-      "type": "balance"
-    },
-    {
-      "from": "diplomatie",
-      "to": "dsinvolture",
-      "type": "excess"
-    },
-    {
-      "from": "tact",
-      "to": "dsinvolture",
-      "type": "excess"
-    },
-    {
-      "from": "coute",
-      "to": "dsinvolture",
-      "type": "excess"
-    },
-    {
-      "from": "flexibilit",
-      "to": "dsinvolture",
-      "type": "excess"
-    },
-    {
-      "from": "compassion",
-      "to": "dsinvolture",
-      "type": "excess"
-    },
-    {
-      "from": "dsinvolture",
-      "to": "sincrit",
-      "type": "balance"
-    },
-    {
-      "from": "diplomatie",
+      "from": "assertivit",
       "to": "indiffrence",
       "type": "excess"
     },
     {
-      "from": "tact",
+      "from": "indpendance",
       "to": "indiffrence",
       "type": "excess"
     },
     {
-      "from": "coute",
+      "from": "objectivit",
       "to": "indiffrence",
       "type": "excess"
     },
     {
-      "from": "flexibilit",
+      "from": "rsilience",
       "to": "indiffrence",
       "type": "excess"
     },
     {
-      "from": "compassion",
+      "from": "dtermination",
       "to": "indiffrence",
       "type": "excess"
     },
     {
       "from": "indiffrence",
-      "to": "sincrit",
+      "to": "empathique",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "indpendance",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "objectivit",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "rsilience",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "rigidit",
+      "to": "empathique",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "gosme",
+      "type": "excess"
+    },
+    {
+      "from": "indpendance",
+      "to": "gosme",
+      "type": "excess"
+    },
+    {
+      "from": "objectivit",
+      "to": "gosme",
+      "type": "excess"
+    },
+    {
+      "from": "rsilience",
+      "to": "gosme",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "gosme",
+      "type": "excess"
+    },
+    {
+      "from": "gosme",
+      "to": "empathique",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "manque-dempathie",
+      "type": "excess"
+    },
+    {
+      "from": "indpendance",
+      "to": "manque-dempathie",
+      "type": "excess"
+    },
+    {
+      "from": "objectivit",
+      "to": "manque-dempathie",
+      "type": "excess"
+    },
+    {
+      "from": "rsilience",
+      "to": "manque-dempathie",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "manque-dempathie",
+      "type": "excess"
+    },
+    {
+      "from": "manque-dempathie",
+      "to": "empathique",
+      "type": "balance"
+    },
+    {
+      "from": "proactif",
+      "to": "impatience",
+      "type": "excess"
+    },
+    {
+      "from": "proactif",
+      "to": "impulsivit",
+      "type": "excess"
+    },
+    {
+      "from": "proactif",
+      "to": "dominance",
+      "type": "excess"
+    },
+    {
+      "from": "proactif",
+      "to": "surcharge",
+      "type": "excess"
+    },
+    {
+      "from": "proactif",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "impatience",
+      "to": "ractivit",
+      "type": "balance"
+    },
+    {
+      "from": "impulsivit",
+      "to": "ractivit",
+      "type": "balance"
+    },
+    {
+      "from": "dominance",
+      "to": "ractivit",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "ractivit",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "ractivit",
+      "type": "balance"
+    },
+    {
+      "from": "impatience",
+      "to": "patience",
+      "type": "balance"
+    },
+    {
+      "from": "impulsivit",
+      "to": "patience",
+      "type": "balance"
+    },
+    {
+      "from": "dominance",
+      "to": "patience",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "patience",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "patience",
+      "type": "balance"
+    },
+    {
+      "from": "impatience",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "impulsivit",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "dominance",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "impatience",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "impulsivit",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "dominance",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "impatience",
+      "to": "acceptation",
+      "type": "balance"
+    },
+    {
+      "from": "impulsivit",
+      "to": "acceptation",
+      "type": "balance"
+    },
+    {
+      "from": "dominance",
+      "to": "acceptation",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "acceptation",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "acceptation",
+      "type": "balance"
+    },
+    {
+      "from": "ractivit",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "patience",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "coute",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "acceptation",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "passivit",
+      "to": "proactif",
+      "type": "balance"
+    },
+    {
+      "from": "ractivit",
+      "to": "inertie",
+      "type": "excess"
+    },
+    {
+      "from": "patience",
+      "to": "inertie",
+      "type": "excess"
+    },
+    {
+      "from": "coute",
+      "to": "inertie",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "inertie",
+      "type": "excess"
+    },
+    {
+      "from": "acceptation",
+      "to": "inertie",
+      "type": "excess"
+    },
+    {
+      "from": "inertie",
+      "to": "proactif",
+      "type": "balance"
+    },
+    {
+      "from": "ractivit",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "patience",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "coute",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "acceptation",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "indcision",
+      "to": "proactif",
+      "type": "balance"
+    },
+    {
+      "from": "ractivit",
+      "to": "dlai",
+      "type": "excess"
+    },
+    {
+      "from": "patience",
+      "to": "dlai",
+      "type": "excess"
+    },
+    {
+      "from": "coute",
+      "to": "dlai",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "dlai",
+      "type": "excess"
+    },
+    {
+      "from": "acceptation",
+      "to": "dlai",
+      "type": "excess"
+    },
+    {
+      "from": "dlai",
+      "to": "proactif",
+      "type": "balance"
+    },
+    {
+      "from": "ractivit",
+      "to": "manque-dinitiative",
+      "type": "excess"
+    },
+    {
+      "from": "patience",
+      "to": "manque-dinitiative",
+      "type": "excess"
+    },
+    {
+      "from": "coute",
+      "to": "manque-dinitiative",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "manque-dinitiative",
+      "type": "excess"
+    },
+    {
+      "from": "acceptation",
+      "to": "manque-dinitiative",
+      "type": "excess"
+    },
+    {
+      "from": "manque-dinitiative",
+      "to": "proactif",
+      "type": "balance"
+    },
+    {
+      "from": "imaginatif",
+      "to": "dlire",
+      "type": "excess"
+    },
+    {
+      "from": "imaginatif",
+      "to": "perte-de-contact",
+      "type": "excess"
+    },
+    {
+      "from": "imaginatif",
+      "to": "fantaisie-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "imaginatif",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "imaginatif",
+      "to": "incohrence",
+      "type": "excess"
+    },
+    {
+      "from": "dlire",
+      "to": "ralisme",
+      "type": "balance"
+    },
+    {
+      "from": "perte-de-contact",
+      "to": "ralisme",
+      "type": "balance"
+    },
+    {
+      "from": "fantaisie-excessive",
+      "to": "ralisme",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "ralisme",
+      "type": "balance"
+    },
+    {
+      "from": "incohrence",
+      "to": "ralisme",
+      "type": "balance"
+    },
+    {
+      "from": "dlire",
+      "to": "pragmatisme",
+      "type": "balance"
+    },
+    {
+      "from": "perte-de-contact",
+      "to": "pragmatisme",
+      "type": "balance"
+    },
+    {
+      "from": "fantaisie-excessive",
+      "to": "pragmatisme",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "pragmatisme",
+      "type": "balance"
+    },
+    {
+      "from": "incohrence",
+      "to": "pragmatisme",
+      "type": "balance"
+    },
+    {
+      "from": "dlire",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "perte-de-contact",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "fantaisie-excessive",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "incohrence",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "dlire",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "perte-de-contact",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "fantaisie-excessive",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "incohrence",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "dlire",
+      "to": "mthode",
+      "type": "balance"
+    },
+    {
+      "from": "perte-de-contact",
+      "to": "mthode",
+      "type": "balance"
+    },
+    {
+      "from": "fantaisie-excessive",
+      "to": "mthode",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "mthode",
+      "type": "balance"
+    },
+    {
+      "from": "incohrence",
+      "to": "mthode",
+      "type": "balance"
+    },
+    {
+      "from": "ralisme",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatisme",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "mthode",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "rigidit",
+      "to": "imaginatif",
+      "type": "balance"
+    },
+    {
+      "from": "ralisme",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatisme",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "mthode",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "routine",
+      "to": "imaginatif",
+      "type": "balance"
+    },
+    {
+      "from": "ralisme",
+      "to": "prvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatisme",
+      "to": "prvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "prvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "prvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "mthode",
+      "to": "prvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "prvisibilit",
+      "to": "imaginatif",
+      "type": "balance"
+    },
+    {
+      "from": "ralisme",
+      "to": "banalit",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatisme",
+      "to": "banalit",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "banalit",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "banalit",
+      "type": "excess"
+    },
+    {
+      "from": "mthode",
+      "to": "banalit",
+      "type": "excess"
+    },
+    {
+      "from": "banalit",
+      "to": "imaginatif",
+      "type": "balance"
+    },
+    {
+      "from": "ralisme",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatisme",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "mthode",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "ennui",
+      "to": "imaginatif",
+      "type": "balance"
+    },
+    {
+      "from": "calme",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "calme",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "calme",
+      "to": "apathie",
+      "type": "excess"
+    },
+    {
+      "from": "calme",
+      "to": "dtachement",
+      "type": "excess"
+    },
+    {
+      "from": "calme",
+      "to": "inertie",
+      "type": "excess"
+    },
+    {
+      "from": "indiffrence",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "passivit",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "apathie",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "inertie",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "indiffrence",
+      "to": "dynamisme",
+      "type": "balance"
+    },
+    {
+      "from": "passivit",
+      "to": "dynamisme",
+      "type": "balance"
+    },
+    {
+      "from": "apathie",
+      "to": "dynamisme",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement",
+      "to": "dynamisme",
+      "type": "balance"
+    },
+    {
+      "from": "inertie",
+      "to": "dynamisme",
+      "type": "balance"
+    },
+    {
+      "from": "indiffrence",
+      "to": "nergie",
+      "type": "balance"
+    },
+    {
+      "from": "passivit",
+      "to": "nergie",
+      "type": "balance"
+    },
+    {
+      "from": "apathie",
+      "to": "nergie",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement",
+      "to": "nergie",
+      "type": "balance"
+    },
+    {
+      "from": "inertie",
+      "to": "nergie",
+      "type": "balance"
+    },
+    {
+      "from": "indiffrence",
+      "to": "engagement",
+      "type": "balance"
+    },
+    {
+      "from": "passivit",
+      "to": "engagement",
+      "type": "balance"
+    },
+    {
+      "from": "apathie",
+      "to": "engagement",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement",
+      "to": "engagement",
+      "type": "balance"
+    },
+    {
+      "from": "inertie",
+      "to": "engagement",
+      "type": "balance"
+    },
+    {
+      "from": "indiffrence",
+      "to": "proactivit",
+      "type": "balance"
+    },
+    {
+      "from": "passivit",
+      "to": "proactivit",
+      "type": "balance"
+    },
+    {
+      "from": "apathie",
+      "to": "proactivit",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement",
+      "to": "proactivit",
+      "type": "balance"
+    },
+    {
+      "from": "inertie",
+      "to": "proactivit",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "agitation",
+      "type": "excess"
+    },
+    {
+      "from": "dynamisme",
+      "to": "agitation",
+      "type": "excess"
+    },
+    {
+      "from": "nergie",
+      "to": "agitation",
+      "type": "excess"
+    },
+    {
+      "from": "engagement",
+      "to": "agitation",
+      "type": "excess"
+    },
+    {
+      "from": "proactivit",
+      "to": "agitation",
+      "type": "excess"
+    },
+    {
+      "from": "agitation",
+      "to": "calme",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "stress",
+      "type": "excess"
+    },
+    {
+      "from": "dynamisme",
+      "to": "stress",
+      "type": "excess"
+    },
+    {
+      "from": "nergie",
+      "to": "stress",
+      "type": "excess"
+    },
+    {
+      "from": "engagement",
+      "to": "stress",
+      "type": "excess"
+    },
+    {
+      "from": "proactivit",
+      "to": "stress",
+      "type": "excess"
+    },
+    {
+      "from": "stress",
+      "to": "calme",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "dynamisme",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "nergie",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "engagement",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "proactivit",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "conflit",
+      "to": "calme",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "bruit",
+      "type": "excess"
+    },
+    {
+      "from": "dynamisme",
+      "to": "bruit",
+      "type": "excess"
+    },
+    {
+      "from": "nergie",
+      "to": "bruit",
+      "type": "excess"
+    },
+    {
+      "from": "engagement",
+      "to": "bruit",
+      "type": "excess"
+    },
+    {
+      "from": "proactivit",
+      "to": "bruit",
+      "type": "excess"
+    },
+    {
+      "from": "bruit",
+      "to": "calme",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "dynamisme",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "nergie",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "engagement",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "proactivit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "calme",
+      "type": "balance"
+    },
+    {
+      "from": "observateur",
+      "to": "trop-analytique",
+      "type": "excess"
+    },
+    {
+      "from": "observateur",
+      "to": "passivit-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "observateur",
+      "to": "dtachement-motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "observateur",
+      "to": "surveillance-constante",
+      "type": "excess"
+    },
+    {
+      "from": "observateur",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "trop-analytique",
+      "to": "proactivit",
+      "type": "balance"
+    },
+    {
+      "from": "passivit-excessive",
+      "to": "proactivit",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement-motionnel",
+      "to": "proactivit",
+      "type": "balance"
+    },
+    {
+      "from": "surveillance-constante",
+      "to": "proactivit",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "proactivit",
+      "type": "balance"
+    },
+    {
+      "from": "trop-analytique",
+      "to": "engagement",
+      "type": "balance"
+    },
+    {
+      "from": "passivit-excessive",
+      "to": "engagement",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement-motionnel",
+      "to": "engagement",
+      "type": "balance"
+    },
+    {
+      "from": "surveillance-constante",
+      "to": "engagement",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "engagement",
+      "type": "balance"
+    },
+    {
+      "from": "trop-analytique",
+      "to": "expression-motionnelle",
+      "type": "balance"
+    },
+    {
+      "from": "passivit-excessive",
+      "to": "expression-motionnelle",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement-motionnel",
+      "to": "expression-motionnelle",
+      "type": "balance"
+    },
+    {
+      "from": "surveillance-constante",
+      "to": "expression-motionnelle",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "expression-motionnelle",
+      "type": "balance"
+    },
+    {
+      "from": "trop-analytique",
+      "to": "interaction-sociale",
+      "type": "balance"
+    },
+    {
+      "from": "passivit-excessive",
+      "to": "interaction-sociale",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement-motionnel",
+      "to": "interaction-sociale",
+      "type": "balance"
+    },
+    {
+      "from": "surveillance-constante",
+      "to": "interaction-sociale",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "interaction-sociale",
+      "type": "balance"
+    },
+    {
+      "from": "trop-analytique",
+      "to": "confiance-en-soi",
+      "type": "balance"
+    },
+    {
+      "from": "passivit-excessive",
+      "to": "confiance-en-soi",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement-motionnel",
+      "to": "confiance-en-soi",
+      "type": "balance"
+    },
+    {
+      "from": "surveillance-constante",
+      "to": "confiance-en-soi",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "confiance-en-soi",
+      "type": "balance"
+    },
+    {
+      "from": "proactivit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "engagement",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "expression-motionnelle",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "interaction-sociale",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "confiance-en-soi",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "observateur",
+      "type": "balance"
+    },
+    {
+      "from": "proactivit",
+      "to": "bruit",
+      "type": "excess"
+    },
+    {
+      "from": "engagement",
+      "to": "bruit",
+      "type": "excess"
+    },
+    {
+      "from": "expression-motionnelle",
+      "to": "bruit",
+      "type": "excess"
+    },
+    {
+      "from": "interaction-sociale",
+      "to": "bruit",
+      "type": "excess"
+    },
+    {
+      "from": "confiance-en-soi",
+      "to": "bruit",
+      "type": "excess"
+    },
+    {
+      "from": "bruit",
+      "to": "observateur",
+      "type": "balance"
+    },
+    {
+      "from": "proactivit",
+      "to": "confusion",
+      "type": "excess"
+    },
+    {
+      "from": "engagement",
+      "to": "confusion",
+      "type": "excess"
+    },
+    {
+      "from": "expression-motionnelle",
+      "to": "confusion",
+      "type": "excess"
+    },
+    {
+      "from": "interaction-sociale",
+      "to": "confusion",
+      "type": "excess"
+    },
+    {
+      "from": "confiance-en-soi",
+      "to": "confusion",
+      "type": "excess"
+    },
+    {
+      "from": "confusion",
+      "to": "observateur",
+      "type": "balance"
+    },
+    {
+      "from": "proactivit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "engagement",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "expression-motionnelle",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "interaction-sociale",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "confiance-en-soi",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "observateur",
+      "type": "balance"
+    },
+    {
+      "from": "proactivit",
+      "to": "superficialit",
+      "type": "excess"
+    },
+    {
+      "from": "engagement",
+      "to": "superficialit",
+      "type": "excess"
+    },
+    {
+      "from": "expression-motionnelle",
+      "to": "superficialit",
+      "type": "excess"
+    },
+    {
+      "from": "interaction-sociale",
+      "to": "superficialit",
+      "type": "excess"
+    },
+    {
+      "from": "confiance-en-soi",
+      "to": "superficialit",
+      "type": "excess"
+    },
+    {
+      "from": "superficialit",
+      "to": "observateur",
+      "type": "balance"
+    },
+    {
+      "from": "soutenant",
+      "to": "crasant",
+      "type": "excess"
+    },
+    {
+      "from": "soutenant",
+      "to": "manipulateur",
+      "type": "excess"
+    },
+    {
+      "from": "soutenant",
+      "to": "surprotecteur",
+      "type": "excess"
+    },
+    {
+      "from": "soutenant",
+      "to": "dominateur",
+      "type": "excess"
+    },
+    {
+      "from": "soutenant",
+      "to": "inflexible",
+      "type": "excess"
+    },
+    {
+      "from": "crasant",
+      "to": "indpendant",
+      "type": "balance"
+    },
+    {
+      "from": "manipulateur",
+      "to": "indpendant",
+      "type": "balance"
+    },
+    {
+      "from": "surprotecteur",
+      "to": "indpendant",
+      "type": "balance"
+    },
+    {
+      "from": "dominateur",
+      "to": "indpendant",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "indpendant",
+      "type": "balance"
+    },
+    {
+      "from": "crasant",
+      "to": "autonome",
+      "type": "balance"
+    },
+    {
+      "from": "manipulateur",
+      "to": "autonome",
+      "type": "balance"
+    },
+    {
+      "from": "surprotecteur",
+      "to": "autonome",
+      "type": "balance"
+    },
+    {
+      "from": "dominateur",
+      "to": "autonome",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "autonome",
+      "type": "balance"
+    },
+    {
+      "from": "crasant",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "manipulateur",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "surprotecteur",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "dominateur",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "crasant",
+      "to": "sincre",
+      "type": "balance"
+    },
+    {
+      "from": "manipulateur",
+      "to": "sincre",
+      "type": "balance"
+    },
+    {
+      "from": "surprotecteur",
+      "to": "sincre",
+      "type": "balance"
+    },
+    {
+      "from": "dominateur",
+      "to": "sincre",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "sincre",
+      "type": "balance"
+    },
+    {
+      "from": "crasant",
+      "to": "critique",
+      "type": "balance"
+    },
+    {
+      "from": "manipulateur",
+      "to": "critique",
+      "type": "balance"
+    },
+    {
+      "from": "surprotecteur",
+      "to": "critique",
+      "type": "balance"
+    },
+    {
+      "from": "dominateur",
+      "to": "critique",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "critique",
+      "type": "balance"
+    },
+    {
+      "from": "indpendant",
+      "to": "gosme",
+      "type": "excess"
+    },
+    {
+      "from": "autonome",
+      "to": "gosme",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "gosme",
+      "type": "excess"
+    },
+    {
+      "from": "sincre",
+      "to": "gosme",
+      "type": "excess"
+    },
+    {
+      "from": "critique",
+      "to": "gosme",
+      "type": "excess"
+    },
+    {
+      "from": "gosme",
+      "to": "soutenant",
+      "type": "balance"
+    },
+    {
+      "from": "indpendant",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "autonome",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "sincre",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "critique",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "indiffrence",
+      "to": "soutenant",
+      "type": "balance"
+    },
+    {
+      "from": "indpendant",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "autonome",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "sincre",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "critique",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "passivit",
+      "to": "soutenant",
+      "type": "balance"
+    },
+    {
+      "from": "indpendant",
+      "to": "dtachement",
+      "type": "excess"
+    },
+    {
+      "from": "autonome",
+      "to": "dtachement",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "dtachement",
+      "type": "excess"
+    },
+    {
+      "from": "sincre",
+      "to": "dtachement",
+      "type": "excess"
+    },
+    {
+      "from": "critique",
+      "to": "dtachement",
+      "type": "excess"
+    },
+    {
+      "from": "dtachement",
+      "to": "soutenant",
+      "type": "balance"
+    },
+    {
+      "from": "indpendant",
+      "to": "ngligence",
+      "type": "excess"
+    },
+    {
+      "from": "autonome",
+      "to": "ngligence",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "ngligence",
+      "type": "excess"
+    },
+    {
+      "from": "sincre",
+      "to": "ngligence",
+      "type": "excess"
+    },
+    {
+      "from": "critique",
+      "to": "ngligence",
+      "type": "excess"
+    },
+    {
+      "from": "ngligence",
+      "to": "soutenant",
+      "type": "balance"
+    },
+    {
+      "from": "assertif",
+      "to": "agressif",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "dominant",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "inflexible",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "impulsif",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "autoritaire",
+      "type": "excess"
+    },
+    {
+      "from": "agressif",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "dominant",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "impulsif",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "autoritaire",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "agressif",
+      "to": "empathie",
+      "type": "balance"
+    },
+    {
+      "from": "dominant",
+      "to": "empathie",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "empathie",
+      "type": "balance"
+    },
+    {
+      "from": "impulsif",
+      "to": "empathie",
+      "type": "balance"
+    },
+    {
+      "from": "autoritaire",
+      "to": "empathie",
+      "type": "balance"
+    },
+    {
+      "from": "agressif",
+      "to": "souplesse",
+      "type": "balance"
+    },
+    {
+      "from": "dominant",
+      "to": "souplesse",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "souplesse",
+      "type": "balance"
+    },
+    {
+      "from": "impulsif",
+      "to": "souplesse",
+      "type": "balance"
+    },
+    {
+      "from": "autoritaire",
+      "to": "souplesse",
+      "type": "balance"
+    },
+    {
+      "from": "agressif",
+      "to": "humilit",
+      "type": "balance"
+    },
+    {
+      "from": "dominant",
+      "to": "humilit",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "humilit",
+      "type": "balance"
+    },
+    {
+      "from": "impulsif",
+      "to": "humilit",
+      "type": "balance"
+    },
+    {
+      "from": "autoritaire",
+      "to": "humilit",
+      "type": "balance"
+    },
+    {
+      "from": "agressif",
+      "to": "collaboration",
+      "type": "balance"
+    },
+    {
+      "from": "dominant",
+      "to": "collaboration",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "collaboration",
+      "type": "balance"
+    },
+    {
+      "from": "impulsif",
+      "to": "collaboration",
+      "type": "balance"
+    },
+    {
+      "from": "autoritaire",
+      "to": "collaboration",
+      "type": "balance"
+    },
+    {
+      "from": "coute",
+      "to": "soumission",
+      "type": "excess"
+    },
+    {
+      "from": "empathie",
+      "to": "soumission",
+      "type": "excess"
+    },
+    {
+      "from": "souplesse",
+      "to": "soumission",
+      "type": "excess"
+    },
+    {
+      "from": "humilit",
+      "to": "soumission",
+      "type": "excess"
+    },
+    {
+      "from": "collaboration",
+      "to": "soumission",
+      "type": "excess"
+    },
+    {
+      "from": "soumission",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "coute",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "empathie",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "souplesse",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "humilit",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "collaboration",
+      "to": "passivit",
+      "type": "excess"
+    },
+    {
+      "from": "passivit",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "coute",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "empathie",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "souplesse",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "humilit",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "collaboration",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "indcision",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "coute",
+      "to": "timidit",
+      "type": "excess"
+    },
+    {
+      "from": "empathie",
+      "to": "timidit",
+      "type": "excess"
+    },
+    {
+      "from": "souplesse",
+      "to": "timidit",
+      "type": "excess"
+    },
+    {
+      "from": "humilit",
+      "to": "timidit",
+      "type": "excess"
+    },
+    {
+      "from": "collaboration",
+      "to": "timidit",
+      "type": "excess"
+    },
+    {
+      "from": "timidit",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "coute",
+      "to": "lchet",
+      "type": "excess"
+    },
+    {
+      "from": "empathie",
+      "to": "lchet",
+      "type": "excess"
+    },
+    {
+      "from": "souplesse",
+      "to": "lchet",
+      "type": "excess"
+    },
+    {
+      "from": "humilit",
+      "to": "lchet",
+      "type": "excess"
+    },
+    {
+      "from": "collaboration",
+      "to": "lchet",
+      "type": "excess"
+    },
+    {
+      "from": "lchet",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "innovant",
+      "to": "distraction",
+      "type": "excess"
+    },
+    {
+      "from": "innovant",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "innovant",
+      "to": "surengagement",
+      "type": "excess"
+    },
+    {
+      "from": "innovant",
+      "to": "ngligence",
+      "type": "excess"
+    },
+    {
+      "from": "innovant",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "distraction",
+      "to": "rigueur",
+      "type": "balance"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "rigueur",
+      "type": "balance"
+    },
+    {
+      "from": "surengagement",
+      "to": "rigueur",
+      "type": "balance"
+    },
+    {
+      "from": "ngligence",
+      "to": "rigueur",
+      "type": "balance"
+    },
+    {
+      "from": "chaos",
+      "to": "rigueur",
+      "type": "balance"
+    },
+    {
+      "from": "distraction",
+      "to": "organisation",
+      "type": "balance"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "organisation",
+      "type": "balance"
+    },
+    {
+      "from": "surengagement",
+      "to": "organisation",
+      "type": "balance"
+    },
+    {
+      "from": "ngligence",
+      "to": "organisation",
+      "type": "balance"
+    },
+    {
+      "from": "chaos",
+      "to": "organisation",
+      "type": "balance"
+    },
+    {
+      "from": "distraction",
+      "to": "mthodologie",
+      "type": "balance"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "mthodologie",
+      "type": "balance"
+    },
+    {
+      "from": "surengagement",
+      "to": "mthodologie",
+      "type": "balance"
+    },
+    {
+      "from": "ngligence",
+      "to": "mthodologie",
+      "type": "balance"
+    },
+    {
+      "from": "chaos",
+      "to": "mthodologie",
+      "type": "balance"
+    },
+    {
+      "from": "distraction",
+      "to": "prcision",
+      "type": "balance"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "prcision",
+      "type": "balance"
+    },
+    {
+      "from": "surengagement",
+      "to": "prcision",
+      "type": "balance"
+    },
+    {
+      "from": "ngligence",
+      "to": "prcision",
+      "type": "balance"
+    },
+    {
+      "from": "chaos",
+      "to": "prcision",
+      "type": "balance"
+    },
+    {
+      "from": "distraction",
+      "to": "stabilit",
+      "type": "balance"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "stabilit",
+      "type": "balance"
+    },
+    {
+      "from": "surengagement",
+      "to": "stabilit",
+      "type": "balance"
+    },
+    {
+      "from": "ngligence",
+      "to": "stabilit",
+      "type": "balance"
+    },
+    {
+      "from": "chaos",
+      "to": "stabilit",
+      "type": "balance"
+    },
+    {
+      "from": "rigueur",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "organisation",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "mthodologie",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "prcision",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "stabilit",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "routine",
+      "to": "innovant",
+      "type": "balance"
+    },
+    {
+      "from": "rigueur",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "organisation",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "mthodologie",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "prcision",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "stabilit",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "ennui",
+      "to": "innovant",
+      "type": "balance"
+    },
+    {
+      "from": "rigueur",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "organisation",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "mthodologie",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "prcision",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "stabilit",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "rigidit",
+      "to": "innovant",
+      "type": "balance"
+    },
+    {
+      "from": "rigueur",
+      "to": "conformisme",
+      "type": "excess"
+    },
+    {
+      "from": "organisation",
+      "to": "conformisme",
+      "type": "excess"
+    },
+    {
+      "from": "mthodologie",
+      "to": "conformisme",
+      "type": "excess"
+    },
+    {
+      "from": "prcision",
+      "to": "conformisme",
+      "type": "excess"
+    },
+    {
+      "from": "stabilit",
+      "to": "conformisme",
+      "type": "excess"
+    },
+    {
+      "from": "conformisme",
+      "to": "innovant",
+      "type": "balance"
+    },
+    {
+      "from": "rigueur",
+      "to": "immobilisme",
+      "type": "excess"
+    },
+    {
+      "from": "organisation",
+      "to": "immobilisme",
+      "type": "excess"
+    },
+    {
+      "from": "mthodologie",
+      "to": "immobilisme",
+      "type": "excess"
+    },
+    {
+      "from": "prcision",
+      "to": "immobilisme",
+      "type": "excess"
+    },
+    {
+      "from": "stabilit",
+      "to": "immobilisme",
+      "type": "excess"
+    },
+    {
+      "from": "immobilisme",
+      "to": "innovant",
+      "type": "balance"
+    },
+    {
+      "from": "rsilient",
+      "to": "ttu",
+      "type": "excess"
+    },
+    {
+      "from": "rsilient",
+      "to": "insensible",
+      "type": "excess"
+    },
+    {
+      "from": "rsilient",
+      "to": "surmen",
+      "type": "excess"
+    },
+    {
+      "from": "rsilient",
+      "to": "isol",
+      "type": "excess"
+    },
+    {
+      "from": "rsilient",
+      "to": "ddaigneux",
+      "type": "excess"
+    },
+    {
+      "from": "ttu",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "insensible",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "surmen",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "isol",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "ddaigneux",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "ttu",
+      "to": "sensibilit",
+      "type": "balance"
+    },
+    {
+      "from": "insensible",
+      "to": "sensibilit",
+      "type": "balance"
+    },
+    {
+      "from": "surmen",
+      "to": "sensibilit",
+      "type": "balance"
+    },
+    {
+      "from": "isol",
+      "to": "sensibilit",
+      "type": "balance"
+    },
+    {
+      "from": "ddaigneux",
+      "to": "sensibilit",
+      "type": "balance"
+    },
+    {
+      "from": "ttu",
+      "to": "lgret",
+      "type": "balance"
+    },
+    {
+      "from": "insensible",
+      "to": "lgret",
+      "type": "balance"
+    },
+    {
+      "from": "surmen",
+      "to": "lgret",
+      "type": "balance"
+    },
+    {
+      "from": "isol",
+      "to": "lgret",
+      "type": "balance"
+    },
+    {
+      "from": "ddaigneux",
+      "to": "lgret",
+      "type": "balance"
+    },
+    {
+      "from": "ttu",
+      "to": "ouverture",
+      "type": "balance"
+    },
+    {
+      "from": "insensible",
+      "to": "ouverture",
+      "type": "balance"
+    },
+    {
+      "from": "surmen",
+      "to": "ouverture",
+      "type": "balance"
+    },
+    {
+      "from": "isol",
+      "to": "ouverture",
+      "type": "balance"
+    },
+    {
+      "from": "ddaigneux",
+      "to": "ouverture",
+      "type": "balance"
+    },
+    {
+      "from": "ttu",
+      "to": "acceptation",
+      "type": "balance"
+    },
+    {
+      "from": "insensible",
+      "to": "acceptation",
+      "type": "balance"
+    },
+    {
+      "from": "surmen",
+      "to": "acceptation",
+      "type": "balance"
+    },
+    {
+      "from": "isol",
+      "to": "acceptation",
+      "type": "balance"
+    },
+    {
+      "from": "ddaigneux",
+      "to": "acceptation",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "faiblesse",
+      "type": "excess"
+    },
+    {
+      "from": "sensibilit",
+      "to": "faiblesse",
+      "type": "excess"
+    },
+    {
+      "from": "lgret",
+      "to": "faiblesse",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture",
+      "to": "faiblesse",
+      "type": "excess"
+    },
+    {
+      "from": "acceptation",
+      "to": "faiblesse",
+      "type": "excess"
+    },
+    {
+      "from": "faiblesse",
+      "to": "rsilient",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "vulnrabilit",
+      "type": "excess"
+    },
+    {
+      "from": "sensibilit",
+      "to": "vulnrabilit",
+      "type": "excess"
+    },
+    {
+      "from": "lgret",
+      "to": "vulnrabilit",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture",
+      "to": "vulnrabilit",
+      "type": "excess"
+    },
+    {
+      "from": "acceptation",
+      "to": "vulnrabilit",
+      "type": "excess"
+    },
+    {
+      "from": "vulnrabilit",
+      "to": "rsilient",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "sensibilit",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "lgret",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "acceptation",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "indcision",
+      "to": "rsilient",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "pessimisme",
+      "type": "excess"
+    },
+    {
+      "from": "sensibilit",
+      "to": "pessimisme",
+      "type": "excess"
+    },
+    {
+      "from": "lgret",
+      "to": "pessimisme",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture",
+      "to": "pessimisme",
+      "type": "excess"
+    },
+    {
+      "from": "acceptation",
+      "to": "pessimisme",
+      "type": "excess"
+    },
+    {
+      "from": "pessimisme",
+      "to": "rsilient",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "soumission",
+      "type": "excess"
+    },
+    {
+      "from": "sensibilit",
+      "to": "soumission",
+      "type": "excess"
+    },
+    {
+      "from": "lgret",
+      "to": "soumission",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture",
+      "to": "soumission",
+      "type": "excess"
+    },
+    {
+      "from": "acceptation",
+      "to": "soumission",
+      "type": "excess"
+    },
+    {
+      "from": "soumission",
+      "to": "rsilient",
+      "type": "balance"
+    },
+    {
+      "from": "curieux",
+      "to": "invasif",
+      "type": "excess"
+    },
+    {
+      "from": "curieux",
+      "to": "dispers",
+      "type": "excess"
+    },
+    {
+      "from": "curieux",
+      "to": "trop-exigeant",
+      "type": "excess"
+    },
+    {
+      "from": "curieux",
+      "to": "impatient",
+      "type": "excess"
+    },
+    {
+      "from": "curieux",
+      "to": "superficiel",
+      "type": "excess"
+    },
+    {
+      "from": "invasif",
+      "to": "srieux",
+      "type": "balance"
+    },
+    {
+      "from": "dispers",
+      "to": "srieux",
+      "type": "balance"
+    },
+    {
+      "from": "trop-exigeant",
+      "to": "srieux",
+      "type": "balance"
+    },
+    {
+      "from": "impatient",
+      "to": "srieux",
+      "type": "balance"
+    },
+    {
+      "from": "superficiel",
+      "to": "srieux",
+      "type": "balance"
+    },
+    {
+      "from": "invasif",
+      "to": "concentration",
+      "type": "balance"
+    },
+    {
+      "from": "dispers",
+      "to": "concentration",
+      "type": "balance"
+    },
+    {
+      "from": "trop-exigeant",
+      "to": "concentration",
+      "type": "balance"
+    },
+    {
+      "from": "impatient",
+      "to": "concentration",
+      "type": "balance"
+    },
+    {
+      "from": "superficiel",
+      "to": "concentration",
+      "type": "balance"
+    },
+    {
+      "from": "invasif",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "dispers",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "trop-exigeant",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "impatient",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "superficiel",
+      "to": "discipline",
+      "type": "balance"
+    },
+    {
+      "from": "invasif",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "dispers",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "trop-exigeant",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "impatient",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "superficiel",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "invasif",
+      "to": "profondeur",
+      "type": "balance"
+    },
+    {
+      "from": "dispers",
+      "to": "profondeur",
+      "type": "balance"
+    },
+    {
+      "from": "trop-exigeant",
+      "to": "profondeur",
+      "type": "balance"
+    },
+    {
+      "from": "impatient",
+      "to": "profondeur",
+      "type": "balance"
+    },
+    {
+      "from": "superficiel",
+      "to": "profondeur",
+      "type": "balance"
+    },
+    {
+      "from": "srieux",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "concentration",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "profondeur",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "ennui",
+      "to": "curieux",
+      "type": "balance"
+    },
+    {
+      "from": "srieux",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "concentration",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "profondeur",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "rigidit",
+      "to": "curieux",
+      "type": "balance"
+    },
+    {
+      "from": "srieux",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "concentration",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "profondeur",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "routine",
+      "to": "curieux",
+      "type": "balance"
+    },
+    {
+      "from": "srieux",
+      "to": "prvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "concentration",
+      "to": "prvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "prvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "prvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "profondeur",
+      "to": "prvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "prvisibilit",
+      "to": "curieux",
+      "type": "balance"
+    },
+    {
+      "from": "srieux",
+      "to": "fermet-desprit",
+      "type": "excess"
+    },
+    {
+      "from": "concentration",
+      "to": "fermet-desprit",
+      "type": "excess"
+    },
+    {
+      "from": "discipline",
+      "to": "fermet-desprit",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "fermet-desprit",
+      "type": "excess"
+    },
+    {
+      "from": "profondeur",
+      "to": "fermet-desprit",
+      "type": "excess"
+    },
+    {
+      "from": "fermet-desprit",
+      "to": "curieux",
+      "type": "balance"
+    },
+    {
+      "from": "collaboratif",
+      "to": "trop-de-dpendance",
+      "type": "excess"
+    },
+    {
+      "from": "collaboratif",
+      "to": "manque-dautonomie",
+      "type": "excess"
+    },
+    {
+      "from": "collaboratif",
+      "to": "dilution-des-responsabilits",
+      "type": "excess"
+    },
+    {
+      "from": "collaboratif",
+      "to": "prise-de-dcisions-lentes",
+      "type": "excess"
+    },
+    {
+      "from": "collaboratif",
+      "to": "conflits-dintrts",
+      "type": "excess"
+    },
+    {
+      "from": "trop-de-dpendance",
+      "to": "indpendant",
+      "type": "balance"
+    },
+    {
+      "from": "manque-dautonomie",
+      "to": "indpendant",
+      "type": "balance"
+    },
+    {
+      "from": "dilution-des-responsabilits",
+      "to": "indpendant",
+      "type": "balance"
+    },
+    {
+      "from": "prise-de-dcisions-lentes",
+      "to": "indpendant",
+      "type": "balance"
+    },
+    {
+      "from": "conflits-dintrts",
+      "to": "indpendant",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-dpendance",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "manque-dautonomie",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "dilution-des-responsabilits",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "prise-de-dcisions-lentes",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "conflits-dintrts",
+      "to": "assertif",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-dpendance",
+      "to": "dtermin",
+      "type": "balance"
+    },
+    {
+      "from": "manque-dautonomie",
+      "to": "dtermin",
+      "type": "balance"
+    },
+    {
+      "from": "dilution-des-responsabilits",
+      "to": "dtermin",
+      "type": "balance"
+    },
+    {
+      "from": "prise-de-dcisions-lentes",
+      "to": "dtermin",
+      "type": "balance"
+    },
+    {
+      "from": "conflits-dintrts",
+      "to": "dtermin",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-dpendance",
+      "to": "confiant",
+      "type": "balance"
+    },
+    {
+      "from": "manque-dautonomie",
+      "to": "confiant",
+      "type": "balance"
+    },
+    {
+      "from": "dilution-des-responsabilits",
+      "to": "confiant",
+      "type": "balance"
+    },
+    {
+      "from": "prise-de-dcisions-lentes",
+      "to": "confiant",
+      "type": "balance"
+    },
+    {
+      "from": "conflits-dintrts",
+      "to": "confiant",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-dpendance",
+      "to": "proactif",
+      "type": "balance"
+    },
+    {
+      "from": "manque-dautonomie",
+      "to": "proactif",
+      "type": "balance"
+    },
+    {
+      "from": "dilution-des-responsabilits",
+      "to": "proactif",
+      "type": "balance"
+    },
+    {
+      "from": "prise-de-dcisions-lentes",
+      "to": "proactif",
+      "type": "balance"
+    },
+    {
+      "from": "conflits-dintrts",
+      "to": "proactif",
+      "type": "balance"
+    },
+    {
+      "from": "indpendant",
+      "to": "isolement",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "isolement",
+      "type": "excess"
+    },
+    {
+      "from": "dtermin",
+      "to": "isolement",
+      "type": "excess"
+    },
+    {
+      "from": "confiant",
+      "to": "isolement",
+      "type": "excess"
+    },
+    {
+      "from": "proactif",
+      "to": "isolement",
+      "type": "excess"
+    },
+    {
+      "from": "isolement",
+      "to": "collaboratif",
+      "type": "balance"
+    },
+    {
+      "from": "indpendant",
+      "to": "individualisme",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "individualisme",
+      "type": "excess"
+    },
+    {
+      "from": "dtermin",
+      "to": "individualisme",
+      "type": "excess"
+    },
+    {
+      "from": "confiant",
+      "to": "individualisme",
+      "type": "excess"
+    },
+    {
+      "from": "proactif",
+      "to": "individualisme",
+      "type": "excess"
+    },
+    {
+      "from": "individualisme",
+      "to": "collaboratif",
+      "type": "balance"
+    },
+    {
+      "from": "indpendant",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "dtermin",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "confiant",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "proactif",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "conflit",
+      "to": "collaboratif",
+      "type": "balance"
+    },
+    {
+      "from": "indpendant",
+      "to": "manque-de-communication",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "manque-de-communication",
+      "type": "excess"
+    },
+    {
+      "from": "dtermin",
+      "to": "manque-de-communication",
+      "type": "excess"
+    },
+    {
+      "from": "confiant",
+      "to": "manque-de-communication",
+      "type": "excess"
+    },
+    {
+      "from": "proactif",
+      "to": "manque-de-communication",
+      "type": "excess"
+    },
+    {
+      "from": "manque-de-communication",
+      "to": "collaboratif",
+      "type": "balance"
+    },
+    {
+      "from": "indpendant",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "assertif",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "dtermin",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "confiant",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "proactif",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "rigidit",
+      "to": "collaboratif",
+      "type": "balance"
+    },
+    {
+      "from": "organis",
+      "to": "rigide",
+      "type": "excess"
+    },
+    {
+      "from": "organis",
+      "to": "perfectionnisme",
+      "type": "excess"
+    },
+    {
+      "from": "organis",
+      "to": "surcontrle",
+      "type": "excess"
+    },
+    {
+      "from": "organis",
+      "to": "stress",
+      "type": "excess"
+    },
+    {
+      "from": "organis",
+      "to": "puis",
+      "type": "excess"
+    },
+    {
+      "from": "rigide",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "surcontrle",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "stress",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "puis",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "rigide",
+      "to": "improvisation",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "improvisation",
+      "type": "balance"
+    },
+    {
+      "from": "surcontrle",
+      "to": "improvisation",
+      "type": "balance"
+    },
+    {
+      "from": "stress",
+      "to": "improvisation",
+      "type": "balance"
+    },
+    {
+      "from": "puis",
+      "to": "improvisation",
+      "type": "balance"
+    },
+    {
+      "from": "rigide",
+      "to": "spontanit",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "spontanit",
+      "type": "balance"
+    },
+    {
+      "from": "surcontrle",
+      "to": "spontanit",
+      "type": "balance"
+    },
+    {
+      "from": "stress",
+      "to": "spontanit",
+      "type": "balance"
+    },
+    {
+      "from": "puis",
+      "to": "spontanit",
+      "type": "balance"
+    },
+    {
+      "from": "rigide",
+      "to": "laisser-aller",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "laisser-aller",
+      "type": "balance"
+    },
+    {
+      "from": "surcontrle",
+      "to": "laisser-aller",
+      "type": "balance"
+    },
+    {
+      "from": "stress",
+      "to": "laisser-aller",
+      "type": "balance"
+    },
+    {
+      "from": "puis",
+      "to": "laisser-aller",
+      "type": "balance"
+    },
+    {
+      "from": "rigide",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "surcontrle",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "stress",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "puis",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "improvisation",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "spontanit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "laisser-aller",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "organis",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "improvisation",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "spontanit",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "laisser-aller",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "chaos",
+      "to": "organis",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "imprvu",
+      "type": "excess"
+    },
+    {
+      "from": "improvisation",
+      "to": "imprvu",
+      "type": "excess"
+    },
+    {
+      "from": "spontanit",
+      "to": "imprvu",
+      "type": "excess"
+    },
+    {
+      "from": "laisser-aller",
+      "to": "imprvu",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "imprvu",
+      "type": "excess"
+    },
+    {
+      "from": "imprvu",
+      "to": "organis",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "anarchie",
+      "type": "excess"
+    },
+    {
+      "from": "improvisation",
+      "to": "anarchie",
+      "type": "excess"
+    },
+    {
+      "from": "spontanit",
+      "to": "anarchie",
+      "type": "excess"
+    },
+    {
+      "from": "laisser-aller",
+      "to": "anarchie",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "anarchie",
+      "type": "excess"
+    },
+    {
+      "from": "anarchie",
+      "to": "organis",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "alatoire",
+      "type": "excess"
+    },
+    {
+      "from": "improvisation",
+      "to": "alatoire",
+      "type": "excess"
+    },
+    {
+      "from": "spontanit",
+      "to": "alatoire",
+      "type": "excess"
+    },
+    {
+      "from": "laisser-aller",
+      "to": "alatoire",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "alatoire",
+      "type": "excess"
+    },
+    {
+      "from": "alatoire",
+      "to": "organis",
+      "type": "balance"
+    },
+    {
+      "from": "original",
+      "to": "excentricit",
+      "type": "excess"
+    },
+    {
+      "from": "original",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "original",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "original",
+      "to": "inconstance",
+      "type": "excess"
+    },
+    {
+      "from": "original",
+      "to": "trop-de-crativit",
+      "type": "excess"
+    },
+    {
+      "from": "excentricit",
+      "to": "conventionnel",
+      "type": "balance"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "conventionnel",
+      "type": "balance"
+    },
+    {
+      "from": "chaos",
+      "to": "conventionnel",
+      "type": "balance"
+    },
+    {
+      "from": "inconstance",
+      "to": "conventionnel",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-crativit",
+      "to": "conventionnel",
+      "type": "balance"
+    },
+    {
+      "from": "excentricit",
+      "to": "pragmatique",
+      "type": "balance"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "pragmatique",
+      "type": "balance"
+    },
+    {
+      "from": "chaos",
+      "to": "pragmatique",
+      "type": "balance"
+    },
+    {
+      "from": "inconstance",
+      "to": "pragmatique",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-crativit",
+      "to": "pragmatique",
+      "type": "balance"
+    },
+    {
+      "from": "excentricit",
+      "to": "quilibre",
+      "type": "balance"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "quilibre",
+      "type": "balance"
+    },
+    {
+      "from": "chaos",
+      "to": "quilibre",
+      "type": "balance"
+    },
+    {
+      "from": "inconstance",
+      "to": "quilibre",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-crativit",
+      "to": "quilibre",
+      "type": "balance"
+    },
+    {
+      "from": "excentricit",
+      "to": "structured",
+      "type": "balance"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "structured",
+      "type": "balance"
+    },
+    {
+      "from": "chaos",
+      "to": "structured",
+      "type": "balance"
+    },
+    {
+      "from": "inconstance",
+      "to": "structured",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-crativit",
+      "to": "structured",
+      "type": "balance"
+    },
+    {
+      "from": "excentricit",
+      "to": "prvisible",
+      "type": "balance"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "prvisible",
+      "type": "balance"
+    },
+    {
+      "from": "chaos",
+      "to": "prvisible",
+      "type": "balance"
+    },
+    {
+      "from": "inconstance",
+      "to": "prvisible",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-crativit",
+      "to": "prvisible",
+      "type": "balance"
+    },
+    {
+      "from": "conventionnel",
+      "to": "banalit",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatique",
+      "to": "banalit",
+      "type": "excess"
+    },
+    {
+      "from": "quilibre",
+      "to": "banalit",
+      "type": "excess"
+    },
+    {
+      "from": "structured",
+      "to": "banalit",
+      "type": "excess"
+    },
+    {
+      "from": "prvisible",
+      "to": "banalit",
+      "type": "excess"
+    },
+    {
+      "from": "banalit",
+      "to": "original",
+      "type": "balance"
+    },
+    {
+      "from": "conventionnel",
+      "to": "uniformit",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatique",
+      "to": "uniformit",
+      "type": "excess"
+    },
+    {
+      "from": "quilibre",
+      "to": "uniformit",
+      "type": "excess"
+    },
+    {
+      "from": "structured",
+      "to": "uniformit",
+      "type": "excess"
+    },
+    {
+      "from": "prvisible",
+      "to": "uniformit",
+      "type": "excess"
+    },
+    {
+      "from": "uniformit",
+      "to": "original",
+      "type": "balance"
+    },
+    {
+      "from": "conventionnel",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatique",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "quilibre",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "structured",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "prvisible",
+      "to": "ennui",
+      "type": "excess"
+    },
+    {
+      "from": "ennui",
+      "to": "original",
+      "type": "balance"
+    },
+    {
+      "from": "conventionnel",
+      "to": "routinier",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatique",
+      "to": "routinier",
+      "type": "excess"
+    },
+    {
+      "from": "quilibre",
+      "to": "routinier",
+      "type": "excess"
+    },
+    {
+      "from": "structured",
+      "to": "routinier",
+      "type": "excess"
+    },
+    {
+      "from": "prvisible",
+      "to": "routinier",
+      "type": "excess"
+    },
+    {
+      "from": "routinier",
+      "to": "original",
+      "type": "balance"
+    },
+    {
+      "from": "conventionnel",
+      "to": "prvisibilit-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatique",
+      "to": "prvisibilit-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "quilibre",
+      "to": "prvisibilit-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "structured",
+      "to": "prvisibilit-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "prvisible",
+      "to": "prvisibilit-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "prvisibilit-excessive",
+      "to": "original",
+      "type": "balance"
+    },
+    {
+      "from": "ancr",
+      "to": "rigide",
+      "type": "excess"
+    },
+    {
+      "from": "ancr",
+      "to": "inflexible",
+      "type": "excess"
+    },
+    {
+      "from": "ancr",
+      "to": "ttu",
+      "type": "excess"
+    },
+    {
+      "from": "ancr",
+      "to": "sarcophage",
+      "type": "excess"
+    },
+    {
+      "from": "ancr",
+      "to": "sur-ancr",
+      "type": "excess"
+    },
+    {
+      "from": "rigide",
+      "to": "ouvert",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "ouvert",
+      "type": "balance"
+    },
+    {
+      "from": "ttu",
+      "to": "ouvert",
+      "type": "balance"
+    },
+    {
+      "from": "sarcophage",
+      "to": "ouvert",
+      "type": "balance"
+    },
+    {
+      "from": "sur-ancr",
+      "to": "ouvert",
+      "type": "balance"
+    },
+    {
+      "from": "rigide",
+      "to": "adaptable",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "adaptable",
+      "type": "balance"
+    },
+    {
+      "from": "ttu",
+      "to": "adaptable",
+      "type": "balance"
+    },
+    {
+      "from": "sarcophage",
+      "to": "adaptable",
+      "type": "balance"
+    },
+    {
+      "from": "sur-ancr",
+      "to": "adaptable",
+      "type": "balance"
+    },
+    {
+      "from": "rigide",
+      "to": "flexible",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "flexible",
+      "type": "balance"
+    },
+    {
+      "from": "ttu",
+      "to": "flexible",
+      "type": "balance"
+    },
+    {
+      "from": "sarcophage",
+      "to": "flexible",
+      "type": "balance"
+    },
+    {
+      "from": "sur-ancr",
+      "to": "flexible",
+      "type": "balance"
+    },
+    {
+      "from": "rigide",
+      "to": "volutif",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "volutif",
+      "type": "balance"
+    },
+    {
+      "from": "ttu",
+      "to": "volutif",
+      "type": "balance"
+    },
+    {
+      "from": "sarcophage",
+      "to": "volutif",
+      "type": "balance"
+    },
+    {
+      "from": "sur-ancr",
+      "to": "volutif",
+      "type": "balance"
+    },
+    {
+      "from": "rigide",
+      "to": "rceptif",
+      "type": "balance"
+    },
+    {
+      "from": "inflexible",
+      "to": "rceptif",
+      "type": "balance"
+    },
+    {
+      "from": "ttu",
+      "to": "rceptif",
+      "type": "balance"
+    },
+    {
+      "from": "sarcophage",
+      "to": "rceptif",
+      "type": "balance"
+    },
+    {
+      "from": "sur-ancr",
+      "to": "rceptif",
+      "type": "balance"
+    },
+    {
+      "from": "ouvert",
+      "to": "instabilit",
+      "type": "excess"
+    },
+    {
+      "from": "adaptable",
+      "to": "instabilit",
+      "type": "excess"
+    },
+    {
+      "from": "flexible",
+      "to": "instabilit",
+      "type": "excess"
+    },
+    {
+      "from": "volutif",
+      "to": "instabilit",
+      "type": "excess"
+    },
+    {
+      "from": "rceptif",
+      "to": "instabilit",
+      "type": "excess"
+    },
+    {
+      "from": "instabilit",
+      "to": "ancr",
+      "type": "balance"
+    },
+    {
+      "from": "ouvert",
+      "to": "irresponsabilit",
+      "type": "excess"
+    },
+    {
+      "from": "adaptable",
+      "to": "irresponsabilit",
+      "type": "excess"
+    },
+    {
+      "from": "flexible",
+      "to": "irresponsabilit",
+      "type": "excess"
+    },
+    {
+      "from": "volutif",
+      "to": "irresponsabilit",
+      "type": "excess"
+    },
+    {
+      "from": "rceptif",
+      "to": "irresponsabilit",
+      "type": "excess"
+    },
+    {
+      "from": "irresponsabilit",
+      "to": "ancr",
+      "type": "balance"
+    },
+    {
+      "from": "ouvert",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "adaptable",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "flexible",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "volutif",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "rceptif",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "ancr",
+      "type": "balance"
+    },
+    {
+      "from": "ouvert",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "adaptable",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "flexible",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "volutif",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "rceptif",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "ancr",
+      "type": "balance"
+    },
+    {
+      "from": "ouvert",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "adaptable",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "flexible",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "volutif",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "rceptif",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "chaos",
+      "to": "ancr",
+      "type": "balance"
+    },
+    {
+      "from": "stratgique",
+      "to": "manipulation",
+      "type": "excess"
+    },
+    {
+      "from": "stratgique",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "stratgique",
+      "to": "overthinking",
+      "type": "excess"
+    },
+    {
+      "from": "stratgique",
+      "to": "dtachement",
+      "type": "excess"
+    },
+    {
+      "from": "stratgique",
+      "to": "surcharge",
+      "type": "excess"
+    },
+    {
+      "from": "manipulation",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "manipulation",
+      "to": "empathie",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "empathie",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "empathie",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement",
+      "to": "empathie",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "empathie",
+      "type": "balance"
+    },
+    {
+      "from": "manipulation",
+      "to": "simplicit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "simplicit",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "simplicit",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement",
+      "to": "simplicit",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "simplicit",
+      "type": "balance"
+    },
+    {
+      "from": "manipulation",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "manipulation",
+      "to": "pragmatisme",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "pragmatisme",
+      "type": "balance"
+    },
+    {
+      "from": "overthinking",
+      "to": "pragmatisme",
+      "type": "balance"
+    },
+    {
+      "from": "dtachement",
+      "to": "pragmatisme",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "pragmatisme",
+      "type": "balance"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "empathie",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "simplicit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatisme",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "stratgique",
+      "type": "balance"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "empathie",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "simplicit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatisme",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "stratgique",
+      "type": "balance"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "incertitude",
+      "type": "excess"
+    },
+    {
+      "from": "empathie",
+      "to": "incertitude",
+      "type": "excess"
+    },
+    {
+      "from": "simplicit",
+      "to": "incertitude",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "incertitude",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatisme",
+      "to": "incertitude",
+      "type": "excess"
+    },
+    {
+      "from": "incertitude",
+      "to": "stratgique",
+      "type": "balance"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "empathie",
+      "to": "motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "simplicit",
+      "to": "motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatisme",
+      "to": "motionnel",
+      "type": "excess"
+    },
+    {
+      "from": "motionnel",
+      "to": "stratgique",
+      "type": "balance"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "ressentiment",
+      "type": "excess"
+    },
+    {
+      "from": "empathie",
+      "to": "ressentiment",
+      "type": "excess"
+    },
+    {
+      "from": "simplicit",
+      "to": "ressentiment",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "ressentiment",
+      "type": "excess"
+    },
+    {
+      "from": "pragmatisme",
+      "to": "ressentiment",
+      "type": "excess"
+    },
+    {
+      "from": "ressentiment",
+      "to": "stratgique",
+      "type": "balance"
+    },
+    {
+      "from": "diplomate",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "diplomate",
+      "to": "manipulation",
+      "type": "excess"
+    },
+    {
+      "from": "diplomate",
+      "to": "trop-de-compromis",
+      "type": "excess"
+    },
+    {
+      "from": "diplomate",
+      "to": "fuite-des-conflits",
+      "type": "excess"
+    },
+    {
+      "from": "diplomate",
+      "to": "perte-dauthenticit",
+      "type": "excess"
+    },
+    {
+      "from": "indcision",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "manipulation",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-compromis",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "fuite-des-conflits",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "perte-dauthenticit",
+      "to": "assertivit",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "franchise",
+      "type": "balance"
+    },
+    {
+      "from": "manipulation",
+      "to": "franchise",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-compromis",
+      "to": "franchise",
+      "type": "balance"
+    },
+    {
+      "from": "fuite-des-conflits",
+      "to": "franchise",
+      "type": "balance"
+    },
+    {
+      "from": "perte-dauthenticit",
+      "to": "franchise",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "manipulation",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-compromis",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "fuite-des-conflits",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "perte-dauthenticit",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "confrontation",
+      "type": "balance"
+    },
+    {
+      "from": "manipulation",
+      "to": "confrontation",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-compromis",
+      "to": "confrontation",
+      "type": "balance"
+    },
+    {
+      "from": "fuite-des-conflits",
+      "to": "confrontation",
+      "type": "balance"
+    },
+    {
+      "from": "perte-dauthenticit",
+      "to": "confrontation",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "clart",
+      "type": "balance"
+    },
+    {
+      "from": "manipulation",
+      "to": "clart",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-compromis",
+      "to": "clart",
+      "type": "balance"
+    },
+    {
+      "from": "fuite-des-conflits",
+      "to": "clart",
+      "type": "balance"
+    },
+    {
+      "from": "perte-dauthenticit",
+      "to": "clart",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "franchise",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "confrontation",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "clart",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "rigidit",
+      "to": "diplomate",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "franchise-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "franchise",
+      "to": "franchise-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "franchise-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "confrontation",
+      "to": "franchise-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "clart",
+      "to": "franchise-excessive",
+      "type": "excess"
+    },
+    {
+      "from": "franchise-excessive",
+      "to": "diplomate",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "franchise",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "confrontation",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "clart",
+      "to": "conflit",
+      "type": "excess"
+    },
+    {
+      "from": "conflit",
+      "to": "diplomate",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "franchise",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "confrontation",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "clart",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "diplomate",
+      "type": "balance"
+    },
+    {
+      "from": "assertivit",
+      "to": "absence-de-compromis",
+      "type": "excess"
+    },
+    {
+      "from": "franchise",
+      "to": "absence-de-compromis",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "absence-de-compromis",
+      "type": "excess"
+    },
+    {
+      "from": "confrontation",
+      "to": "absence-de-compromis",
+      "type": "excess"
+    },
+    {
+      "from": "clart",
+      "to": "absence-de-compromis",
+      "type": "excess"
+    },
+    {
+      "from": "absence-de-compromis",
+      "to": "diplomate",
+      "type": "balance"
+    },
+    {
+      "from": "fiable",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "fiable",
+      "to": "surengagement",
+      "type": "excess"
+    },
+    {
+      "from": "fiable",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "fiable",
+      "to": "perfectionnisme",
+      "type": "excess"
+    },
+    {
+      "from": "fiable",
+      "to": "manque-de-spontanit",
+      "type": "excess"
+    },
+    {
+      "from": "rigidit",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "surengagement",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-spontanit",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "surengagement",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-spontanit",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "surengagement",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-spontanit",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "lgret",
+      "type": "balance"
+    },
+    {
+      "from": "surengagement",
+      "to": "lgret",
+      "type": "balance"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "lgret",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "lgret",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-spontanit",
+      "to": "lgret",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "surengagement",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "perfectionnisme",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-spontanit",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "lgret",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "fiable",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "infiabilit",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "infiabilit",
+      "type": "excess"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "infiabilit",
+      "type": "excess"
+    },
+    {
+      "from": "lgret",
+      "to": "infiabilit",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "infiabilit",
+      "type": "excess"
+    },
+    {
+      "from": "infiabilit",
+      "to": "fiable",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "lgret",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "imprvisibilit",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "fiable",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "laxisme",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "laxisme",
+      "type": "excess"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "laxisme",
+      "type": "excess"
+    },
+    {
+      "from": "lgret",
+      "to": "laxisme",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "laxisme",
+      "type": "excess"
+    },
+    {
+      "from": "laxisme",
+      "to": "fiable",
+      "type": "balance"
+    },
+    {
+      "from": "flexibilit",
+      "to": "irresponsabilit",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "irresponsabilit",
+      "type": "excess"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "irresponsabilit",
+      "type": "excess"
+    },
+    {
+      "from": "lgret",
+      "to": "irresponsabilit",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "irresponsabilit",
+      "type": "excess"
+    },
+    {
+      "from": "irresponsabilit",
+      "to": "fiable",
+      "type": "balance"
+    },
+    {
+      "from": "flexible",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "flexible",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "flexible",
+      "to": "manque-de-structure",
+      "type": "excess"
+    },
+    {
+      "from": "flexible",
+      "to": "perte-de-focus",
+      "type": "excess"
+    },
+    {
+      "from": "flexible",
+      "to": "trop-de-compromis",
+      "type": "excess"
+    },
+    {
+      "from": "indcision",
+      "to": "rigueur",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "rigueur",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-structure",
+      "to": "rigueur",
+      "type": "balance"
+    },
+    {
+      "from": "perte-de-focus",
+      "to": "rigueur",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-compromis",
+      "to": "rigueur",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-structure",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "perte-de-focus",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-compromis",
+      "to": "dtermination",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-structure",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "perte-de-focus",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-compromis",
+      "to": "structure",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "cohrence",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "cohrence",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-structure",
+      "to": "cohrence",
+      "type": "balance"
+    },
+    {
+      "from": "perte-de-focus",
+      "to": "cohrence",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-compromis",
+      "to": "cohrence",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "persvrance",
+      "type": "balance"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "persvrance",
+      "type": "balance"
+    },
+    {
+      "from": "manque-de-structure",
+      "to": "persvrance",
+      "type": "balance"
+    },
+    {
+      "from": "perte-de-focus",
+      "to": "persvrance",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-compromis",
+      "to": "persvrance",
+      "type": "balance"
+    },
+    {
+      "from": "rigueur",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "cohrence",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "persvrance",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "flexible",
+      "type": "balance"
+    },
+    {
+      "from": "rigueur",
+      "to": "autoritarisme",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "autoritarisme",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "autoritarisme",
+      "type": "excess"
+    },
+    {
+      "from": "cohrence",
+      "to": "autoritarisme",
+      "type": "excess"
+    },
+    {
+      "from": "persvrance",
+      "to": "autoritarisme",
+      "type": "excess"
+    },
+    {
+      "from": "autoritarisme",
+      "to": "flexible",
+      "type": "balance"
+    },
+    {
+      "from": "rigueur",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "cohrence",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "persvrance",
+      "to": "routine",
+      "type": "excess"
+    },
+    {
+      "from": "routine",
+      "to": "flexible",
+      "type": "balance"
+    },
+    {
+      "from": "rigueur",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "cohrence",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "persvrance",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "rigidit",
+      "to": "flexible",
+      "type": "balance"
+    },
+    {
+      "from": "rigueur",
+      "to": "stagnation",
+      "type": "excess"
+    },
+    {
+      "from": "dtermination",
+      "to": "stagnation",
+      "type": "excess"
+    },
+    {
+      "from": "structure",
+      "to": "stagnation",
+      "type": "excess"
+    },
+    {
+      "from": "cohrence",
+      "to": "stagnation",
+      "type": "excess"
+    },
+    {
+      "from": "persvrance",
+      "to": "stagnation",
+      "type": "excess"
+    },
+    {
+      "from": "stagnation",
+      "to": "flexible",
+      "type": "balance"
+    },
+    {
+      "from": "quilibr",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "quilibr",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "quilibr",
+      "to": "surcharge",
+      "type": "excess"
+    },
+    {
+      "from": "quilibr",
+      "to": "surimplication",
+      "type": "excess"
+    },
+    {
+      "from": "quilibr",
+      "to": "contrle-excessif",
+      "type": "excess"
+    },
+    {
+      "from": "rigidit",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "surimplication",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "contrle-excessif",
+      "to": "adaptabilit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "surimplication",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "contrle-excessif",
+      "to": "ouverture-desprit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "surimplication",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "contrle-excessif",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "surimplication",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "contrle-excessif",
+      "to": "crativit",
+      "type": "balance"
+    },
+    {
+      "from": "rigidit",
+      "to": "imprvisibilit",
+      "type": "balance"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "imprvisibilit",
+      "type": "balance"
+    },
+    {
+      "from": "surcharge",
+      "to": "imprvisibilit",
+      "type": "balance"
+    },
+    {
+      "from": "surimplication",
+      "to": "imprvisibilit",
+      "type": "balance"
+    },
+    {
+      "from": "contrle-excessif",
+      "to": "imprvisibilit",
+      "type": "balance"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "dsorganisation",
+      "type": "excess"
+    },
+    {
+      "from": "dsorganisation",
+      "to": "quilibr",
+      "type": "balance"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "chaos",
+      "type": "excess"
+    },
+    {
+      "from": "chaos",
+      "to": "quilibr",
+      "type": "balance"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "instabilit",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "instabilit",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "instabilit",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "instabilit",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "instabilit",
+      "type": "excess"
+    },
+    {
+      "from": "instabilit",
+      "to": "quilibr",
+      "type": "balance"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "imprparation",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "imprparation",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "imprparation",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "imprparation",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "imprparation",
+      "type": "excess"
+    },
+    {
+      "from": "imprparation",
+      "to": "quilibr",
+      "type": "balance"
+    },
+    {
+      "from": "adaptabilit",
+      "to": "anarchie",
+      "type": "excess"
+    },
+    {
+      "from": "ouverture-desprit",
+      "to": "anarchie",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "anarchie",
+      "type": "excess"
+    },
+    {
+      "from": "crativit",
+      "to": "anarchie",
+      "type": "excess"
+    },
+    {
+      "from": "imprvisibilit",
+      "to": "anarchie",
+      "type": "excess"
+    },
+    {
+      "from": "anarchie",
+      "to": "quilibr",
       "type": "balance"
     }
   ]
