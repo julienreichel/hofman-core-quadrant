@@ -45,9 +45,6 @@ export default {
     generating: 'Génération en cours...',
     selectSuggestion: 'Cliquez pour sélectionner',
   },
-  summary: {
-    title: 'Votre Quadrant de Ofman Complet',
-  },
   errors: {
     noApiKey: "Veuillez d'abord configurer votre clé API",
     noInput: 'Veuillez entrer un trait dans un quadrant',

@@ -45,9 +45,6 @@ export default {
     generating: 'Generating...',
     selectSuggestion: 'Click to select',
   },
-  summary: {
-    title: 'Your Complete Ofman Quadrant',
-  },
   errors: {
     noApiKey: 'Please configure your API key first',
     noInput: 'Please enter a trait in one quadrant',
