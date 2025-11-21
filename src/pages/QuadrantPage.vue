@@ -140,7 +140,7 @@ const handleGenerate = async () => {
       message: 'Suggestions generated successfully!',
       position: 'top',
     });
-  } catch (err) {
+  } catch {
     errorMessage.value = error.value || t('errors.generationFailed');
     $q.notify({
       type: 'negative',

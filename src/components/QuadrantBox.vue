@@ -45,7 +45,7 @@
 import type { QuadrantType } from 'src/composables/useQuadrantState';
 import SuggestionList from 'components/SuggestionList.vue';
 
-const props = defineProps<{
+defineProps<{
   quadrantType: QuadrantType;
   inputValue: string;
   selectedWord: string;

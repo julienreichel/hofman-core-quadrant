@@ -44,7 +44,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   loading: boolean;
   error: string | null;
   canGenerate: boolean;
