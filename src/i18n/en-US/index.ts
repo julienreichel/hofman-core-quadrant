@@ -67,5 +67,16 @@ export default {
     statusComplete: 'Complete! Download started.',
     errorNoQualities: 'Please enter at least one core quality',
     errorGeneration: 'Generation failed: {error}',
+    // Import database keys
+    importButton: 'Import Database',
+    importTitle: 'Import Custom Database',
+    importDescription:
+      'Upload a JSON file with custom traits and relationships. If no database is imported, the default database will be used.',
+    selectFile: 'Select JSON file',
+    import: 'Import',
+    importSuccess: 'Database imported successfully',
+    importError: 'Failed to import database',
+    customDbLoaded: 'Custom database loaded ({count} traits)',
+    defaultDbLoaded: 'Using default database ({count} traits)',
   },
 };

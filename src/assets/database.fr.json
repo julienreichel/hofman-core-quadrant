@@ -1,0 +1,761 @@
+{
+  "traits": [
+    {
+      "id": "doute",
+      "label": "Doute",
+      "polarity": "positive"
+    },
+    {
+      "id": "indcision",
+      "label": "indécision",
+      "polarity": "negative"
+    },
+    {
+      "id": "paralysie",
+      "label": "paralysie",
+      "polarity": "negative"
+    },
+    {
+      "id": "angoisse",
+      "label": "angoisse",
+      "polarity": "negative"
+    },
+    {
+      "id": "mfiance",
+      "label": "méfiance",
+      "polarity": "negative"
+    },
+    {
+      "id": "scepticisme",
+      "label": "scepticisme",
+      "polarity": "negative"
+    },
+    {
+      "id": "confiance",
+      "label": "confiance",
+      "polarity": "positive"
+    },
+    {
+      "id": "croyance",
+      "label": "croyance",
+      "polarity": "positive"
+    },
+    {
+      "id": "assurance",
+      "label": "assurance",
+      "polarity": "positive"
+    },
+    {
+      "id": "optimisme",
+      "label": "optimisme",
+      "polarity": "positive"
+    },
+    {
+      "id": "fermet",
+      "label": "fermeté",
+      "polarity": "positive"
+    },
+    {
+      "id": "certitude",
+      "label": "certitude",
+      "polarity": "negative"
+    },
+    {
+      "id": "dogmatisme",
+      "label": "dogmatisme",
+      "polarity": "negative"
+    },
+    {
+      "id": "rigidit",
+      "label": "rigidité",
+      "polarity": "negative"
+    },
+    {
+      "id": "arrogance",
+      "label": "arrogance",
+      "polarity": "negative"
+    },
+    {
+      "id": "inflexibilit",
+      "label": "inflexibilité",
+      "polarity": "negative"
+    },
+    {
+      "id": "sincrit",
+      "label": "Sincérité",
+      "polarity": "positive"
+    },
+    {
+      "id": "brutalit",
+      "label": "brutalité",
+      "polarity": "negative"
+    },
+    {
+      "id": "insensibilit",
+      "label": "insensibilité",
+      "polarity": "negative"
+    },
+    {
+      "id": "trop-de-franchise",
+      "label": "trop de franchise",
+      "polarity": "negative"
+    },
+    {
+      "id": "imprcision",
+      "label": "imprécision",
+      "polarity": "negative"
+    },
+    {
+      "id": "diplomatie",
+      "label": "diplomatie",
+      "polarity": "positive"
+    },
+    {
+      "id": "tact",
+      "label": "tact",
+      "polarity": "positive"
+    },
+    {
+      "id": "coute",
+      "label": "écoute",
+      "polarity": "positive"
+    },
+    {
+      "id": "flexibilit",
+      "label": "flexibilité",
+      "polarity": "positive"
+    },
+    {
+      "id": "compassion",
+      "label": "compassion",
+      "polarity": "positive"
+    },
+    {
+      "id": "hypocrisie",
+      "label": "hypocrisie",
+      "polarity": "negative"
+    },
+    {
+      "id": "manipulation",
+      "label": "manipulation",
+      "polarity": "negative"
+    },
+    {
+      "id": "fausse-modestie",
+      "label": "fausse modestie",
+      "polarity": "negative"
+    },
+    {
+      "id": "dsinvolture",
+      "label": "désinvolture",
+      "polarity": "negative"
+    },
+    {
+      "id": "indiffrence",
+      "label": "indifférence",
+      "polarity": "negative"
+    }
+  ],
+  "links": [
+    {
+      "from": "doute",
+      "to": "indcision",
+      "type": "excess"
+    },
+    {
+      "from": "doute",
+      "to": "paralysie",
+      "type": "excess"
+    },
+    {
+      "from": "doute",
+      "to": "angoisse",
+      "type": "excess"
+    },
+    {
+      "from": "doute",
+      "to": "mfiance",
+      "type": "excess"
+    },
+    {
+      "from": "doute",
+      "to": "scepticisme",
+      "type": "excess"
+    },
+    {
+      "from": "indcision",
+      "to": "confiance",
+      "type": "balance"
+    },
+    {
+      "from": "paralysie",
+      "to": "confiance",
+      "type": "balance"
+    },
+    {
+      "from": "angoisse",
+      "to": "confiance",
+      "type": "balance"
+    },
+    {
+      "from": "mfiance",
+      "to": "confiance",
+      "type": "balance"
+    },
+    {
+      "from": "scepticisme",
+      "to": "confiance",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "croyance",
+      "type": "balance"
+    },
+    {
+      "from": "paralysie",
+      "to": "croyance",
+      "type": "balance"
+    },
+    {
+      "from": "angoisse",
+      "to": "croyance",
+      "type": "balance"
+    },
+    {
+      "from": "mfiance",
+      "to": "croyance",
+      "type": "balance"
+    },
+    {
+      "from": "scepticisme",
+      "to": "croyance",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "assurance",
+      "type": "balance"
+    },
+    {
+      "from": "paralysie",
+      "to": "assurance",
+      "type": "balance"
+    },
+    {
+      "from": "angoisse",
+      "to": "assurance",
+      "type": "balance"
+    },
+    {
+      "from": "mfiance",
+      "to": "assurance",
+      "type": "balance"
+    },
+    {
+      "from": "scepticisme",
+      "to": "assurance",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "optimisme",
+      "type": "balance"
+    },
+    {
+      "from": "paralysie",
+      "to": "optimisme",
+      "type": "balance"
+    },
+    {
+      "from": "angoisse",
+      "to": "optimisme",
+      "type": "balance"
+    },
+    {
+      "from": "mfiance",
+      "to": "optimisme",
+      "type": "balance"
+    },
+    {
+      "from": "scepticisme",
+      "to": "optimisme",
+      "type": "balance"
+    },
+    {
+      "from": "indcision",
+      "to": "fermet",
+      "type": "balance"
+    },
+    {
+      "from": "paralysie",
+      "to": "fermet",
+      "type": "balance"
+    },
+    {
+      "from": "angoisse",
+      "to": "fermet",
+      "type": "balance"
+    },
+    {
+      "from": "mfiance",
+      "to": "fermet",
+      "type": "balance"
+    },
+    {
+      "from": "scepticisme",
+      "to": "fermet",
+      "type": "balance"
+    },
+    {
+      "from": "confiance",
+      "to": "certitude",
+      "type": "excess"
+    },
+    {
+      "from": "croyance",
+      "to": "certitude",
+      "type": "excess"
+    },
+    {
+      "from": "assurance",
+      "to": "certitude",
+      "type": "excess"
+    },
+    {
+      "from": "optimisme",
+      "to": "certitude",
+      "type": "excess"
+    },
+    {
+      "from": "fermet",
+      "to": "certitude",
+      "type": "excess"
+    },
+    {
+      "from": "certitude",
+      "to": "doute",
+      "type": "balance"
+    },
+    {
+      "from": "confiance",
+      "to": "dogmatisme",
+      "type": "excess"
+    },
+    {
+      "from": "croyance",
+      "to": "dogmatisme",
+      "type": "excess"
+    },
+    {
+      "from": "assurance",
+      "to": "dogmatisme",
+      "type": "excess"
+    },
+    {
+      "from": "optimisme",
+      "to": "dogmatisme",
+      "type": "excess"
+    },
+    {
+      "from": "fermet",
+      "to": "dogmatisme",
+      "type": "excess"
+    },
+    {
+      "from": "dogmatisme",
+      "to": "doute",
+      "type": "balance"
+    },
+    {
+      "from": "confiance",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "croyance",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "assurance",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "optimisme",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "fermet",
+      "to": "rigidit",
+      "type": "excess"
+    },
+    {
+      "from": "rigidit",
+      "to": "doute",
+      "type": "balance"
+    },
+    {
+      "from": "confiance",
+      "to": "arrogance",
+      "type": "excess"
+    },
+    {
+      "from": "croyance",
+      "to": "arrogance",
+      "type": "excess"
+    },
+    {
+      "from": "assurance",
+      "to": "arrogance",
+      "type": "excess"
+    },
+    {
+      "from": "optimisme",
+      "to": "arrogance",
+      "type": "excess"
+    },
+    {
+      "from": "fermet",
+      "to": "arrogance",
+      "type": "excess"
+    },
+    {
+      "from": "arrogance",
+      "to": "doute",
+      "type": "balance"
+    },
+    {
+      "from": "confiance",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "croyance",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "assurance",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "optimisme",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "fermet",
+      "to": "inflexibilit",
+      "type": "excess"
+    },
+    {
+      "from": "inflexibilit",
+      "to": "doute",
+      "type": "balance"
+    },
+    {
+      "from": "sincrit",
+      "to": "brutalit",
+      "type": "excess"
+    },
+    {
+      "from": "sincrit",
+      "to": "insensibilit",
+      "type": "excess"
+    },
+    {
+      "from": "sincrit",
+      "to": "trop-de-franchise",
+      "type": "excess"
+    },
+    {
+      "from": "sincrit",
+      "to": "imprcision",
+      "type": "excess"
+    },
+    {
+      "from": "sincrit",
+      "to": "arrogance",
+      "type": "excess"
+    },
+    {
+      "from": "brutalit",
+      "to": "diplomatie",
+      "type": "balance"
+    },
+    {
+      "from": "insensibilit",
+      "to": "diplomatie",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-franchise",
+      "to": "diplomatie",
+      "type": "balance"
+    },
+    {
+      "from": "imprcision",
+      "to": "diplomatie",
+      "type": "balance"
+    },
+    {
+      "from": "arrogance",
+      "to": "diplomatie",
+      "type": "balance"
+    },
+    {
+      "from": "brutalit",
+      "to": "tact",
+      "type": "balance"
+    },
+    {
+      "from": "insensibilit",
+      "to": "tact",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-franchise",
+      "to": "tact",
+      "type": "balance"
+    },
+    {
+      "from": "imprcision",
+      "to": "tact",
+      "type": "balance"
+    },
+    {
+      "from": "arrogance",
+      "to": "tact",
+      "type": "balance"
+    },
+    {
+      "from": "brutalit",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "insensibilit",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-franchise",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "imprcision",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "arrogance",
+      "to": "coute",
+      "type": "balance"
+    },
+    {
+      "from": "brutalit",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "insensibilit",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-franchise",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "imprcision",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "arrogance",
+      "to": "flexibilit",
+      "type": "balance"
+    },
+    {
+      "from": "brutalit",
+      "to": "compassion",
+      "type": "balance"
+    },
+    {
+      "from": "insensibilit",
+      "to": "compassion",
+      "type": "balance"
+    },
+    {
+      "from": "trop-de-franchise",
+      "to": "compassion",
+      "type": "balance"
+    },
+    {
+      "from": "imprcision",
+      "to": "compassion",
+      "type": "balance"
+    },
+    {
+      "from": "arrogance",
+      "to": "compassion",
+      "type": "balance"
+    },
+    {
+      "from": "diplomatie",
+      "to": "hypocrisie",
+      "type": "excess"
+    },
+    {
+      "from": "tact",
+      "to": "hypocrisie",
+      "type": "excess"
+    },
+    {
+      "from": "coute",
+      "to": "hypocrisie",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "hypocrisie",
+      "type": "excess"
+    },
+    {
+      "from": "compassion",
+      "to": "hypocrisie",
+      "type": "excess"
+    },
+    {
+      "from": "hypocrisie",
+      "to": "sincrit",
+      "type": "balance"
+    },
+    {
+      "from": "diplomatie",
+      "to": "manipulation",
+      "type": "excess"
+    },
+    {
+      "from": "tact",
+      "to": "manipulation",
+      "type": "excess"
+    },
+    {
+      "from": "coute",
+      "to": "manipulation",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "manipulation",
+      "type": "excess"
+    },
+    {
+      "from": "compassion",
+      "to": "manipulation",
+      "type": "excess"
+    },
+    {
+      "from": "manipulation",
+      "to": "sincrit",
+      "type": "balance"
+    },
+    {
+      "from": "diplomatie",
+      "to": "fausse-modestie",
+      "type": "excess"
+    },
+    {
+      "from": "tact",
+      "to": "fausse-modestie",
+      "type": "excess"
+    },
+    {
+      "from": "coute",
+      "to": "fausse-modestie",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "fausse-modestie",
+      "type": "excess"
+    },
+    {
+      "from": "compassion",
+      "to": "fausse-modestie",
+      "type": "excess"
+    },
+    {
+      "from": "fausse-modestie",
+      "to": "sincrit",
+      "type": "balance"
+    },
+    {
+      "from": "diplomatie",
+      "to": "dsinvolture",
+      "type": "excess"
+    },
+    {
+      "from": "tact",
+      "to": "dsinvolture",
+      "type": "excess"
+    },
+    {
+      "from": "coute",
+      "to": "dsinvolture",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "dsinvolture",
+      "type": "excess"
+    },
+    {
+      "from": "compassion",
+      "to": "dsinvolture",
+      "type": "excess"
+    },
+    {
+      "from": "dsinvolture",
+      "to": "sincrit",
+      "type": "balance"
+    },
+    {
+      "from": "diplomatie",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "tact",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "coute",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "flexibilit",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "compassion",
+      "to": "indiffrence",
+      "type": "excess"
+    },
+    {
+      "from": "indiffrence",
+      "to": "sincrit",
+      "type": "balance"
+    }
+  ]
+}

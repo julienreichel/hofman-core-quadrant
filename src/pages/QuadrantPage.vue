@@ -59,11 +59,14 @@
 
     <!-- Offline DB Generator Button (only when API key is set) -->
     <generate-offline-db-button v-if="hasKey" />
+
+    <!-- Import Database Button (only when NO API key is set) -->
+    <import-database-button v-if="!hasKey" />
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useQuasar } from 'quasar';
 import type { QuadrantType } from 'src/composables/useQuadrantState';
@@ -71,9 +74,11 @@ import { useApiKey } from 'src/composables/useApiKey';
 import { useQuadrantState } from 'src/composables/useQuadrantState';
 import { useOfmanGenerator } from 'src/composables/useOfmanGenerator';
 import { useLanguage } from 'src/composables/useLanguage';
+import { useOfflineDatabase } from 'src/composables/useOfflineDatabase';
 import QuadrantBox from 'components/QuadrantBox.vue';
 import GeneratePanel from 'components/GeneratePanel.vue';
 import GenerateOfflineDbButton from 'components/GenerateOfflineDbButton.vue';
+import ImportDatabaseButton from 'components/ImportDatabaseButton.vue';
 
 const { t } = useI18n();
 const $q = useQuasar();
@@ -93,14 +98,27 @@ const {
   reset,
 } = useQuadrantState();
 
-const { generateSuggestions, isLoading, error } = useOfmanGenerator();
+const { generateSuggestions, generateOfflineSuggestions, isLoading, error } =
+  useOfmanGenerator();
+const { loadDefaultDatabase } = useOfflineDatabase();
 
 // Local state
 const errorMessage = ref<string | null>(null);
 
+// Initialize offline database on mount
+onMounted(() => {
+  // Convert 'en'/'fr' to 'en-US'/'fr-FR' for database loading
+  const dbLang = currentLang.value === 'fr' ? 'fr-FR' : 'en-US';
+  loadDefaultDatabase(dbLang);
+});
+
 // Computed
 const canGenerate = computed(() => {
-  return hasKey.value && isValidKey.value && isReadyToGenerate.value;
+  // Can generate with API key OR in offline mode
+  return (
+    isReadyToGenerate.value &&
+    ((hasKey.value && isValidKey.value) || !hasKey.value)
+  );
 });
 
 const allQuadrantsComplete = computed(() => {
@@ -129,23 +147,40 @@ const handleGenerate = async () => {
   errorMessage.value = null;
 
   // Validation
-  if (!hasKey.value || !isValidKey.value) {
-    errorMessage.value = t('errors.noApiKey');
-    return;
-  }
-
   if (!isReadyToGenerate.value) {
     errorMessage.value = t('errors.noInput');
     return;
   }
 
   try {
-    const newSuggestions = await generateSuggestions(
-      apiKey.value,
-      inputQuadrant.value!,
-      inputValue.value,
-      currentLang.value,
-    );
+    let newSuggestions;
+
+    if (hasKey.value && isValidKey.value) {
+      // Online mode: use OpenAI API
+      newSuggestions = await generateSuggestions(
+        apiKey.value,
+        inputQuadrant.value!,
+        inputValue.value,
+        currentLang.value,
+      );
+    } else {
+      // Offline mode: use database links
+      // For offline mode, we need the trait ID not the label
+      // For MVP, we'll search the database for a matching trait
+      const { searchTraits } = useOfflineDatabase();
+      const matchingTraits = searchTraits(inputValue.value, 'positive');
+      
+      if (matchingTraits.length === 0) {
+        throw new Error('Trait not found in database. Please select from autocomplete suggestions.');
+      }
+
+      // Use the first matching trait
+      const selectedTrait = matchingTraits[0];
+      if (!selectedTrait) {
+        throw new Error('Invalid trait selection');
+      }
+      newSuggestions = generateOfflineSuggestions(inputQuadrant.value!, selectedTrait.id);
+    }
 
     setSuggestions(newSuggestions);
 
@@ -157,8 +192,9 @@ const handleGenerate = async () => {
       message: 'Suggestions generated successfully!',
       position: 'top',
     });
-  } catch {
-    errorMessage.value = error.value || t('errors.generationFailed');
+  } catch (err) {
+    const errMsg = err instanceof Error ? err.message : t('errors.generationFailed');
+    errorMessage.value = error.value || errMsg;
     $q.notify({
       type: 'negative',
       message: errorMessage.value,
