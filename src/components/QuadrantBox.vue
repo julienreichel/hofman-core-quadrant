@@ -26,8 +26,8 @@
         <div class="text-h6 text-primary">{{ selectedWord }}</div>
       </div>
 
-      <!-- Suggestions list -->
-      <div v-if="suggestions.length > 0" class="q-mt-md">
+      <!-- Suggestions list (only show when no word selected) -->
+      <div v-if="suggestions.length > 0 && !selectedWord" class="q-mt-md">
         <div class="text-caption text-grey-7 q-mb-sm">
           {{ $t('quadrant.suggestions') }}
         </div>

@@ -54,9 +54,6 @@
           @reset="handleReset"
         />
       </div>
-
-      <!-- Summary View (Optional) -->
-      <summary-view :selected-words="selectedWords" />
     </div>
   </q-page>
 </template>
@@ -72,7 +69,6 @@ import { useOfmanGenerator } from 'src/composables/useOfmanGenerator';
 import { useLanguage } from 'src/composables/useLanguage';
 import QuadrantBox from 'components/QuadrantBox.vue';
 import GeneratePanel from 'components/GeneratePanel.vue';
-import SummaryView from 'components/SummaryView.vue';
 
 const { t } = useI18n();
 const $q = useQuasar();
