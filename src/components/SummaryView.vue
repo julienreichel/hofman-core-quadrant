@@ -1,7 +1,7 @@
 <template>
   <q-card v-if="hasAllSelections" flat bordered class="summary-view">
     <q-card-section>
-      <div class="text-h6">Your Complete Ofman Quadrant</div>
+      <div class="text-h6">{{ $t('summary.title') }}</div>
     </q-card-section>
 
     <q-separator />
