@@ -11,8 +11,31 @@
 
     <q-card-section>
       <!-- Input field (only when no value selected) -->
+      <!-- Use autocomplete select in offline mode, regular input in online mode -->
+      <q-select
+        v-if="!selectedWord && isOfflineMode"
+        :model-value="inputValue"
+        :options="filteredOptions"
+        :placeholder="$t(`quadrant.${quadrantType}.placeholder`)"
+        outlined
+        dense
+        use-input
+        input-debounce="0"
+        @filter="filterOptions"
+        @update:model-value="handleSelect"
+        @input-value="handleInput"
+      >
+        <template v-slot:no-option>
+          <q-item>
+            <q-item-section class="text-grey">
+              {{ $t('quadrant.noMatches') }}
+            </q-item-section>
+          </q-item>
+        </template>
+      </q-select>
+
       <q-input
-        v-if="!selectedWord"
+        v-else-if="!selectedWord"
         :model-value="inputValue"
         :placeholder="$t(`quadrant.${quadrantType}.placeholder`)"
         outlined
@@ -42,14 +65,17 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
 import type { QuadrantType } from 'src/composables/useQuadrantState';
 import SuggestionList from 'components/SuggestionList.vue';
 
-defineProps<{
+const props = defineProps<{
   quadrantType: QuadrantType;
   inputValue: string;
   selectedWord: string;
   suggestions: string[];
+  isOfflineMode: boolean;
+  availableTraits: string[];
 }>();
 
 const emit = defineEmits<{
@@ -57,12 +83,27 @@ const emit = defineEmits<{
   select: [word: string];
 }>();
 
+const filteredOptions = ref<string[]>([]);
+
 const handleInput = (value: string | number | null) => {
   emit('input', String(value || ''));
 };
 
 const handleSelect = (word: string) => {
   emit('select', word);
+};
+
+const filterOptions = (val: string, update: (fn: () => void) => void) => {
+  update(() => {
+    if (val === '') {
+      filteredOptions.value = [];
+    } else {
+      const needle = val.toLowerCase();
+      filteredOptions.value = props.availableTraits
+        .filter((v) => v.toLowerCase().includes(needle))
+        .slice(0, 5);
+    }
+  });
 };
 </script>
 

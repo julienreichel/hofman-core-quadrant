@@ -9,6 +9,8 @@
           :input-value="getInputValue('core_quality')"
           :selected-word="selectedWords.core_quality"
           :suggestions="suggestions.core_quality"
+          :is-offline-mode="!hasKey"
+          :available-traits="getAvailableTraits('core_quality')"
           @input="(value) => handleInput('core_quality', value)"
           @select="(word) => selectWord('core_quality', word)"
         />
@@ -19,6 +21,8 @@
           :input-value="getInputValue('pitfall')"
           :selected-word="selectedWords.pitfall"
           :suggestions="suggestions.pitfall"
+          :is-offline-mode="!hasKey"
+          :available-traits="getAvailableTraits('pitfall')"
           @input="(value) => handleInput('pitfall', value)"
           @select="(word) => selectWord('pitfall', word)"
         />
@@ -29,6 +33,8 @@
           :input-value="getInputValue('allergy')"
           :selected-word="selectedWords.allergy"
           :suggestions="suggestions.allergy"
+          :is-offline-mode="!hasKey"
+          :available-traits="getAvailableTraits('allergy')"
           @input="(value) => handleInput('allergy', value)"
           @select="(word) => selectWord('allergy', word)"
         />
@@ -39,6 +45,8 @@
           :input-value="getInputValue('challenge')"
           :selected-word="selectedWords.challenge"
           :suggestions="suggestions.challenge"
+          :is-offline-mode="!hasKey"
+          :available-traits="getAvailableTraits('challenge')"
           @input="(value) => handleInput('challenge', value)"
           @select="(word) => selectWord('challenge', word)"
         />
@@ -99,10 +107,21 @@ const {
 } = useQuadrantState();
 
 const { generateSuggestions, generateOfflineSuggestions, isLoading, error } = useOfmanGenerator();
-const { loadDefaultDatabase } = useOfflineDatabase();
+const { loadDefaultDatabase, searchTraits, getTraitsByPolarity } = useOfflineDatabase();
 
 // Local state
 const errorMessage = ref<string | null>(null);
+
+// Get available traits for autocomplete based on quadrant type
+const getAvailableTraits = (quadrant: QuadrantType): string[] => {
+  // Determine polarity based on quadrant type
+  // core_quality and challenge are positive traits
+  // pitfall and allergy are negative traits
+  const polarity =
+    quadrant === 'core_quality' || quadrant === 'challenge' ? 'positive' : 'negative';
+
+  return getTraitsByPolarity(polarity).map((trait) => trait.label);
+};
 
 // Initialize offline database on mount
 onMounted(async () => {
@@ -173,7 +192,6 @@ const handleGenerate = async () => {
           ? 'positive'
           : 'negative';
 
-      const { searchTraits } = useOfflineDatabase();
       const matchingTraits = searchTraits(inputValue.value, polarity);
 
       if (matchingTraits.length === 0) {

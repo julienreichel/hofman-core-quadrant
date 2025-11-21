@@ -4918,11 +4918,6 @@
       "type": "balance"
     },
     {
-      "from": "overthinking",
-      "to": "conformity",
-      "type": "balance"
-    },
-    {
       "from": "isolation",
       "to": "conformity",
       "type": "balance"
@@ -4959,31 +4954,6 @@
     },
     {
       "from": "eccentricity",
-      "to": "routine",
-      "type": "balance"
-    },
-    {
-      "from": "rebellion",
-      "to": "routine",
-      "type": "balance"
-    },
-    {
-      "from": "overthinking",
-      "to": "routine",
-      "type": "balance"
-    },
-    {
-      "from": "isolation",
-      "to": "routine",
-      "type": "balance"
-    },
-    {
-      "from": "inflexibility",
-      "to": "routine",
-      "type": "balance"
-    },
-    {
-      "from": "eccentricity",
       "to": "tradition",
       "type": "balance"
     },
@@ -5031,19 +5001,9 @@
       "from": "inflexibility",
       "to": "practicality",
       "type": "balance"
-    },
-    {
-      "from": "conformity",
-      "to": "mediocrity",
-      "type": "excess"
     },
     {
       "from": "stability",
-      "to": "mediocrity",
-      "type": "excess"
-    },
-    {
-      "from": "routine",
       "to": "mediocrity",
       "type": "excess"
     },
@@ -5063,17 +5023,7 @@
       "type": "balance"
     },
     {
-      "from": "conformity",
-      "to": "uniformity",
-      "type": "excess"
-    },
-    {
       "from": "stability",
-      "to": "uniformity",
-      "type": "excess"
-    },
-    {
-      "from": "routine",
       "to": "uniformity",
       "type": "excess"
     },
@@ -5093,17 +5043,7 @@
       "type": "balance"
     },
     {
-      "from": "conformity",
-      "to": "conformism",
-      "type": "excess"
-    },
-    {
       "from": "stability",
-      "to": "conformism",
-      "type": "excess"
-    },
-    {
-      "from": "routine",
       "to": "conformism",
       "type": "excess"
     },
@@ -5123,17 +5063,7 @@
       "type": "balance"
     },
     {
-      "from": "conformity",
-      "to": "predictability",
-      "type": "excess"
-    },
-    {
       "from": "stability",
-      "to": "predictability",
-      "type": "excess"
-    },
-    {
-      "from": "routine",
       "to": "predictability",
       "type": "excess"
     },
@@ -5153,17 +5083,7 @@
       "type": "balance"
     },
     {
-      "from": "conformity",
-      "to": "simplicity",
-      "type": "excess"
-    },
-    {
       "from": "stability",
-      "to": "simplicity",
-      "type": "excess"
-    },
-    {
-      "from": "routine",
       "to": "simplicity",
       "type": "excess"
     },
@@ -6459,31 +6379,6 @@
     },
     {
       "from": "indecisive",
-      "to": "routine",
-      "type": "balance"
-    },
-    {
-      "from": "inconsistent",
-      "to": "routine",
-      "type": "balance"
-    },
-    {
-      "from": "lack-of-commitment",
-      "to": "routine",
-      "type": "balance"
-    },
-    {
-      "from": "easily-distracted",
-      "to": "routine",
-      "type": "balance"
-    },
-    {
-      "from": "overly-adaptable",
-      "to": "routine",
-      "type": "balance"
-    },
-    {
-      "from": "indecisive",
       "to": "discipline",
       "type": "balance"
     },
@@ -6539,11 +6434,6 @@
     },
     {
       "from": "stability",
-      "to": "rigidity",
-      "type": "excess"
-    },
-    {
-      "from": "routine",
       "to": "rigidity",
       "type": "excess"
     },
@@ -6573,11 +6463,6 @@
       "type": "excess"
     },
     {
-      "from": "routine",
-      "to": "dogmatism",
-      "type": "excess"
-    },
-    {
       "from": "discipline",
       "to": "dogmatism",
       "type": "excess"
@@ -6599,11 +6484,6 @@
     },
     {
       "from": "stability",
-      "to": "inflexibility",
-      "type": "excess"
-    },
-    {
-      "from": "routine",
       "to": "inflexibility",
       "type": "excess"
     },
@@ -6633,11 +6513,6 @@
       "type": "excess"
     },
     {
-      "from": "routine",
-      "to": "conformity",
-      "type": "excess"
-    },
-    {
       "from": "discipline",
       "to": "conformity",
       "type": "excess"
@@ -6659,11 +6534,6 @@
     },
     {
       "from": "stability",
-      "to": "stubbornness",
-      "type": "excess"
-    },
-    {
-      "from": "routine",
       "to": "stubbornness",
       "type": "excess"
     },

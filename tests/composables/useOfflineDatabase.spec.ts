@@ -13,7 +13,7 @@ global.fetch = vi.fn((input: RequestInfo | URL) => {
   } else if (input instanceof Request) {
     url = input.url;
   }
-  
+
   if (url.includes('database.en.json')) {
     return Promise.resolve({
       ok: true,
@@ -35,20 +35,20 @@ global.fetch = vi.fn((input: RequestInfo | URL) => {
 describe('useOfflineDatabase', () => {
   let db: ReturnType<typeof useOfflineDatabase>;
 
-  beforeEach(async () => {
+  beforeEach(() => {
     db = useOfflineDatabase();
   });
 
   describe('loadDefaultDatabase', () => {
     it('should load English database', async () => {
-      await await db.loadDefaultDatabase('en-US');
+      await db.loadDefaultDatabase('en-US');
       expect(db.isDatabaseLoaded.value).toBe(true);
       expect(db.isCustomDatabase.value).toBe(false);
       expect(db.traitCount.value).toBeGreaterThan(0);
     });
 
     it('should load French database', async () => {
-      await await db.loadDefaultDatabase('fr-FR');
+      await db.loadDefaultDatabase('fr-FR');
       expect(db.isDatabaseLoaded.value).toBe(true);
       expect(db.isCustomDatabase.value).toBe(false);
       expect(db.traitCount.value).toBeGreaterThan(0);

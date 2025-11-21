@@ -38,6 +38,7 @@ export default {
     },
     selected: 'Selected:',
     suggestions: 'Suggestions:',
+    noMatches: 'No matching traits found',
   },
   actions: {
     generate: 'Generate Suggestions',

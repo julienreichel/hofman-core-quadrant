@@ -38,6 +38,7 @@ export default {
     },
     selected: 'Sélectionné :',
     suggestions: 'Suggestions :',
+    noMatches: 'Aucun trait correspondant trouvé',
   },
   actions: {
     generate: 'Générer des Suggestions',
