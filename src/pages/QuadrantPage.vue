@@ -44,8 +44,8 @@
         />
       </div>
 
-      <!-- Generate Panel -->
-      <div class="q-mt-md">
+      <!-- Generate Panel (hide when all quadrants are complete) -->
+      <div v-if="!allQuadrantsComplete" class="q-mt-md">
         <generate-panel
           :loading="isLoading"
           :error="errorMessage"
@@ -96,6 +96,15 @@ const errorMessage = ref<string | null>(null);
 // Computed
 const canGenerate = computed(() => {
   return hasKey.value && isValidKey.value && isReadyToGenerate.value;
+});
+
+const allQuadrantsComplete = computed(() => {
+  return (
+    selectedWords.value.core_quality !== '' &&
+    selectedWords.value.pitfall !== '' &&
+    selectedWords.value.challenge !== '' &&
+    selectedWords.value.allergy !== ''
+  );
 });
 
 // Get input value for a specific quadrant
