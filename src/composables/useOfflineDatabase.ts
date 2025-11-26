@@ -23,6 +23,27 @@ const currentDatabase = ref<OfflineDatabase | null>(null);
 const isCustomDatabase = ref(false);
 
 /**
+ * Normalize label capitalization (first letter uppercase)
+ */
+function normalizeLabel(label: string): string {
+  if (!label) return label;
+  return label.charAt(0).toUpperCase() + label.slice(1);
+}
+
+/**
+ * Normalize all labels in the database for consistent display
+ */
+function normalizeDatabase(db: OfflineDatabase): OfflineDatabase {
+  return {
+    ...db,
+    traits: db.traits.map((trait) => ({
+      ...trait,
+      labels: trait.labels.map(normalizeLabel),
+    })),
+  };
+}
+
+/**
  * Composable for managing offline database (default or custom imported)
  * Provides trait suggestions and link traversal for offline mode
  */
@@ -40,7 +61,8 @@ export function useOfflineDatabase() {
         throw new Error(`Failed to load database: ${response.statusText}`);
       }
       const db = await response.json();
-      currentDatabase.value = db as OfflineDatabase;
+      // Normalize label capitalization for consistent display
+      currentDatabase.value = normalizeDatabase(db as OfflineDatabase);
       isCustomDatabase.value = false;
     } catch (error) {
       console.error('Failed to load default database:', error);
@@ -86,7 +108,7 @@ export function useOfflineDatabase() {
         }
       }
 
-      currentDatabase.value = parsed as OfflineDatabase;
+      currentDatabase.value = normalizeDatabase(parsed as OfflineDatabase);
       isCustomDatabase.value = true;
     } catch (error) {
       throw new Error(
