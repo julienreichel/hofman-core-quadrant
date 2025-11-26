@@ -7,9 +7,16 @@ vi.mock('src/composables/useOfmanGenerator', () => ({
     // eslint-disable-next-line @typescript-eslint/require-await
     generateSuggestions: vi.fn(async (_apiKey: string, quadrant: string) => {
       // Mock AI responses with fixed suggestions
-      if (quadrant === 'core_quality') {
+      // When generating database, we call with pitfall as input to get core_quality suggestions
+      if (quadrant === 'pitfall') {
         return {
-          pitfall: ['suggestion1', 'suggestion2', 'suggestion3', 'suggestion4', 'suggestion5'],
+          core_quality: [
+            'suggestion1',
+            'suggestion2',
+            'suggestion3',
+            'suggestion4',
+            'suggestion5',
+          ],
           challenge: ['challenge1', 'challenge2', 'challenge3', 'challenge4', 'challenge5'],
           allergy: ['allergy1', 'allergy2', 'allergy3', 'allergy4', 'allergy5'],
         };

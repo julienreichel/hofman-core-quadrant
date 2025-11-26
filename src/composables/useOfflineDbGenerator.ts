@@ -69,27 +69,32 @@ export function useOfflineDbGenerator() {
   /**
    * Generate all suggestions for one core quality
    * Returns all 4 quadrants worth of suggestions
+   * 
+   * Note: We generate from pitfall→core instead of core→pitfall because
+   * generateSuggestions removes the input quadrant from results.
+   * By using pitfall as input, we get core_quality suggestions from GPT.
    */
   const generateForCoreQuality = async (
     apiKey: string,
     coreQuality: string,
     language: 'en' | 'fr',
   ): Promise<{
-    core: string;
+    cores: string[];
     pitfalls: string[];
     challenges: string[];
     allergies: string[];
   }> => {
-    // Generate all three quadrants in a single API call
-    const suggestions = await generateSuggestions(apiKey, 'core_quality', coreQuality, language);
+    // Generate from pitfall quadrant so we get core_quality suggestions back
+    // This is a workaround since generateSuggestions removes the input quadrant
+    const suggestions = await generateSuggestions(apiKey, 'pitfall', coreQuality, language);
 
-    const pitfalls = suggestions.pitfall || [];
+    const cores = suggestions.core_quality || [];
     const challenges = suggestions.challenge || [];
     const allergies = suggestions.allergy || [];
 
     return {
-      core: coreQuality,
-      pitfalls: pitfalls.filter((p): p is string => p !== undefined),
+      cores: cores.filter((c): c is string => c !== undefined),
+      pitfalls: [coreQuality], // The input becomes the pitfall
       challenges: challenges.filter((c): c is string => c !== undefined),
       allergies: allergies.filter((a): a is string => a !== undefined),
     };
@@ -100,7 +105,7 @@ export function useOfflineDbGenerator() {
    */
   const buildDatabase = (
     results: Array<{
-      core: string;
+      cores: string[];
       pitfalls: string[];
       challenges: string[];
       allergies: string[];
@@ -133,8 +138,8 @@ export function useOfflineDbGenerator() {
 
     // Process each core quality result
     for (const result of results) {
-      // Use core quality as a single-label trait (user input)
-      const coreId = addTraitLabels([result.core], 'positive');
+      // Group all core quality suggestions together under first core's ID
+      const coreId = addTraitLabels(result.cores, 'positive');
       if (!coreId) continue;
 
       // Group all pitfalls together under first pitfall's ID
