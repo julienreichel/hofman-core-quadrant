@@ -64,12 +64,16 @@ export function useOfmanGenerator() {
       const shuffledTraits = uniqueTraits.sort(() => Math.random() - 0.5);
       const selectedTraits = shuffledTraits.slice(0, 5);
 
-      // Flatten all labels from selected traits and take first 5
-      const allLabels = selectedTraits.flatMap((t) => t.labels).slice(0, 5);
+      // Flatten all labels from selected traits
+      const allLabels = selectedTraits.flatMap((t) => t.labels);
+
+      // Randomly select 5 labels if more than 5 available (provides variety on each generation)
+      const finalLabels =
+        allLabels.length > 5 ? allLabels.sort(() => Math.random() - 0.5).slice(0, 5) : allLabels;
 
       // Store result
       if (targetQuadrant) {
-        result[targetQuadrant] = allLabels;
+        result[targetQuadrant] = finalLabels;
       }
 
       // Update current traits for next iteration

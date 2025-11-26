@@ -178,22 +178,12 @@ export function useOfflineDbGenerator() {
     }
 
     // Convert accumulated labels to TraitNode array
-    // If more than 5 labels, randomly select 5
-    const traits: TraitNode[] = Array.from(traitLabelsMap.entries()).map(([id, data]) => {
-      const allLabels = Array.from(data.labels);
-      
-      // If more than 5 labels, shuffle and take 5 random ones
-      const finalLabels =
-        allLabels.length > 5
-          ? allLabels.sort(() => Math.random() - 0.5).slice(0, 5)
-          : allLabels;
-
-      return {
-        id,
-        labels: finalLabels,
-        polarity: data.polarity,
-      };
-    });
+    // Keep all accumulated labels in the database - randomization happens at generation time
+    const traits: TraitNode[] = Array.from(traitLabelsMap.entries()).map(([id, data]) => ({
+      id,
+      labels: Array.from(data.labels),
+      polarity: data.polarity,
+    }));
 
     return {
       traits,
