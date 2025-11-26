@@ -123,13 +123,13 @@ const getAvailableTraits = (quadrant: QuadrantType): string[] => {
   // Flatten all labels from all traits with matching polarity
   const allLabels = getTraitsByPolarity(polarity).flatMap((trait) => trait.labels);
   
-  // Deduplicate labels (multiple traits may share the same label)
-  const uniqueLabels = Array.from(new Set(allLabels));
-  
   // Capitalize first letter of each label for uniform display
-  return uniqueLabels.map((label) => {
+  const capitalizedLabels = allLabels.map((label) => {
     return label.charAt(0).toUpperCase() + label.slice(1);
   });
+  
+  // Deduplicate labels after capitalization (avoids "analytical" and "Analytical" as separate entries)
+  return Array.from(new Set(capitalizedLabels));
 };
 
 // Initialize offline database on mount
