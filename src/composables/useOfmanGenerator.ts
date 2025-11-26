@@ -85,13 +85,15 @@ export function useOfmanGenerator() {
    * @param inputQuadrant - Which quadrant the user provided
    * @param inputValue - The trait/word the user entered
    * @param language - The language for suggestions ('en' or 'fr')
-   * @returns Partial suggestions object (excluding the input quadrant)
+   * @param includeInputQuadrant - Whether to include GPT suggestions for the input quadrant (default: false for UI, true for database generation)
+   * @returns Partial suggestions object (optionally excluding the input quadrant)
    */
   const generateSuggestions = async (
     apiKey: string,
     inputQuadrant: QuadrantType,
     inputValue: string,
     language: 'en' | 'fr' = 'en',
+    includeInputQuadrant = false,
   ): Promise<Partial<QuadrantSuggestions>> => {
     isLoading.value = true;
     error.value = null;
@@ -133,11 +135,15 @@ export function useOfmanGenerator() {
       // Parse JSON response
       const suggestions = JSON.parse(content) as QuadrantSuggestions;
 
-      // Remove the input quadrant from suggestions
-      const result: Partial<QuadrantSuggestions> = { ...suggestions };
-      delete result[inputQuadrant];
+      // Optionally remove the input quadrant from suggestions (for UI usage)
+      // For database generation, we keep all quadrants to get GPT's synonym suggestions
+      if (!includeInputQuadrant) {
+        const result: Partial<QuadrantSuggestions> = { ...suggestions };
+        delete result[inputQuadrant];
+        return result;
+      }
 
-      return result;
+      return suggestions;
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Unknown error occurred';
       error.value = errorMessage;

@@ -68,11 +68,7 @@ export function useOfflineDbGenerator() {
 
   /**
    * Generate all suggestions for one core quality
-   * Returns all 4 quadrants worth of suggestions
-   * 
-   * Note: We generate from pitfall→core instead of core→pitfall because
-   * generateSuggestions removes the input quadrant from results.
-   * By using pitfall as input, we get core_quality suggestions from GPT.
+   * Returns all 4 quadrants worth of suggestions including GPT variations for the core quality
    */
   const generateForCoreQuality = async (
     apiKey: string,
@@ -84,17 +80,23 @@ export function useOfflineDbGenerator() {
     challenges: string[];
     allergies: string[];
   }> => {
-    // Generate from pitfall quadrant so we get core_quality suggestions back
-    // This is a workaround since generateSuggestions removes the input quadrant
-    const suggestions = await generateSuggestions(apiKey, 'pitfall', coreQuality, language);
+    // Generate all quadrants including the input (core_quality) to get GPT synonym suggestions
+    const suggestions = await generateSuggestions(
+      apiKey,
+      'core_quality',
+      coreQuality,
+      language,
+      true, // Include input quadrant to get GPT's synonym suggestions
+    );
 
     const cores = suggestions.core_quality || [];
+    const pitfalls = suggestions.pitfall || [];
     const challenges = suggestions.challenge || [];
     const allergies = suggestions.allergy || [];
 
     return {
       cores: cores.filter((c): c is string => c !== undefined),
-      pitfalls: [coreQuality], // The input becomes the pitfall
+      pitfalls: pitfalls.filter((p): p is string => p !== undefined),
       challenges: challenges.filter((c): c is string => c !== undefined),
       allergies: allergies.filter((a): a is string => a !== undefined),
     };

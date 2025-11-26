@@ -4,25 +4,28 @@ import { useOfflineDbGenerator } from 'src/composables/useOfflineDbGenerator';
 // Mock the useOfmanGenerator composable
 vi.mock('src/composables/useOfmanGenerator', () => ({
   useOfmanGenerator: () => ({
-    // eslint-disable-next-line @typescript-eslint/require-await
-    generateSuggestions: vi.fn(async (_apiKey: string, quadrant: string) => {
-      // Mock AI responses with fixed suggestions
-      // When generating database, we call with pitfall as input to get core_quality suggestions
-      if (quadrant === 'pitfall') {
-        return {
-          core_quality: [
-            'suggestion1',
-            'suggestion2',
-            'suggestion3',
-            'suggestion4',
-            'suggestion5',
-          ],
-          challenge: ['challenge1', 'challenge2', 'challenge3', 'challenge4', 'challenge5'],
-          allergy: ['allergy1', 'allergy2', 'allergy3', 'allergy4', 'allergy5'],
-        };
-      }
-      return {};
-    }),
+    generateSuggestions: vi.fn(
+      // eslint-disable-next-line @typescript-eslint/require-await
+      async (_apiKey: string, quadrant: string, _value: string, _lang: string, includeInput) => {
+        // Mock AI responses with fixed suggestions
+        if (quadrant === 'core_quality' && includeInput) {
+          // For database generation, return all 4 quadrants including input
+          return {
+            core_quality: [
+              'suggestion1',
+              'suggestion2',
+              'suggestion3',
+              'suggestion4',
+              'suggestion5',
+            ],
+            pitfall: ['pitfall1', 'pitfall2', 'pitfall3', 'pitfall4', 'pitfall5'],
+            challenge: ['challenge1', 'challenge2', 'challenge3', 'challenge4', 'challenge5'],
+            allergy: ['allergy1', 'allergy2', 'allergy3', 'allergy4', 'allergy5'],
+          };
+        }
+        return {};
+      },
+    ),
   }),
 }));
 
