@@ -124,7 +124,12 @@ const getAvailableTraits = (quadrant: QuadrantType): string[] => {
   const allLabels = getTraitsByPolarity(polarity).flatMap((trait) => trait.labels);
   
   // Deduplicate labels (multiple traits may share the same label)
-  return Array.from(new Set(allLabels));
+  const uniqueLabels = Array.from(new Set(allLabels));
+  
+  // Capitalize first letter of each label for uniform display
+  return uniqueLabels.map((label) => {
+    return label.charAt(0).toUpperCase() + label.slice(1);
+  });
 };
 
 // Initialize offline database on mount
