@@ -33,7 +33,9 @@ export function useOfflineDatabase() {
   async function loadDefaultDatabase(language: MessageLanguages): Promise<void> {
     const fileName = language === 'fr-FR' ? 'database.fr.json' : 'database.en.json';
     try {
-      const response = await fetch(`/src/assets/${fileName}`);
+      // Use import.meta.env.BASE_URL to support GitHub Pages deployment
+      const basePath = import.meta.env.BASE_URL || '/';
+      const response = await fetch(`${basePath}src/assets/${fileName}`);
       if (!response.ok) {
         throw new Error(`Failed to load database: ${response.statusText}`);
       }
