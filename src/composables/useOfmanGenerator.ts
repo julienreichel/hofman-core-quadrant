@@ -45,9 +45,7 @@ export function useOfmanGenerator() {
     const startIndex = quadrantOrder.indexOf(inputQuadrant);
 
     // Track current traits for traversal (use TraitNode type from database)
-    let currentTraits: Array<{ id: string; labels: string[] }> = [
-      { id: inputTraitId, labels: [] },
-    ];
+    let currentTraits: Array<{ id: string; labels: string[] }> = [{ id: inputTraitId, labels: [] }];
 
     // Iterate through the next 3 quadrants (skip the input quadrant)
     for (let i = 1; i <= 3; i++) {

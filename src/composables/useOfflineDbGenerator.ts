@@ -113,46 +113,49 @@ export function useOfflineDbGenerator() {
     >();
     const links: TraitLink[] = [];
 
-    // Helper to add or update trait labels
-    const addTraitLabels = (label: string, polarity: 'positive' | 'negative') => {
-      const id = normalizeId(label);
+    // Helper to add or update trait labels using first label as primary ID
+    const addTraitLabels = (labels: string[], polarity: 'positive' | 'negative') => {
+      if (labels.length === 0) return null;
+
+      // Use the first label to generate the ID
+      const primaryLabel = labels[0]!;
+      const id = normalizeId(primaryLabel);
+
       if (!traitLabelsMap.has(id)) {
-        traitLabelsMap.set(id, { labels: new Set([label]), polarity });
+        // Create new trait with all labels
+        traitLabelsMap.set(id, { labels: new Set(labels), polarity });
       } else {
-        traitLabelsMap.get(id)!.labels.add(label);
+        // Add all labels to existing trait
+        labels.forEach((label) => traitLabelsMap.get(id)!.labels.add(label));
       }
       return id;
     };
 
     // Process each core quality result
     for (const result of results) {
-      const coreId = addTraitLabels(result.core, 'positive');
+      // Use core quality as a single-label trait (user input)
+      const coreId = addTraitLabels([result.core], 'positive');
+      if (!coreId) continue;
 
-      // Add pitfalls (negative polarity) and create links
-      for (const pitfall of result.pitfalls) {
-        const pitfallId = addTraitLabels(pitfall, 'negative');
+      // Group all pitfalls together under first pitfall's ID
+      const pitfallId = addTraitLabels(result.pitfalls, 'negative');
+      if (pitfallId) {
         // Core -> Pitfall is "excess"
         links.push(createLink(coreId, pitfallId, 'excess'));
       }
 
-      // Add challenges (positive polarity) and create links
-      for (const challenge of result.challenges) {
-        const challengeId = addTraitLabels(challenge, 'positive');
-
-        // Create links: Pitfall -> Challenge (balance)
-        for (const pitfall of result.pitfalls) {
-          const pitfallId = normalizeId(pitfall);
-          links.push(createLink(pitfallId, challengeId, 'balance'));
-        }
+      // Group all challenges together under first challenge's ID
+      const challengeId = addTraitLabels(result.challenges, 'positive');
+      if (challengeId && pitfallId) {
+        // Create link: Pitfall -> Challenge (balance)
+        links.push(createLink(pitfallId, challengeId, 'balance'));
       }
 
-      // Add allergies (negative polarity) and create links
-      for (const allergy of result.allergies) {
-        const allergyId = addTraitLabels(allergy, 'negative');
-
+      // Group all allergies together under first allergy's ID
+      const allergyId = addTraitLabels(result.allergies, 'negative');
+      if (allergyId) {
         // Challenge -> Allergy (excess)
-        for (const challenge of result.challenges) {
-          const challengeId = normalizeId(challenge);
+        if (challengeId) {
           links.push(createLink(challengeId, allergyId, 'excess'));
         }
 

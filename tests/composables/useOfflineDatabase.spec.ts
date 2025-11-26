@@ -190,9 +190,9 @@ describe('useOfflineDatabase', () => {
     it('should find traits by partial label match', () => {
       const results = db.searchTraits('ana');
       expect(results.length).toBeGreaterThan(0);
-      expect(results.some((t) => t.labels.some((label) => label.toLowerCase().includes('ana')))).toBe(
-        true,
-      );
+      expect(
+        results.some((t) => t.labels.some((label) => label.toLowerCase().includes('ana'))),
+      ).toBe(true);
     });
 
     it('should filter by polarity when specified', () => {
