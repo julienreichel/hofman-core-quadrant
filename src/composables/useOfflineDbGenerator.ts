@@ -94,8 +94,14 @@ export function useOfflineDbGenerator() {
     const challenges = suggestions.challenge || [];
     const allergies = suggestions.allergy || [];
 
+    // Ensure the original user input is always included as first label for core quality
+    // GPT might return synonyms that don't include the exact input
+    const coresWithOriginal = cores.includes(coreQuality)
+      ? cores
+      : [coreQuality, ...cores].slice(0, 5); // Keep max 5 labels, prioritize original
+
     return {
-      cores: cores.filter((c): c is string => c !== undefined),
+      cores: coresWithOriginal.filter((c): c is string => c !== undefined),
       pitfalls: pitfalls.filter((p): p is string => p !== undefined),
       challenges: challenges.filter((c): c is string => c !== undefined),
       allergies: allergies.filter((a): a is string => a !== undefined),
