@@ -74,7 +74,6 @@ Return your response as a JSON object with this exact structure:
   "allergy": ["suggestion1", "suggestion2", "suggestion3", "suggestion4", "suggestion5"]
 }
 
-Do NOT include suggestions for "${inputQuadrant}" since the user already provided that.
 Only return valid JSON, no additional text.`;
 
     return prompt;

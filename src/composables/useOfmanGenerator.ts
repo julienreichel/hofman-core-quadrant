@@ -26,6 +26,7 @@ export function useOfmanGenerator() {
    * Generate suggestions using offline database
    * Uses links to traverse from the input trait following the circular pattern:
    * core_quality → pitfall → challenge → allergy → core_quality
+   * Returns all labels from linked traits (up to 5 labels per quadrant)
    */
   const generateOfflineSuggestions = (
     inputQuadrant: QuadrantType,
@@ -43,8 +44,10 @@ export function useOfmanGenerator() {
     // Find starting position
     const startIndex = quadrantOrder.indexOf(inputQuadrant);
 
-    // Track current traits for traversal
-    let currentTraits = [{ id: inputTraitId, label: '' }]; // We only need IDs for traversal
+    // Track current traits for traversal (use TraitNode type from database)
+    let currentTraits: Array<{ id: string; labels: string[] }> = [
+      { id: inputTraitId, labels: [] },
+    ];
 
     // Iterate through the next 3 quadrants (skip the input quadrant)
     for (let i = 1; i <= 3; i++) {
@@ -58,14 +61,17 @@ export function useOfmanGenerator() {
         getLinkedTraits(trait.id, linkType, 5),
       );
 
-      // Deduplicate and pick 5 random
+      // Deduplicate and pick up to 5 traits
       const uniqueTraits = Array.from(new Map(allNextTraits.map((t) => [t.id, t])).values());
       const shuffledTraits = uniqueTraits.sort(() => Math.random() - 0.5);
       const selectedTraits = shuffledTraits.slice(0, 5);
 
+      // Flatten all labels from selected traits and take first 5
+      const allLabels = selectedTraits.flatMap((t) => t.labels).slice(0, 5);
+
       // Store result
       if (targetQuadrant) {
-        result[targetQuadrant] = selectedTraits.map((t) => t.label);
+        result[targetQuadrant] = allLabels;
       }
 
       // Update current traits for next iteration

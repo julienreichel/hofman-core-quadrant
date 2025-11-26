@@ -14,8 +14,8 @@ import { useOfmanGenerator } from './useOfmanGenerator';
 
 // Data structure types matching the specification
 export interface TraitNode {
-  id: string; // lowercase, hyphenated version of label
-  label: string; // Display name
+  id: string; // lowercase, hyphenated version of primary label
+  labels: string[]; // Array of synonyms/variations
   polarity: 'positive' | 'negative';
 }
 
@@ -47,17 +47,6 @@ export function useOfflineDbGenerator() {
       .trim()
       .replace(/[^\w\s-]/g, '') // Remove special chars
       .replace(/\s+/g, '-'); // Replace spaces with hyphens
-  };
-
-  /**
-   * Create a trait node
-   */
-  const createTraitNode = (label: string, polarity: 'positive' | 'negative'): TraitNode => {
-    return {
-      id: normalizeId(label),
-      label: label.trim(),
-      polarity,
-    };
   };
 
   /**
@@ -117,34 +106,38 @@ export function useOfflineDbGenerator() {
       allergies: string[];
     }>,
   ): OfflineDatabase => {
-    const traitMap = new Map<string, TraitNode>();
+    // Map to accumulate labels for each trait ID
+    const traitLabelsMap = new Map<
+      string,
+      { labels: Set<string>; polarity: 'positive' | 'negative' }
+    >();
     const links: TraitLink[] = [];
+
+    // Helper to add or update trait labels
+    const addTraitLabels = (label: string, polarity: 'positive' | 'negative') => {
+      const id = normalizeId(label);
+      if (!traitLabelsMap.has(id)) {
+        traitLabelsMap.set(id, { labels: new Set([label]), polarity });
+      } else {
+        traitLabelsMap.get(id)!.labels.add(label);
+      }
+      return id;
+    };
 
     // Process each core quality result
     for (const result of results) {
-      const coreId = normalizeId(result.core);
-
-      // Add core quality (positive polarity)
-      if (!traitMap.has(coreId)) {
-        traitMap.set(coreId, createTraitNode(result.core, 'positive'));
-      }
+      const coreId = addTraitLabels(result.core, 'positive');
 
       // Add pitfalls (negative polarity) and create links
       for (const pitfall of result.pitfalls) {
-        const pitfallId = normalizeId(pitfall);
-        if (!traitMap.has(pitfallId)) {
-          traitMap.set(pitfallId, createTraitNode(pitfall, 'negative'));
-        }
+        const pitfallId = addTraitLabels(pitfall, 'negative');
         // Core -> Pitfall is "excess"
         links.push(createLink(coreId, pitfallId, 'excess'));
       }
 
       // Add challenges (positive polarity) and create links
       for (const challenge of result.challenges) {
-        const challengeId = normalizeId(challenge);
-        if (!traitMap.has(challengeId)) {
-          traitMap.set(challengeId, createTraitNode(challenge, 'positive'));
-        }
+        const challengeId = addTraitLabels(challenge, 'positive');
 
         // Create links: Pitfall -> Challenge (balance)
         for (const pitfall of result.pitfalls) {
@@ -155,10 +148,7 @@ export function useOfflineDbGenerator() {
 
       // Add allergies (negative polarity) and create links
       for (const allergy of result.allergies) {
-        const allergyId = normalizeId(allergy);
-        if (!traitMap.has(allergyId)) {
-          traitMap.set(allergyId, createTraitNode(allergy, 'negative'));
-        }
+        const allergyId = addTraitLabels(allergy, 'negative');
 
         // Challenge -> Allergy (excess)
         for (const challenge of result.challenges) {
@@ -171,8 +161,15 @@ export function useOfflineDbGenerator() {
       }
     }
 
+    // Convert accumulated labels to TraitNode array
+    const traits: TraitNode[] = Array.from(traitLabelsMap.entries()).map(([id, data]) => ({
+      id,
+      labels: Array.from(data.labels),
+      polarity: data.polarity,
+    }));
+
     return {
-      traits: Array.from(traitMap.values()),
+      traits,
       links,
     };
   };

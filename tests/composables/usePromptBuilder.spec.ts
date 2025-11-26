@@ -61,7 +61,7 @@ describe('usePromptBuilder', () => {
     it('should instruct to exclude the input quadrant', () => {
       const prompt = buildPrompt('core_quality', 'Decisive');
 
-      expect(prompt).toContain('Do NOT include suggestions for "core_quality"');
+      expect(prompt).toContain('OTHER three quadrants');
     });
 
     it('should request 5 suggestions per quadrant', () => {
@@ -93,8 +93,8 @@ describe('usePromptBuilder', () => {
 
       expect(prompt1).toContain('core_quality');
       expect(prompt2).toContain('pitfall');
-      expect(prompt1).toContain('Do NOT include suggestions for "core_quality"');
-      expect(prompt2).toContain('Do NOT include suggestions for "pitfall"');
+      expect(prompt1).toContain('OTHER three quadrants');
+      expect(prompt2).toContain('OTHER three quadrants');
     });
 
     it('should default to English when no language specified', () => {

@@ -120,7 +120,8 @@ const getAvailableTraits = (quadrant: QuadrantType): string[] => {
   const polarity =
     quadrant === 'core_quality' || quadrant === 'challenge' ? 'positive' : 'negative';
 
-  return getTraitsByPolarity(polarity).map((trait) => trait.label);
+  // Flatten all labels from all traits with matching polarity
+  return getTraitsByPolarity(polarity).flatMap((trait) => trait.labels);
 };
 
 // Initialize offline database on mount

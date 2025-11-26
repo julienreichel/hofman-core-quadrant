@@ -3,7 +3,7 @@ import type { MessageLanguages } from 'src/boot/i18n';
 
 export interface TraitNode {
   id: string;
-  label: string;
+  labels: string[]; // Array of synonyms/variations for this trait
   polarity: 'positive' | 'negative';
 }
 
@@ -35,7 +35,7 @@ export function useOfflineDatabase() {
     try {
       // Use import.meta.env.BASE_URL to support GitHub Pages deployment
       const basePath = import.meta.env.BASE_URL || '/';
-      const response = await fetch(`${basePath}src/assets/${fileName}`);
+      const response = await fetch(`${basePath}db/${fileName}`);
       if (!response.ok) {
         throw new Error(`Failed to load database: ${response.statusText}`);
       }
@@ -65,8 +65,11 @@ export function useOfflineDatabase() {
 
       // Validate trait structure
       for (const trait of parsed.traits) {
-        if (!trait.id || !trait.label || !trait.polarity) {
+        if (!trait.id || !trait.labels || !Array.isArray(trait.labels) || !trait.polarity) {
           throw new Error('Invalid trait structure');
+        }
+        if (trait.labels.length === 0) {
+          throw new Error('Trait must have at least one label');
         }
         if (trait.polarity !== 'positive' && trait.polarity !== 'negative') {
           throw new Error('Invalid polarity value');
@@ -109,14 +112,14 @@ export function useOfflineDatabase() {
   }
 
   /**
-   * Search traits by label (case-insensitive partial match)
+   * Search traits by label (case-insensitive partial match across all labels)
    */
   function searchTraits(query: string, polarity?: 'positive' | 'negative'): TraitNode[] {
     if (!currentDatabase.value || !query) return [];
 
     const lowerQuery = query.toLowerCase();
     let results = currentDatabase.value.traits.filter((t) =>
-      t.label.toLowerCase().includes(lowerQuery),
+      t.labels.some((label) => label.toLowerCase().includes(lowerQuery)),
     );
 
     if (polarity) {

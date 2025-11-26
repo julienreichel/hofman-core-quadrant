@@ -1,7 +1,48 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { useOfflineDatabase } from 'src/composables/useOfflineDatabase';
-import databaseEn from 'src/assets/database.en.json';
-import databaseFr from 'src/assets/database.fr.json';
+
+// Mock database with new structure (labels array)
+const mockDatabaseEn = {
+  traits: [
+    { id: 'analytical', labels: ['Analytical', 'Methodical', 'Systematic'], polarity: 'positive' },
+    {
+      id: 'overthinking',
+      labels: ['Overthinking', 'Analysis Paralysis'],
+      polarity: 'negative',
+    },
+    { id: 'paralysis', labels: ['Paralysis', 'Frozen'], polarity: 'negative' },
+    { id: 'perfectionism', labels: ['Perfectionism'], polarity: 'negative' },
+    { id: 'rigidity', labels: ['Rigidity', 'Inflexible'], polarity: 'negative' },
+    { id: 'pedantic', labels: ['Pedantic', 'Nitpicking'], polarity: 'negative' },
+    { id: 'intuition', labels: ['Intuition', 'Gut Feeling'], polarity: 'positive' },
+    { id: 'spontaneity', labels: ['Spontaneity', 'Flexibility'], polarity: 'positive' },
+    { id: 'creativity', labels: ['Creativity', 'Innovation'], polarity: 'positive' },
+    { id: 'impulsive', labels: ['Impulsive', 'Rash'], polarity: 'negative' },
+  ],
+  links: [
+    { from: 'analytical', to: 'overthinking', type: 'excess' },
+    { from: 'analytical', to: 'paralysis', type: 'excess' },
+    { from: 'analytical', to: 'perfectionism', type: 'excess' },
+    { from: 'analytical', to: 'rigidity', type: 'excess' },
+    { from: 'analytical', to: 'pedantic', type: 'excess' },
+    { from: 'overthinking', to: 'intuition', type: 'balance' },
+    { from: 'overthinking', to: 'spontaneity', type: 'balance' },
+    { from: 'overthinking', to: 'creativity', type: 'balance' },
+    { from: 'paralysis', to: 'intuition', type: 'balance' },
+    { from: 'perfectionism', to: 'spontaneity', type: 'balance' },
+    { from: 'rigidity', to: 'intuition', type: 'balance' },
+    { from: 'intuition', to: 'impulsive', type: 'excess' },
+    { from: 'impulsive', to: 'analytical', type: 'balance' },
+  ],
+};
+
+const mockDatabaseFr = {
+  traits: [
+    { id: 'analytique', labels: ['Analytique', 'Méthodique'], polarity: 'positive' },
+    { id: 'suranalyse', labels: ['Suranalyse'], polarity: 'negative' },
+  ],
+  links: [{ from: 'analytique', to: 'suranalyse', type: 'excess' }],
+};
 
 // Mock fetch
 global.fetch = vi.fn((input: RequestInfo | URL) => {
@@ -17,13 +58,13 @@ global.fetch = vi.fn((input: RequestInfo | URL) => {
   if (url.includes('database.en.json')) {
     return Promise.resolve({
       ok: true,
-      json: () => Promise.resolve(databaseEn),
+      json: () => Promise.resolve(mockDatabaseEn),
     } as Response);
   }
   if (url.includes('database.fr.json')) {
     return Promise.resolve({
       ok: true,
-      json: () => Promise.resolve(databaseFr),
+      json: () => Promise.resolve(mockDatabaseFr),
     } as Response);
   }
   return Promise.resolve({
@@ -59,8 +100,8 @@ describe('useOfflineDatabase', () => {
     it('should import valid JSON database', () => {
       const validDb = JSON.stringify({
         traits: [
-          { id: 'test1', label: 'Test 1', polarity: 'positive' },
-          { id: 'test2', label: 'Test 2', polarity: 'negative' },
+          { id: 'test1', labels: ['Test 1', 'Testing 1'], polarity: 'positive' },
+          { id: 'test2', labels: ['Test 2'], polarity: 'negative' },
         ],
         links: [{ from: 'test1', to: 'test2', type: 'excess' }],
       });
@@ -91,7 +132,7 @@ describe('useOfflineDatabase', () => {
 
     it('should reject traits with invalid polarity', () => {
       const invalidDb = JSON.stringify({
-        traits: [{ id: 'test', label: 'Test', polarity: 'invalid' }],
+        traits: [{ id: 'test', labels: ['Test'], polarity: 'invalid' }],
         links: [],
       });
       expect(() => db.importDatabase(invalidDb)).toThrow('Invalid polarity');
@@ -99,7 +140,7 @@ describe('useOfflineDatabase', () => {
 
     it('should reject links with invalid type', () => {
       const invalidDb = JSON.stringify({
-        traits: [{ id: 'test', label: 'Test', polarity: 'positive' }],
+        traits: [{ id: 'test', labels: ['Test'], polarity: 'positive' }],
         links: [{ from: 'test', to: 'test', type: 'invalid' }],
       });
       expect(() => db.importDatabase(invalidDb)).toThrow('Invalid link type');
@@ -149,7 +190,9 @@ describe('useOfflineDatabase', () => {
     it('should find traits by partial label match', () => {
       const results = db.searchTraits('ana');
       expect(results.length).toBeGreaterThan(0);
-      expect(results.some((t) => t.label.toLowerCase().includes('ana'))).toBe(true);
+      expect(results.some((t) => t.labels.some((label) => label.toLowerCase().includes('ana')))).toBe(
+        true,
+      );
     });
 
     it('should filter by polarity when specified', () => {
