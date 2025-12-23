@@ -51,7 +51,7 @@ export default defineConfig((ctx) => {
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
 
-      publicPath: process.env.GITHUB_PAGES ? '/hofman-core-quadrant/' : '/',
+      publicPath: process.env.GITHUB_PAGES ? '/ofman-core-quadrant/' : '/',
       // analyze: true,
       // env: {},
       // rawDefine: {}
